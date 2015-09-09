@@ -5,15 +5,15 @@ package com.eruntech.chineseaddresspicker.valueobjects;
  * @author 作者：Qin Yuanyi
  * 功能：区域信息模型，包含区域名称和邮编
  */
-public class DistrictModel {
+public class District {
     private String name;
     private String zipcode;
 
-    public DistrictModel() {
+    public District() {
         super();
     }
 
-    public DistrictModel(String name, String zipcode) {
+    public District(String name, String zipcode) {
         super();
         this.name = name;
         this.zipcode = zipcode;
@@ -37,6 +37,6 @@ public class DistrictModel {
 
     @Override
     public String toString() {
-        return "DistrictModel [name=" + name + ", zipcode=" + zipcode + "]";
+        return "District [name=" + name + ", zipcode=" + zipcode + "]";
     }
 }

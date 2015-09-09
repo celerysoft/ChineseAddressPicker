@@ -7,15 +7,15 @@ import java.util.List;
  * @author 作者：Qin Yuanyi
  * 功能：省份信息模型，包含省份名称，省份城市列表
  */
-public class ProvinceModel {
+public class Province {
     private String name;
-    private List<CityModel> cityList;
+    private List<City> cityList;
 
-    public ProvinceModel() {
+    public Province() {
         super();
     }
 
-    public ProvinceModel(String name, List<CityModel> cityList) {
+    public Province(String name, List<City> cityList) {
         super();
         this.name = name;
         this.cityList = cityList;
@@ -29,16 +29,16 @@ public class ProvinceModel {
         this.name = name;
     }
 
-    public List<CityModel> getCityList() {
+    public List<City> getCityList() {
         return cityList;
     }
 
-    public void setCityList(List<CityModel> cityList) {
+    public void setCityList(List<City> cityList) {
         this.cityList = cityList;
     }
 
     @Override
     public String toString() {
-        return "ProvinceModel [name=" + name + ", cityList=" + cityList + "]";
+        return "Province [name=" + name + ", cityList=" + cityList + "]";
     }
 }

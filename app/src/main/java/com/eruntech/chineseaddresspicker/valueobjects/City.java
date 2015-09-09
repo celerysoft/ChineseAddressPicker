@@ -7,15 +7,15 @@ import java.util.List;
  * @author 作者：Qin Yuanyi
  * 功能：城市信息模型，包含城市名称，城市区域列表
  */
-public class CityModel {
+public class City {
     private String name;
-    private List<DistrictModel> districtList;
+    private List<District> districtList;
 
-    public CityModel() {
+    public City() {
         super();
     }
 
-    public CityModel(String name, List<DistrictModel> districtList) {
+    public City(String name, List<District> districtList) {
         super();
         this.name = name;
         this.districtList = districtList;
@@ -29,17 +29,17 @@ public class CityModel {
         this.name = name;
     }
 
-    public List<DistrictModel> getDistrictList() {
+    public List<District> getDistrictList() {
         return districtList;
     }
 
-    public void setDistrictList(List<DistrictModel> districtList) {
+    public void setDistrictList(List<District> districtList) {
         this.districtList = districtList;
     }
 
     @Override
     public String toString() {
-        return "CityModel [name=" + name + ", districtList=" + districtList
+        return "City [name=" + name + ", districtList=" + districtList
                 + "]";
     }
 }

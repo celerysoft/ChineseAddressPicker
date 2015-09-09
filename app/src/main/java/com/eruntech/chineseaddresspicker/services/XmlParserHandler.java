@@ -1,8 +1,8 @@
 package com.eruntech.chineseaddresspicker.services;
 
-import com.eruntech.chineseaddresspicker.valueobjects.CityModel;
-import com.eruntech.chineseaddresspicker.valueobjects.DistrictModel;
-import com.eruntech.chineseaddresspicker.valueobjects.ProvinceModel;
+import com.eruntech.chineseaddresspicker.valueobjects.City;
+import com.eruntech.chineseaddresspicker.valueobjects.District;
+import com.eruntech.chineseaddresspicker.valueobjects.Province;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -20,13 +20,13 @@ public class XmlParserHandler extends DefaultHandler {
     /**
      * 存储所有的解析对象
      */
-    private List<ProvinceModel> provinceList = new ArrayList<ProvinceModel>();
+    private List<Province> provinceList = new ArrayList<Province>();
 
     public XmlParserHandler() {
 
     }
 
-    public List<ProvinceModel> getDataList() {
+    public List<Province> getDataList() {
         return provinceList;
     }
 
@@ -35,24 +35,24 @@ public class XmlParserHandler extends DefaultHandler {
         // 当读到第一个开始标签的时候，会触发这个方法
     }
 
-    ProvinceModel provinceModel = new ProvinceModel();
-    CityModel cityModel = new CityModel();
-    DistrictModel districtModel = new DistrictModel();
+    Province provinceModel = new Province();
+    City cityModel = new City();
+    District districtModel = new District();
 
     @Override
     public void startElement(String uri, String localName, String qName,
                              Attributes attributes) throws SAXException {
         // 当遇到开始标记的时候，调用这个方法
         if (qName.equals("province")) {
-            provinceModel = new ProvinceModel();
+            provinceModel = new Province();
             provinceModel.setName(attributes.getValue(0));
-            provinceModel.setCityList(new ArrayList<CityModel>());
+            provinceModel.setCityList(new ArrayList<City>());
         } else if (qName.equals("city")) {
-            cityModel = new CityModel();
+            cityModel = new City();
             cityModel.setName(attributes.getValue(0));
-            cityModel.setDistrictList(new ArrayList<DistrictModel>());
+            cityModel.setDistrictList(new ArrayList<District>());
         } else if (qName.equals("district")) {
-            districtModel = new DistrictModel();
+            districtModel = new District();
             districtModel.setName(attributes.getValue(0));
             districtModel.setZipcode(attributes.getValue(1));
         }
