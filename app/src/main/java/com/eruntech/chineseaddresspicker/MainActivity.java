@@ -2,6 +2,7 @@ package com.eruntech.chineseaddresspicker;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +29,8 @@ import kankan.wheel.widget.adapters.ArrayWheelAdapter;
  */
 public class MainActivity extends Activity
         implements View.OnClickListener, OnWheelChangedListener, OnAddressDataServiceListener {
+
+    private final String LOG_TAG = this.getClass().getSimpleName();
 
     /**
      * 所有省
@@ -138,49 +141,68 @@ public class MainActivity extends Activity
         mViewCity.setVisibleItems(7);
         mViewDistrict.setVisibleItems(7);
         updateCities();
-        updateAreas();
+        updateDistricts();
     }
 
     @Override
     public void onChanged(WheelView wheel, int oldValue, int newValue) {
         if (wheel == mViewProvince) {
-            updateCities();
+            onProvinceChanged();
         } else if (wheel == mViewCity) {
-            updateAreas();
+            onCityChanged();
         } else if (wheel == mViewDistrict) {
-            mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[newValue];
-            mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
+            onDistrictChanged();
         }
     }
+
+    private void onProvinceChanged() {
+        updateCities();
+    }
+
+    private void onCityChanged() {
+        updateDistricts();
+    }
+
+    private void onDistrictChanged() {
+        int currentDistrictIndex = mViewDistrict.getCurrentItem();
+        mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[currentDistrictIndex];
+        mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
+    }
+
 
     /**
      * 根据当前的市，更新区WheelView的信息
      */
-    private void updateAreas() {
-        int pCurrent = mViewCity.getCurrentItem();
-        mCurrentCityName = mCitisDatasMap.get(mCurrentProviceName)[pCurrent];
-        String[] areas = mDistrictDatasMap.get(mCurrentCityName);
+    private void updateDistricts() {
+        int currentCityIndex = mViewCity.getCurrentItem();
+        mCurrentCityName = mCitisDatasMap.get(mCurrentProviceName)[currentCityIndex];
+        String[] districts = mDistrictDatasMap.get(mCurrentCityName);
 
-        if (areas == null) {
-            areas = new String[] { "" };
+        if (districts == null) {
+            districts = new String[] { "数据缺失" };
+            Log.w(LOG_TAG, mCurrentCityName + "下的区域信息缺失。");
         }
-        mViewDistrict.setViewAdapter(new ArrayWheelAdapter<String>(this, areas));
+        mViewDistrict.setViewAdapter(new ArrayWheelAdapter<String>(this, districts));
         mViewDistrict.setCurrentItem(0);
+
+        mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[0];
+        mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
     }
 
     /**
      * 根据当前的省，更新市WheelView的信息
      */
     private void updateCities() {
-        int pCurrent = mViewProvince.getCurrentItem();
-        mCurrentProviceName = mProvinceDatas[pCurrent];
+        int currentItemIndex = mViewProvince.getCurrentItem();
+        mCurrentProviceName = mProvinceDatas[currentItemIndex];
         String[] cities = mCitisDatasMap.get(mCurrentProviceName);
         if (cities == null) {
-            cities = new String[] { "" };
+            cities = new String[] { "数据缺失" };
+            Log.w(LOG_TAG, mCurrentProviceName + "下的城市信息缺失。");
         }
         mViewCity.setViewAdapter(new ArrayWheelAdapter<String>(this, cities));
         mViewCity.setCurrentItem(0);
-        updateAreas();
+        updateDistricts();
     }
 
     @Override
@@ -209,7 +231,6 @@ public class MainActivity extends Activity
             }
         }
 
-        //TODO update store to hashmap
         mProvinceDatas = new String[provinceList.size()];
         for (int i=0; i< provinceList.size(); i++) {
             // 遍历所有省的数据
