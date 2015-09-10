@@ -177,26 +177,13 @@ public class LoadAddressDataService {
         String zipCode = null;
 
         if (parser.getName().equalsIgnoreCase("district")) {
-            name = parser.getAttributeValue(ns, "name");
+            // 为了让区域名称String指向的内存地址不同，建立IdentityHashMap时防止“其他”区域的邮编一致的bug
+            name = new String(parser.getAttributeValue(ns, "name"));
             zipCode = parser.getAttributeValue(ns, "zipcode");
             parser.nextTag();
         } else {
             Log.w(LOG_TAG, "city下出现非district标签");
         }
-        /*
-        while (parser.next() != XmlPullParser.END_TAG) {
-            if (parser.getEventType() != XmlPullParser.START_TAG) {
-                continue;
-            }
-            if (parser.getName().equalsIgnoreCase("district")) {
-                name = parser.getAttributeValue(ns, "name");
-                zipCode = parser.getAttributeValue(ns, "zipcode");
-                parser.nextTag();
-            } else {
-                Log.w(LOG_TAG, "city下出现非district标签");
-            }
-        }
-        */
 
         district = new District(name, zipCode);
 

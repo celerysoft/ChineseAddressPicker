@@ -15,6 +15,7 @@ import com.eruntech.chineseaddresspicker.valueobjects.District;
 import com.eruntech.chineseaddresspicker.valueobjects.Province;
 
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -44,7 +45,7 @@ public class MainActivity extends Activity
     /**
      * key - 区 values - 邮编
      */
-    protected Map<String, String> mZipcodeDatasMap = new HashMap<String, String>();
+    protected Map<String, String> mZipcodeDatasMap = new IdentityHashMap<String, String>();
 
     /**
      * 当前省的名称
