@@ -1,4 +1,4 @@
-package com.eruntech.chineseaddresspicker.valueobjects;
+package com.eruntech.addresspicker.valueobjects;
 
 import java.util.List;
 

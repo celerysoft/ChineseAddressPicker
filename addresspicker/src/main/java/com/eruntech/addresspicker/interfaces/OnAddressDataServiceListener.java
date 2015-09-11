@@ -1,7 +1,7 @@
-package com.eruntech.chineseaddresspicker.interfaces;
+package com.eruntech.addresspicker.interfaces;
 
-import com.eruntech.chineseaddresspicker.services.LoadAddressDataService;
-import com.eruntech.chineseaddresspicker.valueobjects.Province;
+import com.eruntech.addresspicker.services.LoadAddressDataService;
+import com.eruntech.addresspicker.valueobjects.Province;
 
 import java.util.List;
 
@@ -16,5 +16,5 @@ public interface OnAddressDataServiceListener {
     /**
      * call this method when the address xml resource is parsed.
      */
-    public void onAddressDataGot(List<Province> provinceList);
+    void onAddressDataGot(List<Province> provinceList);
 }

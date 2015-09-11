@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">中国地址选择器</string>
+
+    <string name="tv_widget_title">请选择您的位置</string>
+
+    <string name="btn_confirm_text">确定</string>
+</resources>

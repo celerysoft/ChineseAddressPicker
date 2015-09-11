@@ -1,4 +1,4 @@
-package com.eruntech.chineseaddresspicker.services;
+package com.eruntech.addresspicker.services;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -6,10 +6,11 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Xml;
 
-import com.eruntech.chineseaddresspicker.interfaces.OnAddressDataServiceListener;
-import com.eruntech.chineseaddresspicker.valueobjects.City;
-import com.eruntech.chineseaddresspicker.valueobjects.District;
-import com.eruntech.chineseaddresspicker.valueobjects.Province;
+import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
+import com.eruntech.addresspicker.valueobjects.City;
+import com.eruntech.addresspicker.valueobjects.District;
+import com.eruntech.addresspicker.valueobjects.Province;
+import com.eruntech.addresspicker.widgets.ChineseAddressPicker;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -29,7 +30,7 @@ public class LoadAddressDataService {
 
     private final String LOG_TAG = this.getClass().getSimpleName();
 
-    private Context mContext;
+    private ChineseAddressPicker mChineseAddressPicker;
     private OnAddressDataServiceListener mOnAddressDataServiceListener;
 
     /** namespace **/
@@ -44,12 +45,12 @@ public class LoadAddressDataService {
         return mProvinceList;
     }
 
-    public LoadAddressDataService(Context context) {
-        mContext = context;
-        if (context instanceof OnAddressDataServiceListener) {
-            mOnAddressDataServiceListener = (OnAddressDataServiceListener) context;
+    public LoadAddressDataService(ChineseAddressPicker chineseAddressPicker) {
+        mChineseAddressPicker = chineseAddressPicker;
+        if (chineseAddressPicker instanceof OnAddressDataServiceListener) {
+            mOnAddressDataServiceListener = (OnAddressDataServiceListener) chineseAddressPicker;
         } else {
-                Log.w(LOG_TAG, "传进本类的Context必须实现OnTubeViewServiceListener接口");
+                Log.w(LOG_TAG, "LoadAddressDataService构造函数传进的参数必须实现OnTubeViewServiceListener接口");
         }
     }
 
@@ -59,7 +60,7 @@ public class LoadAddressDataService {
 
     private void parseXmlData(String xmlPath) throws XmlPullParserException, IOException {
 
-        AssetManager asset = mContext.getAssets();
+        AssetManager asset = mChineseAddressPicker.getContext().getAssets();
         InputStream xmlStream = asset.open(xmlPath);
 
         XmlPullParser parser = Xml.newPullParser();

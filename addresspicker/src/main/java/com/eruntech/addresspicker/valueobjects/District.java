@@ -1,4 +1,4 @@
-package com.eruntech.chineseaddresspicker.valueobjects;
+package com.eruntech.addresspicker.valueobjects;
 
 /**
  * 时间：2015-09-08

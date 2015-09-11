@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chinese Address Picker</string>
+
+    <string name="tv_widget_title">Please choose your location</string>
+
+    <string name="btn_confirm_text">confirm</string>
+</resources>
