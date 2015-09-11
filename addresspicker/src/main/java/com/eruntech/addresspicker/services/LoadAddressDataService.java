@@ -54,6 +54,11 @@ public class LoadAddressDataService {
         }
     }
 
+    /**
+     * 修改时间：2015-09-11
+     * 作者：Qin Yuanyi
+     * 功能描述：发送异步请求开始解析储存在本地的中国地址数据库
+     */
     public void startToParseData() {
         new GetAddressDataAsyncTask().execute("address_data.xml");
     }

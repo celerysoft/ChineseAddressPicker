@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChineseAddressPicker">
+        <attr name="visibleItemCount" format="integer" />
+        <attr name="defaultVisible" format="boolean" />
+    </declare-styleable>
+</resources>

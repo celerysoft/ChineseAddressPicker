@@ -1,6 +1,7 @@
 package com.eruntech.addresspicker.widgets;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,60 +27,101 @@ import kankan.wheel.widget.WheelView;
 import kankan.wheel.widget.adapters.ArrayWheelAdapter;
 
 /**
- * Created by Administrator on 2015-09-10.
+ * A Chinese Address Picker for Picking a location.
+ * <p>时间：2015-09-11
+ * <p>作者 Qin Yuanyi
+ * <p>功能：中国省市区级联地址选择器
  */
 public class ChineseAddressPicker extends LinearLayout
         implements View.OnClickListener, OnWheelChangedListener, OnAddressDataServiceListener {
 
     /** 上下文 **/
     private Context mContext;
+    /** **/
+    private OnAddressPickerListener mOnAddressPickerListener;
 
     /** Log标签 **/
     private final String LOG_TAG = this.getClass().getSimpleName();
 
-    /** 地址选择器可见项目数 **/
-    private final int VISIBLE_ITEM_COUNT = 5;
+    /** 地址选择器默认可见项目数 **/
+    private final int DEFAULT_VISIBLE_ITEM_COUNT = 5;
+
+    /** 地址选择器实际可见项目数 **/
+    private int mVisibleItemCount;
+    /** 控件默认是否可见 **/
+    private boolean mDefaultVisible;
 
     /** 所有省 **/
-    protected String[] mProvinceDatas;
+    private String[] mProvinceDatas;
     /** key - 省 value - 市 **/
-    protected Map<String, String[]> mCitisDatasMap = new HashMap<String, String[]>();
+    private Map<String, String[]> mCitisDatasMap = new HashMap<String, String[]>();
     /** key - 市 values - 区 **/
-    protected Map<String, String[]> mDistrictDatasMap = new HashMap<String, String[]>();
+    private Map<String, String[]> mDistrictDatasMap = new HashMap<String, String[]>();
     /** key - 区 values - 邮编**/
-    protected Map<String, String> mZipcodeDatasMap = new IdentityHashMap<String, String>();
+    private Map<String, String> mZipcodeDatasMap = new IdentityHashMap<String, String>();
 
     /** 当前省的名称 **/
-    protected String mCurrentProviceName;
+    private String mCurrentProviceName;
+    public String getProviceName() {
+        return mCurrentProviceName;
+    }
     /** 当前市的名称 **/
-    protected String mCurrentCityName;
+    private String mCurrentCityName;
+    public String getCityName() {
+        return mCurrentCityName;
+    }
     /** 当前区的名称 **/
-    protected String mCurrentDistrictName ="";
+    private String mCurrentDistrictName;
+    public String getDistrictName() {
+        return mCurrentDistrictName;
+    }
     /** 当前区的邮政编码 **/
-    protected String mCurrentZipCode ="";
+    private String mCurrentZipCode;
 
-
-
+    /** 省份WheelView的引用 **/
     private WheelView mViewProvince;
+    /** 城市WheelView的引用 **/
     private WheelView mViewCity;
+    /** 区域WheelView的引用 **/
     private WheelView mViewDistrict;
+    /** 确认按钮的引用 **/
     private Button mBtnConfirm;
 
     public ChineseAddressPicker(Context context) {
         super(context);
 
-        mContext = context;
+        initPicker(context);
 
         requestAddressData();
     }
 
     public ChineseAddressPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mContext = context;
+
+        initPicker(context);
+
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ChineseAddressPicker, 0, 0);
+        try {
+            mVisibleItemCount = a.getInteger(R.styleable.ChineseAddressPicker_visibleItemCount, DEFAULT_VISIBLE_ITEM_COUNT);
+            mVisibleItemCount = mVisibleItemCount >= 3 ? mVisibleItemCount : 3;
+
+            boolean mDefaultVisible = a.getBoolean(R.styleable.ChineseAddressPicker_defaultVisible, true);
+        } finally {
+            a.recycle();
+        }
     }
 
     public ChineseAddressPicker(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    private void initPicker(Context context) {
+        mContext = context;
+        if (context instanceof OnAddressPickerListener) {
+            mOnAddressPickerListener = (OnAddressPickerListener) context;
+        } else {
+            Log.w(LOG_TAG, "构造传入的Context类最好实现OnAddressPickerListener接口，不然无法响应选择地址事件");
+        }
     }
 
     @Override
@@ -89,6 +131,11 @@ public class ChineseAddressPicker extends LinearLayout
         requestAddressData();
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
+     */
     private void requestAddressData() {
         LoadAddressDataService service = new LoadAddressDataService(this);
         service.startToParseData();
@@ -98,6 +145,11 @@ public class ChineseAddressPicker extends LinearLayout
     @Override
     public void onAddressDataGot(List<Province> provinceList) {
         LayoutInflater.from(getContext()).inflate(R.layout.chinese_address_picker, this);
+        if (mDefaultVisible) {
+            show();
+        } else {
+            hide();
+        }
 
         setUpViews();
         setUpListener();
@@ -124,9 +176,9 @@ public class ChineseAddressPicker extends LinearLayout
 
         mViewProvince.setViewAdapter(new ArrayWheelAdapter<String>(mContext, mProvinceDatas));
 
-        mViewProvince.setVisibleItems(VISIBLE_ITEM_COUNT);
-        mViewCity.setVisibleItems(VISIBLE_ITEM_COUNT);
-        mViewDistrict.setVisibleItems(VISIBLE_ITEM_COUNT);
+        mViewProvince.setVisibleItems(mVisibleItemCount);
+        mViewCity.setVisibleItems(mVisibleItemCount);
+        mViewDistrict.setVisibleItems(mVisibleItemCount);
 
         updateCities();
         updateDistricts();
@@ -237,12 +289,30 @@ public class ChineseAddressPicker extends LinearLayout
     public void onClick(View v) {
         if (v.getId() == R.id.btn_confirm) {
             showSelectedResult();
+            hide();
+            mOnAddressPickerListener.onAddressPicked();
         }
     }
 
     private void showSelectedResult() {
-        Toast.makeText(mContext, "当前选中:" + mCurrentProviceName + "," + mCurrentCityName + ","
-                + mCurrentDistrictName + "," + mCurrentZipCode, Toast.LENGTH_SHORT).show();
+        Log.v(LOG_TAG, "当前选中：" + mCurrentProviceName + " - " + mCurrentCityName + " - "
+                + mCurrentDistrictName + " 邮编：" + mCurrentZipCode);
+    }
+
+    public void show() {
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
+        layoutParams.height = LayoutParams.WRAP_CONTENT;
+        this.setLayoutParams(layoutParams);
+    }
+
+    public void hide() {
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
+        layoutParams.height = 0;
+        this.setLayoutParams(layoutParams);
+    }
+
+    public interface OnAddressPickerListener {
+        void onAddressPicked();
     }
 
 }

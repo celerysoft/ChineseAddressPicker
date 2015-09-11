@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">中国地址选择示例</string>
+    <string name="app_name">中国地址选择控件示例程序</string>
+    <string name="main_btn_text">点击选择地址</string>
 </resources>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Chinese Address Picker Demo</string>
+    <string name="main_btn_text">Tap to pick a location</string>
 </resources>
