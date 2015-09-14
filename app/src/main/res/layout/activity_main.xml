@@ -22,6 +22,8 @@
         android:layout_height="wrap_content"
         app:visibleItemCount="5"
         app:defaultVisible="false"
+        app:actionBarVisible="true"
+        app:animationVisible="true"
         />
 
 </LinearLayout>
