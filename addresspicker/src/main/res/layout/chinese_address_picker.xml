@@ -45,13 +45,13 @@
         <kankan.wheel.widget.WheelView
             android:id="@+id/wheelview_city"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <kankan.wheel.widget.WheelView
             android:id="@+id/wheelview_district"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
     </LinearLayout>
 
