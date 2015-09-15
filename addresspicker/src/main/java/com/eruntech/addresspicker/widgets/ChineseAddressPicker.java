@@ -6,6 +6,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -123,9 +126,7 @@ public class ChineseAddressPicker extends LinearLayout
         }
     }
 
-    public ChineseAddressPicker(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+
 
     /**
      * <P>修改时间：2015-09-11
@@ -141,6 +142,7 @@ public class ChineseAddressPicker extends LinearLayout
             Log.w(LOG_TAG, "当显示ActionBar时，构造传入的Context类最好实现OnAddressPickerListener接口，不然无法响应选择地址事件");
         }
     }
+
 
     @Override
     protected void onFinishInflate() {
@@ -176,6 +178,11 @@ public class ChineseAddressPicker extends LinearLayout
         setUpData(provinceList);
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：定义控件
+     */
     private void setUpViews() {
         mViewProvince = (WheelView) findViewById(R.id.wheelview_province);
         mViewCity = (WheelView) findViewById(R.id.wheelview_city);
@@ -184,6 +191,11 @@ public class ChineseAddressPicker extends LinearLayout
         mActionBar = (RelativeLayout) findViewById(R.id.rl_action_bar);
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：定义监听器
+     */
     private void setUpListener() {
         mViewProvince.addChangingListener(this);
         mViewCity.addChangingListener(this);
@@ -191,11 +203,14 @@ public class ChineseAddressPicker extends LinearLayout
         mBtnConfirm.setOnClickListener(this);
     }
 
+    /**
+     * <P>修改时间：2015-09-14
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：根据属性表的设置来对控件进行初始化
+     */
     private void setUpAttributeSet() {
-        if (mDefaultVisible) {
-            show();
-        } else {
-            hide();
+        if (!mDefaultVisible) {
+            hideWidget();
         }
 
         if (!mActionBarVisible) {
@@ -299,8 +314,11 @@ public class ChineseAddressPicker extends LinearLayout
         mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[currentDistrictIndex];
         mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
     }
+
     /**
-     * 根据当前的省，更新市WheelView的信息
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：根据当前的省，更新市WheelView的信息
      */
     private void updateCities() {
         int currentItemIndex = mViewProvince.getCurrentItem();
@@ -316,7 +334,9 @@ public class ChineseAddressPicker extends LinearLayout
     }
 
     /**
-     * 根据当前的市，更新区WheelView的信息
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：根据当前的市，更新区WheelView的信息
      */
     private void updateDistricts() {
         int currentCityIndex = mViewCity.getCurrentItem();
@@ -334,33 +354,153 @@ public class ChineseAddressPicker extends LinearLayout
         mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：Click事件的回调函数
+     */
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_confirm) {
-            showSelectedResult();
+            Log.v(LOG_TAG, "当前选中：" + mCurrentProviceName + " - " + mCurrentCityName + " - "
+                    + mCurrentDistrictName + "，邮编：" + mCurrentZipCode);
             hide();
             mOnAddressPickerListener.onAddressPicked();
         }
     }
 
-    private void showSelectedResult() {
-        Log.v(LOG_TAG, "当前选中：" + mCurrentProviceName + " - " + mCurrentCityName + " - "
-                + mCurrentDistrictName + "，邮编：" + mCurrentZipCode);
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：显示控件
+     */
+    public void show() {
+        if (mAnimationVisible) {
+            showWidgetWithAnimation();
+        } else {
+            showWidget();
+        }
     }
 
-    public void show() {
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：显示控件(无动画)
+     */
+    private void showWidget() {
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
         layoutParams.height = LayoutParams.WRAP_CONTENT;
         this.setLayoutParams(layoutParams);
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：显示控件（包含过渡动画）
+     */
+    private void showWidgetWithAnimation() {
+        //从屏幕底端之外移动到指定区域
+        float fromY = mContext.getResources().getDisplayMetrics().heightPixels + this.getHeight();
+        float toY = 0;
+
+        ChineseAddressPickerAnimationListener animationListener = new ChineseAddressPickerAnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                showWidget();
+            }
+        };
+
+        TranslateAnimation animation = new TranslateAnimation(0, 0, fromY, toY);
+        animation.setDuration(mContext.getResources().getInteger(android.R.integer.config_longAnimTime));
+        animation.setFillBefore(false);
+        animation.setAnimationListener(animationListener);
+
+        AnimationSet animationSet = new AnimationSet(true);
+        animationSet.addAnimation(animation);
+
+        this.startAnimation(animationSet);
+    }
+
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：隐藏控件
+     */
     public void hide() {
+        if (mAnimationVisible) {
+            hideWidgetWithAnimation();
+        } else {
+            hideWidget();
+        }
+    }
+
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：隐藏控件(无动画)
+     */
+    private void hideWidget() {
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
         layoutParams.height = 0;
         this.setLayoutParams(layoutParams);
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：隐藏控件（包含过渡动画）
+     */
+    private void hideWidgetWithAnimation() {
+        //从原位置移动到屏幕底端之外
+        float fromY = 0;
+        float toY = mContext.getResources().getDisplayMetrics().heightPixels + this.getHeight();
+
+        ChineseAddressPickerAnimationListener animationListener = new ChineseAddressPickerAnimationListener() {
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                hideWidget();
+            }
+        };
+
+        TranslateAnimation animation = new TranslateAnimation(0, 0, fromY, toY);
+        animation.setDuration(mContext.getResources().getInteger(android.R.integer.config_longAnimTime));
+        animation.setFillBefore(false);
+        animation.setAnimationListener(animationListener);
+
+        AnimationSet animationSet = new AnimationSet(true);
+        animationSet.addAnimation(animation);
+
+        this.startAnimation(animationSet);
+    }
+
+    /**
+     * <P>时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能：实现动画监听接口的抽象类
+     */
+    private abstract class ChineseAddressPickerAnimationListener implements Animation.AnimationListener {
+        @Override
+        public void onAnimationStart(Animation animation) {}
+
+        @Override
+        public void onAnimationEnd(Animation animation) {}
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {}
+    }
+
+    /**
+     * Difine some mothod must be implemented when listen {@link ChineseAddressPicker}.
+     * <P>时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能：定义监听ChineseAddressPicker类必须实现的方法
+     */
     public interface OnAddressPickerListener {
+        /**
+         * <P>修改时间：2015-09-11
+         * <P>作者：Qin Yuanyi
+         * <P>功能描述：当地址被选中之后的回调函数
+         */
         void onAddressPicked();
     }
 
