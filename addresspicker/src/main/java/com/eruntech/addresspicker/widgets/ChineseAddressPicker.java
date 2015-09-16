@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import com.eruntech.addresspicker.R;
 import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
 import com.eruntech.addresspicker.services.LoadAddressDataService;
+import com.eruntech.addresspicker.services.LoadOldAddressDataService;
 import com.eruntech.addresspicker.valueobjects.City;
 import com.eruntech.addresspicker.valueobjects.District;
 import com.eruntech.addresspicker.valueobjects.Province;
@@ -126,7 +127,12 @@ public class ChineseAddressPicker extends LinearLayout
         }
     }
 
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
 
+        requestAddressData();
+    }
 
     /**
      * <P>修改时间：2015-09-11
@@ -143,22 +149,16 @@ public class ChineseAddressPicker extends LinearLayout
         }
     }
 
-
-    @Override
-    protected void onFinishInflate() {
-        super.onFinishInflate();
-
-        requestAddressData();
-    }
-
     /**
      * <P>修改时间：2015-09-11
      * <P>作者：Qin Yuanyi
      * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     private void requestAddressData() {
-        LoadAddressDataService service = new LoadAddressDataService(this);
-        service.startToParseData();
+        //LoadAddressDataService service = new LoadAddressDataService(this);
+        //service.startToParseData();
+        LoadOldAddressDataService oldService = new LoadOldAddressDataService(this);
+        oldService.startToParseData();
         // 异步方法，解析完地址数据后自动调用 onAddressDataGot() 方法
     }
 
