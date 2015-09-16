@@ -1,6 +1,6 @@
 <root>
     <province name="安徽省" index="13">
-        <city name="安庆市">
+        <city name="安庆市" index="8">
             <district name="枞阳县" index="246000" />
             <district name="大观区" index="246000" />
             <district name="怀宁县" index="246000" />
@@ -14,7 +14,7 @@
             <district name="岳西县" index="246000" />
             <district name="其他" index="246000" />
         </city>
-        <city name="蚌埠市">
+        <city name="蚌埠市" index="3">
             <district name="蚌山区" index="233000" />
             <district name="固镇县" index="233000" />
             <district name="怀远县" index="233000" />
@@ -24,29 +24,21 @@
             <district name="禹会区" index="233000" />
             <district name="其他" index="233000" />
         </city>
-        <city name="亳州市">
+        <city name="亳州市" index="14">
             <district name="利辛县" index="236000" />
             <district name="蒙城县" index="236000" />
             <district name="谯城区" index="236000" />
             <district name="涡阳县" index="236000" />
             <district name="其他" index="236000" />
         </city>
-        <city name="巢湖市">
-            <district name="含山县" index="238000" />
-            <district name="和县" index="238000" />
-            <district name="居巢区" index="238000" />
-            <district name="庐江县" index="238000" />
-            <district name="无为县" index="238000" />
-            <district name="其他" index="238000" />
-        </city>
-        <city name="池州市">
+        <city name="池州市" index="15">
             <district name="东至县" index="247100" />
             <district name="贵池区" index="247100" />
             <district name="青阳县" index="247100" />
             <district name="石台县" index="247100" />
             <district name="其他" index="247100" />
         </city>
-        <city name="滁州市">
+        <city name="滁州市"  index="10">
             <district name="定远县" index="239000" />
             <district name="凤阳县" index="239000" />
             <district name="来安县" index="239000" />
@@ -57,7 +49,7 @@
             <district name="天长市" index="239000" />
             <district name="其他" index="239000" />
         </city>
-        <city name="阜阳市">
+        <city name="阜阳市" index="11">
             <district name="阜南县" index="236100" />
             <district name="界首市" index="236100" />
             <district name="临泉县" index="236100" />
@@ -68,24 +60,25 @@
             <district name="颍州区" index="236100" />
             <district name="其他" index="236100" />
         </city>
-        <city name="合肥市">
-            <district name="包河区" index="230000" />
-            <district name="长丰县" index="230000" />
-            <district name="肥东县" index="230000" />
-            <district name="肥西县" index="230000" />
-            <district name="庐阳区" index="230000" />
-            <district name="蜀山区" index="230000" />
-            <district name="瑶海区" index="230000" />
-            <district name="其他" index="230000" />
+        <city name="合肥市" index="1">
+            <district name="包河区" index="4" />
+            <district name="长丰县" index="5" />
+            <district name="巢湖市" index="9" />
+            <district name="肥东县" index="6" />
+            <district name="肥西县" index="7" />
+            <district name="庐江县" index="8" />
+            <district name="庐阳区" index="2" />
+            <district name="蜀山区" index="3" />
+            <district name="瑶海区" index="1" />
         </city>
-        <city name="淮北市">
+        <city name="淮北市" index="6">
             <district name="杜集区" index="235000" />
             <district name="烈山区" index="235000" />
             <district name="濉溪县" index="235000" />
             <district name="相山区" index="235000" />
             <district name="其他" index="235000" />
         </city>
-        <city name="淮南市">
+        <city name="淮南市" index="4">
             <district name="八公山区" index="232000" />
             <district name="大通区" index="232000" />
             <district name="凤台县" index="232000" />
@@ -94,7 +87,7 @@
             <district name="谢家集区" index="232000" />
             <district name="其他" index="232000" />
         </city>
-        <city name="黄山市">
+        <city name="黄山市" index="9">
             <district name="黄山区" index="242700" />
             <district name="徽州区" index="242700" />
             <district name="祁门县" index="242700" />
@@ -104,7 +97,7 @@
             <district name="黟县" index="242700" />
             <district name="其他" index="242700" />
         </city>
-        <city name="六安市">
+        <city name="六安市" index="13">
             <district name="霍邱县" index="237000" />
             <district name="霍山县" index="237000" />
             <district name="金安区" index="237000" />
@@ -114,14 +107,15 @@
             <district name="裕安区" index="237000" />
             <district name="其他" index="237000" />
         </city>
-        <city name="马鞍山市">
-            <district name="当涂县" index="243000" />
-            <district name="花山区" index="243000" />
-            <district name="金家庄区" index="243000" />
-            <district name="雨山区" index="243000" />
-            <district name="其他" index="243000" />
+        <city name="马鞍山市" index="5">
+            <district name="博望区" index="3" />
+            <district name="当涂县" index="4" />
+            <district name="含山县" index="5" />
+            <district name="和县" index="6" />
+            <district name="花山区" index="1" />
+            <district name="雨山区" index="2" />
         </city>
-        <city name="宿州市">
+        <city name="宿州市" index="12">
             <district name="砀山县" index="234100" />
             <district name="灵璧县" index="234100" />
             <district name="泗县" index="234100" />
@@ -129,24 +123,25 @@
             <district name="墉桥区" index="234100" />
             <district name="其他" index="234100" />
         </city>
-        <city name="铜陵市">
+        <city name="铜陵市" index="7">
             <district name="郊区" index="244000" />
             <district name="狮子山区" index="244000" />
             <district name="铜官山区" index="244000" />
             <district name="铜陵县" index="244000" />
             <district name="其他" index="244000" />
         </city>
-        <city name="芜湖市">
+        <city name="芜湖市" index="2">
             <district name="繁昌县" index="241000" />
             <district name="镜湖区" index="241000" />
             <district name="鸠江区" index="241000" />
             <district name="南陵县" index="241000" />
             <district name="三山区" index="241000" />
             <district name="芜湖县" index="241000" />
+            <district name="无为县" index="238000" />
             <district name="弋江区" index="241000" />
             <district name="其他" index="241000" />
         </city>
-        <city name="宣城市">
+        <city name="宣城市" index="16">
             <district name="广德县" index="366000" />
             <district name="绩溪县" index="366000" />
             <district name="泾县" index="366000" />
@@ -157,6 +152,20 @@
             <district name="其他" index="366000" />
         </city>
     </province>
+
+    <province name="澳门" index="35">
+    <city name="澳门特别行政区" index="1">
+        <district name="大堂区" index="3" />
+        <district name="氹仔" index="6" />
+        <district name="风顺堂区" index="5" />
+        <district name="花地玛堂区" index="1" />
+        <district name="路氹城" index="8" />
+        <district name="路环" index="7" />
+        <district name="圣安多尼堂区" index="2" />
+        <district name="望德堂区" index="4" />
+    </city>
+    </province>
+
     <province name="北京市" index="2">
         <city name="北京市" index="1">
             <district name="昌平区" index="11" />
@@ -177,6 +186,7 @@
             <district name="延庆县" index="16" />
         </city>
     </province>
+
     <province name="重庆市" index="23">
         <city name="重庆市" index="1">
             <district name="巴南区" index="14" />
@@ -222,8 +232,9 @@
             <district name="忠县" index="27" />
         </city>
     </province>
+
     <province name="福建省" index="14">
-        <city name="福州市">
+        <city name="福州市" index="1">
             <district name="仓山区" index="350000" />
             <district name="长乐市" index="350000" />
             <district name="福清市" index="350000" />
@@ -239,7 +250,7 @@
             <district name="永泰县" index="350000" />
             <district name="其他" index="350000" />
         </city>
-        <city name="龙岩市">
+        <city name="龙岩市" index="8">
             <district name="长汀县" index="364000" />
             <district name="连城县" index="364000" />
             <district name="上杭县" index="364000" />
@@ -249,7 +260,7 @@
             <district name="漳平市" index="364000" />
             <district name="其他" index="364000" />
         </city>
-        <city name="南平市">
+        <city name="南平市" index="7">
             <district name="光泽县" index="353000" />
             <district name="建瓯市" index="353000" />
             <district name="建阳市" index="353000" />
@@ -262,7 +273,7 @@
             <district name="政和县" index="353000" />
             <district name="其他" index="353000" />
         </city>
-        <city name="宁德市">
+        <city name="宁德市" index="9">
             <district name="福安市" index="352100" />
             <district name="福鼎市" index="352100" />
             <district name="古田县" index="352100" />
@@ -274,7 +285,7 @@
             <district name="周宁县" index="352100" />
             <district name="其他" index="352100" />
         </city>
-        <city name="莆田市">
+        <city name="莆田市" index="3">
             <district name="城厢区" index="362000" />
             <district name="涵江区" index="362000" />
             <district name="荔城区" index="362000" />
@@ -282,7 +293,7 @@
             <district name="秀屿区" index="362000" />
             <district name="其他" index="362000" />
         </city>
-        <city name="泉州市">
+        <city name="泉州市" index="5">
             <district name="安溪县" index="362000" />
             <district name="德化县" index="362000" />
             <district name="丰泽区" index="362000" />
@@ -296,7 +307,7 @@
             <district name="永春县" index="362000" />
             <district name="其他" index="362000" />
         </city>
-        <city name="三明市">
+        <city name="三明市" index="4">
             <district name="大田县" index="363000" />
             <district name="建宁县" index="363000" />
             <district name="将乐县" index="363000" />
@@ -311,7 +322,7 @@
             <district name="尤溪县" index="743000" />
             <district name="其他" index="743000" />
         </city>
-        <city name="厦门市">
+        <city name="厦门市" index="2">
             <district name="海沧区" index="743000" />
             <district name="湖里区" index="361000" />
             <district name="集美区" index="361000" />
@@ -320,7 +331,7 @@
             <district name="翔安区" index="361000" />
             <district name="其他" index="361000" />
         </city>
-        <city name="漳州市">
+        <city name="漳州市" index="6">
             <district name="长泰县" index="363000" />
             <district name="东山县" index="363000" />
             <district name="华安县" index="363000" />
@@ -335,8 +346,9 @@
             <district name="其他" index="363000" />
         </city>
     </province>
+
     <province name="甘肃省" index="29">
-        <city name="白银市">
+        <city name="白银市" index="4">
             <district name="白银区" index="730900" />
             <district name="会宁县" index="730900" />
             <district name="景泰县" index="730900" />
@@ -344,7 +356,7 @@
             <district name="平川区" index="730900" />
             <district name="其他" index="730900" />
         </city>
-        <city name="定西市">
+        <city name="定西市" index="11">
             <district name="安定区" index="743000" />
             <district name="临洮县" index="743000" />
             <district name="陇西县" index="743000" />
@@ -354,7 +366,7 @@
             <district name="漳县" index="743000" />
             <district name="其他" index="743000" />
         </city>
-        <city name="甘南藏族自治州">
+        <city name="甘南藏族自治州" index="14">
             <district name="迭部县" index="747000" />
             <district name="合作市" index="747000" />
             <district name="临潭县" index="747000" />
@@ -365,12 +377,12 @@
             <district name="卓尼县" index="747000" />
             <district name="其他" index="747000" />
         </city>
-        <city name="金昌市">
+        <city name="金昌市" index="3">
             <district name="金川区" index="737100" />
             <district name="永昌县" index="737100" />
             <district name="其他" index="737100" />
         </city>
-        <city name="酒泉市">
+        <city name="酒泉市" index="9">
             <district name="阿克塞哈萨克族自治县" index="735000" />
             <district name="敦煌市" index="735000" />
             <district name="瓜州县" index="735000" />
@@ -380,7 +392,7 @@
             <district name="玉门市" index="735000" />
             <district name="其他" index="735000" />
         </city>
-        <city name="兰州市">
+        <city name="兰州市" index="1">
             <district name="安宁区" index="730000" />
             <district name="城关区" index="730000" />
             <district name="皋兰县" index="730000" />
@@ -391,7 +403,7 @@
             <district name="榆中县" index="730000" />
             <district name="其他" index="730000" />
         </city>
-        <city name="临夏回族自治州">
+        <city name="临夏回族自治州" index="13">
             <district name="东乡族自治县" index="731100" />
             <district name="广河县" index="731100" />
             <district name="和政县" index="731100" />
@@ -402,7 +414,7 @@
             <district name="永靖县" index="731100" />
             <district name="其他" index="731100" />
         </city>
-        <city name="陇南市">
+        <city name="陇南市" index="12">
             <district name="成县" index="742100" />
             <district name="宕昌县" index="742100" />
             <district name="徽县" index="742100" />
@@ -414,7 +426,7 @@
             <district name="西和县" index="742100" />
             <district name="其他" index="742100" />
         </city>
-        <city name="平凉市">
+        <city name="平凉市" index="8">
             <district name="崇信县" index="744000" />
             <district name="华亭县" index="744000" />
             <district name="泾川县" index="744000" />
@@ -424,7 +436,7 @@
             <district name="庄浪县" index="744000" />
             <district name="其他" index="744000" />
         </city>
-        <city name="庆阳市">
+        <city name="庆阳市" index="10">
             <district name="合水县" index="744500" />
             <district name="华池县" index="744500" />
             <district name="环县" index="744500" />
@@ -435,7 +447,7 @@
             <district name="正宁县" index="744500" />
             <district name="其他" index="744500" />
         </city>
-        <city name="天水市">
+        <city name="天水市" index="5">
             <district name="甘谷县" index="741000" />
             <district name="麦积区" index="741000" />
             <district name="秦安县" index="741000" />
@@ -445,14 +457,14 @@
             <district name="张家川回族自治县" index="741000" />
             <district name="其他" index="741000" />
         </city>
-        <city name="武威市">
+        <city name="武威市" index="6">
             <district name="古浪县" index="733000" />
             <district name="凉州区" index="733000" />
             <district name="民勤县" index="733000" />
             <district name="天祝藏族自治县" index="733000" />
             <district name="其他" index="733000" />
         </city>
-        <city name="张掖市">
+        <city name="张掖市" index="7">
             <district name="甘州区" index="734000" />
             <district name="高台县" index="734000" />
             <district name="临泽县" index="734000" />
@@ -462,15 +474,17 @@
             <district name="其他" index="734000" />
         </city>
     </province>
+
     <province name="广东省" index="20">
-        <city name="潮州市">
+        <city name="潮州市" index="19">
             <district name="潮安县" index="515600" />
             <district name="枫溪区" index="515600" />
             <district name="饶平县" index="515600" />
             <district name="湘桥区" index="515600" />
             <district name="其他" index="515600" />
         </city>
-        <city name="佛山市">
+        <city name="东莞市" index="17" />
+        <city name="佛山市" index="6">
             <district name="禅城区" index="517000" />
             <district name="高明区" index="517000" />
             <district name="南海区" index="517000" />
@@ -478,23 +492,21 @@
             <district name="顺德区" index="517000" />
             <district name="其他" index="517000" />
         </city>
-        <city name="广州市">
-            <district name="白云区" index="510000" />
-            <district name="从化市" index="510000" />
-            <district name="东山区" index="510000" />
-            <district name="番禺区" index="510000" />
-            <district name="芳村区" index="510000" />
-            <district name="海珠区" index="510000" />
-            <district name="花都区" index="510000" />
-            <district name="黄埔区" index="510000" />
-            <district name="荔湾区" index="510000" />
-            <district name="萝岗区" index="510000" />
-            <district name="天河区" index="510000" />
-            <district name="越秀区" index="510000" />
-            <district name="增城市" index="510000" />
-            <district name="其他" index="510000" />
+        <city name="广州市" index="1">
+            <district name="白云区" index="5" />
+            <district name="从化市" index="12" />
+            <district name="番禺区" index="7" />
+            <district name="海珠区" index="3" />
+            <district name="花都区" index="8" />
+            <district name="黄埔区" index="6" />
+            <district name="荔湾区" index="1" />
+            <district name="萝岗区" index="10" />
+            <district name="南沙区" index="9" />
+            <district name="天河区" index="4" />
+            <district name="越秀区" index="2" />
+            <district name="增城市" index="11" />
         </city>
-        <city name="河源市">
+        <city name="河源市" index="14">
             <district name="东源县" index="517000" />
             <district name="和平县" index="517000" />
             <district name="连平县" index="517000" />
@@ -503,7 +515,7 @@
             <district name="紫金县" index="517000" />
             <district name="其他" index="517000" />
         </city>
-        <city name="惠州市">
+        <city name="惠州市" index="11">
             <district name="博罗县" index="516000" />
             <district name="惠城区" index="516000" />
             <district name="惠东县" index="516000" />
@@ -511,7 +523,7 @@
             <district name="龙门县" index="516000" />
             <district name="其他" index="516000" />
         </city>
-        <city name="江门市">
+        <city name="江门市" index="7">
             <district name="恩平市" index="529000" />
             <district name="鹤山市" index="529000" />
             <district name="江海区" index="529000" />
@@ -521,7 +533,7 @@
             <district name="新会区" index="529000" />
             <district name="其他" index="529000" />
         </city>
-        <city name="揭阳市">
+        <city name="揭阳市" index="20">
             <district name="东山区" index="522000" />
             <district name="惠来县" index="522000" />
             <district name="揭东县" index="522000" />
@@ -531,7 +543,7 @@
             <district name="榕城区" index="522000" />
             <district name="其他" index="522000" />
         </city>
-        <city name="茂名市">
+        <city name="茂名市" index="9">
             <district name="电白县" index="525000" />
             <district name="高州市" index="525000" />
             <district name="化州市" index="525000" />
@@ -540,7 +552,7 @@
             <district name="信宜市" index="525000" />
             <district name="其他" index="525000" />
         </city>
-        <city name="梅州市">
+        <city name="梅州市" index="12">
             <district name="大埔县" index="514000" />
             <district name="丰顺县" index="514000" />
             <district name="蕉岭县" index="514000" />
@@ -551,7 +563,7 @@
             <district name="兴宁市" index="514000" />
             <district name="其他" index="514000" />
         </city>
-        <city name="清远市">
+        <city name="清远市" index="16">
             <district name="佛冈县" index="511500" />
             <district name="连南瑶族自治县" index="511500" />
             <district name="连山壮族瑶族自治县" index="511500" />
@@ -562,7 +574,7 @@
             <district name="英德市" index="511500" />
             <district name="其他" index="511500" />
         </city>
-        <city name="汕头市">
+        <city name="汕头市" index="5">
             <district name="潮南区" index="515000" />
             <district name="潮阳区" index="515000" />
             <district name="澄海区" index="515000" />
@@ -572,7 +584,7 @@
             <district name="南澳县" index="515000" />
             <district name="其他" index="515000" />
         </city>
-        <city name="汕尾市">
+        <city name="汕尾市" index="13">
             <district name="城区" index="516600" />
             <district name="海丰县" index="516600" />
             <district name="红海湾经济开发试验区" index="516600" />
@@ -580,7 +592,7 @@
             <district name="陆河县" index="516600" />
             <district name="其他" index="516600" />
         </city>
-        <city name="韶关市">
+        <city name="韶关市" index="2">
             <district name="乐昌市" index="512000" />
             <district name="南雄市" index="512000" />
             <district name="曲江区" index="512000" />
@@ -593,23 +605,22 @@
             <district name="浈江区" index="512000" />
             <district name="其他" index="512000" />
         </city>
-        <city name="深圳市">
-            <district name="宝安区" index="518000" />
-            <district name="福田区" index="518000" />
-            <district name="龙岗区" index="518000" />
-            <district name="罗湖区" index="518000" />
-            <district name="南山区" index="518000" />
-            <district name="盐田区" index="518000" />
-            <district name="其他" index="518000" />
+        <city name="深圳市" index="3">
+            <district name="宝安区" index="4" />
+            <district name="福田区" index="2" />
+            <district name="龙岗区" index="5" />
+            <district name="罗湖区" index="1" />
+            <district name="南山区" index="3" />
+            <district name="盐田区" index="6" />
         </city>
-        <city name="阳江市">
+        <city name="阳江市" index="15">
             <district name="江城区" index="529500" />
             <district name="阳春市" index="529500" />
             <district name="阳东县" index="529500" />
             <district name="阳西县" index="529500" />
             <district name="其他" index="529500" />
         </city>
-        <city name="云浮市">
+        <city name="云浮市" index="21">
             <district name="罗定市" index="527300" />
             <district name="新兴县" index="527300" />
             <district name="郁南县" index="527300" />
@@ -617,7 +628,7 @@
             <district name="云城区" index="527300" />
             <district name="其他" index="527300" />
         </city>
-        <city name="湛江市">
+        <city name="湛江市" index="8">
             <district name="赤坎区" index="528400" />
             <district name="东海岛" index="519000" />
             <district name="开发区" index="519000" />
@@ -631,7 +642,7 @@
             <district name="徐闻县" index="533000" />
             <district name="其他" index="533000" />
         </city>
-        <city name="肇庆市">
+        <city name="肇庆市" index="10">
             <district name="德庆县" index="533000" />
             <district name="鼎湖区" index="533000" />
             <district name="端州区" index="533000" />
@@ -642,15 +653,17 @@
             <district name="四会市" index="536000" />
             <district name="其他" index="536000" />
         </city>
-        <city name="珠海市">
+        <city name="中山市" index="18" />
+        <city name="珠海市" index="4">
             <district name="斗门区" index="519000" />
             <district name="金湾区" index="519000" />
             <district name="香洲区" index="519000" />
             <district name="其他" index="519000" />
         </city>
     </province>
+
     <province name="广西壮族自治区" index="21">
-        <city name="百色市">
+        <city name="百色市" index="10">
             <district name="德保县" index="533000" />
             <district name="靖西县" index="533000" />
             <district name="乐业县" index="533000" />
@@ -665,14 +678,14 @@
             <district name="右江区" index="533000" />
             <district name="其他" index="533000" />
         </city>
-        <city name="北海市">
+        <city name="北海市" index="5">
             <district name="海城区" index="536000" />
             <district name="合浦县" index="536000" />
             <district name="铁山港区" index="536000" />
             <district name="银海区" index="536000" />
             <district name="其他" index="536000" />
         </city>
-        <city name="崇左市">
+        <city name="崇左市" index="14">
             <district name="大新县" index="532200" />
             <district name="扶绥县" index="532200" />
             <district name="江洲区" index="532200" />
@@ -682,14 +695,14 @@
             <district name="天等县" index="532200" />
             <district name="其他" index="532200" />
         </city>
-        <city name="防城港市">
+        <city name="防城港市" index="6">
             <district name="东兴市" index="538000" />
             <district name="防城区" index="538000" />
             <district name="港口区" index="538000" />
             <district name="上思县" index="538000" />
             <district name="其他" index="538000" />
         </city>
-        <city name="贵港市">
+        <city name="贵港市" index="8">
             <district name="港北区" index="537100" />
             <district name="港南区" index="537100" />
             <district name="桂平市" index="537100" />
@@ -697,7 +710,7 @@
             <district name="覃塘区" index="537100" />
             <district name="其他" index="537100" />
         </city>
-        <city name="桂林市">
+        <city name="桂林市" index="3">
             <district name="叠彩区" index="541000" />
             <district name="恭城瑶族自治县" index="541000" />
             <district name="灌阳县" index="541000" />
@@ -717,7 +730,7 @@
             <district name="资源县" index="541000" />
             <district name="其他" index="541000" />
         </city>
-        <city name="河池市">
+        <city name="河池市" index="12">
             <district name="巴马瑶族自治县" index="547000" />
             <district name="大化瑶族自治县" index="547000" />
             <district name="东兰县" index="547000" />
@@ -731,14 +744,13 @@
             <district name="宜州市" index="547000" />
             <district name="其他" index="547000" />
         </city>
-        <city name="贺州市">
-            <district name="八步区" index="542800" />
-            <district name="富川瑶族自治县" index="542800" />
-            <district name="昭平县" index="542800" />
-            <district name="钟山县" index="542800" />
-            <district name="其他" index="542800" />
+        <city name="贺州市" index="11">
+            <district name="八步区" index="1" />
+            <district name="富川瑶族自治县" index="4" />
+            <district name="昭平县" index="2" />
+            <district name="钟山县" index="3" />
         </city>
-        <city name="来宾市">
+        <city name="来宾市" index="13">
             <district name="合山市" index="546100" />
             <district name="金秀瑶族自治县" index="546100" />
             <district name="武宣县" index="546100" />
@@ -747,7 +759,7 @@
             <district name="兴宾区" index="546100" />
             <district name="其他" index="546100" />
         </city>
-        <city name="柳州市">
+        <city name="柳州市" index="2">
             <district name="城中区" index="545000" />
             <district name="柳北区" index="545000" />
             <district name="柳城县" index="545000" />
@@ -760,7 +772,7 @@
             <district name="鱼峰区" index="545000" />
             <district name="其他" index="545000" />
         </city>
-        <city name="南宁市">
+        <city name="南宁市" index="1">
             <district name="宾阳县" index="530000" />
             <district name="横县" index="530000" />
             <district name="江南区" index="530000" />
@@ -775,14 +787,14 @@
             <district name="邕宁区" index="530000" />
             <district name="其他" index="530000" />
         </city>
-        <city name="钦州市">
+        <city name="钦州市" index="7">
             <district name="灵山县" index="535000" />
             <district name="浦北县" index="535000" />
             <district name="钦北区" index="535000" />
             <district name="钦南区" index="535000" />
             <district name="其他" index="535000" />
         </city>
-        <city name="梧州市">
+        <city name="梧州市" index="4">
             <district name="苍梧县" index="543000" />
             <district name="岑溪市" index="543000" />
             <district name="长洲区" index="543000" />
@@ -792,7 +804,7 @@
             <district name="万秀区" index="543000" />
             <district name="其他" index="543000" />
         </city>
-        <city name="玉林市">
+        <city name="玉林市" index="9">
             <district name="北流市" index="537000" />
             <district name="博白县" index="537000" />
             <district name="陆川县" index="537000" />
@@ -802,8 +814,9 @@
             <district name="其他" index="537000" />
         </city>
     </province>
+
     <province name="贵州省" index="25">
-        <city name="安顺市">
+        <city name="安顺市" index="4">
             <district name="关岭布依族苗族自治县" index="561000" />
             <district name="平坝县" index="561000" />
             <district name="普定县" index="561000" />
@@ -812,7 +825,7 @@
             <district name="紫云苗族布依族自治县" index="561000" />
             <district name="其他" index="561000" />
         </city>
-        <city name="毕节地区">
+        <city name="毕节地区" index="7">
             <district name="毕节市" index="551700" />
             <district name="大方县" index="551700" />
             <district name="赫章县" index="551700" />
@@ -823,7 +836,7 @@
             <district name="织金县" index="551700" />
             <district name="其他" index="551700" />
         </city>
-        <city name="贵阳市">
+        <city name="贵阳市" index="1">
             <district name="白云区" index="550000" />
             <district name="花溪区" index="550000" />
             <district name="开阳县" index="550000" />
@@ -836,14 +849,14 @@
             <district name="云岩区" index="550000" />
             <district name="其他" index="550000" />
         </city>
-        <city name="六盘水市">
+        <city name="六盘水市" index="2">
             <district name="六枝特区" index="553000" />
             <district name="盘县" index="553000" />
             <district name="水城县" index="553000" />
             <district name="钟山区" index="553000" />
             <district name="其他" index="553000" />
         </city>
-        <city name="黔东南苗族侗族自治州">
+        <city name="黔东南苗族侗族自治州" index="8">
             <district name="岑巩县" index="556000" />
             <district name="从江县" index="556000" />
             <district name="丹寨县" index="556000" />
@@ -862,7 +875,7 @@
             <district name="镇远县" index="556000" />
             <district name="其他" index="556000" />
         </city>
-        <city name="黔南布依族苗族自治州">
+        <city name="黔南布依族苗族自治州" index="9">
             <district name="长顺县" index="558000" />
             <district name="都匀市" index="558000" />
             <district name="独山县" index="558000" />
@@ -877,7 +890,7 @@
             <district name="瓮安县" index="558000" />
             <district name="其他" index="558000" />
         </city>
-        <city name="黔西南布依族苗族自治州">
+        <city name="黔西南布依族苗族自治州" index="6">
             <district name="安龙县" index="562400" />
             <district name="册亨县" index="562400" />
             <district name="普安县" index="562400" />
@@ -888,7 +901,7 @@
             <district name="贞丰县" index="562400" />
             <district name="其他" index="562400" />
         </city>
-        <city name="铜仁地区">
+        <city name="铜仁地区" index="5">
             <district name="德江县" index="554300" />
             <district name="江口县" index="554300" />
             <district name="石阡县" index="554300" />
@@ -901,7 +914,7 @@
             <district name="玉屏侗族自治县" index="554300" />
             <district name="其他" index="554300" />
         </city>
-        <city name="遵义市">
+        <city name="遵义市" index="3">
             <district name="赤水市" index="563000" />
             <district name="道真仡佬族苗族自治县" index="563000" />
             <district name="凤冈县" index="563000" />
@@ -951,7 +964,7 @@
     </province>
     
     <province name="河北省" index="18">
-        <city name="保定市">
+        <city name="保定市" index="6">
             <district name="安国市" index="071000" />
             <district name="安新县" index="071000" />
             <district name="北市区" index="071000" />
@@ -979,7 +992,7 @@
             <district name="涿州市" index="071000" />
             <district name="其他" index="71000" />
         </city>
-        <city name="沧州市">
+        <city name="沧州市" index="9">
             <district name="泊头市" index="061000" />
             <district name="沧县" index="061000" />
             <district name="东光县" index="061000" />
@@ -998,7 +1011,7 @@
             <district name="运河区" index="061000" />
             <district name="其他" index="61000" />
         </city>
-        <city name="承德市">
+        <city name="承德市" index="8">
             <district name="承德县" index="067000" />
             <district name="丰宁满族自治县" index="067000" />
             <district name="宽城满族自治县" index="067000" />
@@ -1012,7 +1025,7 @@
             <district name="鹰手营子矿区" index="067000" />
             <district name="其他" index="67000" />
         </city>
-        <city name="邯郸市">
+        <city name="邯郸市" index="4">
             <district name="成安县" index="056000" />
             <district name="磁县" index="056000" />
             <district name="丛台区" index="056000" />
@@ -1034,7 +1047,7 @@
             <district name="永年县" index="056000" />
             <district name="其他" index="56000" />
         </city>
-        <city name="衡水市">
+        <city name="衡水市" index="11">
             <district name="安平县" index="053000" />
             <district name="阜城县" index="053000" />
             <district name="故城县" index="053000" />
@@ -1048,7 +1061,7 @@
             <district name="枣强县" index="053000" />
             <district name="其他" index="53000" />
         </city>
-        <city name="廊坊市">
+        <city name="廊坊市" index="10">
             <district name="安次区" index="065000" />
             <district name="霸州市" index="065000" />
             <district name="大厂回族自治县" index="065000" />
@@ -1061,7 +1074,7 @@
             <district name="永清县" index="065000" />
             <district name="其他" index="65000" />
         </city>
-        <city name="秦皇岛市">
+        <city name="秦皇岛市" index="3">
             <district name="北戴河区" index="066000" />
             <district name="昌黎县" index="066000" />
             <district name="抚宁县" index="066000" />
@@ -1072,7 +1085,7 @@
             <district name="山海关区" index="066000" />
             <district name="其他" index="66000" />
         </city>
-        <city name="石家庄市">
+        <city name="石家庄市" index="1">
             <district name="长安区" index="050000" />
             <district name="高邑县" index="050000" />
             <district name="藁城市" index="050000" />
@@ -1098,7 +1111,7 @@
             <district name="正定县" index="050000" />
             <district name="其他" index="50000" />
         </city>
-        <city name="唐山市">
+        <city name="唐山市" index="2">
             <district name="丰南区" index="063000" />
             <district name="丰润区" index="063000" />
             <district name="古冶区" index="063000" />
@@ -1115,7 +1128,7 @@
             <district name="遵化市" index="063000" />
             <district name="其他" index="63000" />
         </city>
-        <city name="邢台市">
+        <city name="邢台市" index="5">
             <district name="柏乡县" index="054000" />
             <district name="广宗县" index="054000" />
             <district name="巨鹿县" index="054000" />
@@ -1137,7 +1150,7 @@
             <district name="邢台县" index="054000" />
             <district name="其他" index="54000" />
         </city>
-        <city name="张家口市">
+        <city name="张家口市" index="7">
             <district name="赤城县" index="075000" />
             <district name="崇礼县" index="075000" />
             <district name="沽源县" index="075000" />
@@ -1158,8 +1171,9 @@
             <district name="其他" index="75000" />
         </city>
     </province>
+
     <province name="河南省" index="17">
-        <city name="安阳市">
+        <city name="安阳市" index="5">
             <district name="安阳县" index="454900" />
             <district name="北关区" index="454900" />
             <district name="滑县" index="454900" />
@@ -1171,7 +1185,7 @@
             <district name="殷都区" index="454900" />
             <district name="其他" index="454900" />
         </city>
-        <city name="鹤壁市">
+        <city name="鹤壁市" index="6">
             <district name="鹤山区" index="458000" />
             <district name="浚县" index="458000" />
             <district name="淇滨区" index="458000" />
@@ -1179,7 +1193,8 @@
             <district name="山城区" index="458000" />
             <district name="其他" index="458000" />
         </city>
-        <city name="焦作市">
+        <city name="济源市" index="18" />
+        <city name="焦作市" index="8">
             <district name="博爱县" index="454100" />
             <district name="解放区" index="454100" />
             <district name="孟州市" index="454100" />
@@ -1191,7 +1206,7 @@
             <district name="中站区" index="454100" />
             <district name="其他" index="454100" />
         </city>
-        <city name="开封市">
+        <city name="开封市" index="2">
             <district name="鼓楼区" index="475000" />
             <district name="金明区" index="475000" />
             <district name="开封县" index="475000" />
@@ -1204,7 +1219,7 @@
             <district name="禹王台区" index="475000" />
             <district name="其他" index="475000" />
         </city>
-        <city name="洛阳市">
+        <city name="洛阳市" index="3">
             <district name="瀍河回族区" index="471000" />
             <district name="吉利区" index="471000" />
             <district name="涧西区" index="471000" />
@@ -1222,7 +1237,7 @@
             <district name="宜阳县" index="471000" />
             <district name="其他" index="471000" />
         </city>
-        <city name="漯河市">
+        <city name="漯河市" index="11">
             <district name="临颍县" index="462000" />
             <district name="舞阳县" index="462000" />
             <district name="郾城区" index="462000" />
@@ -1230,7 +1245,7 @@
             <district name="召陵区" index="462000" />
             <district name="其他" index="462000" />
         </city>
-        <city name="南阳市">
+        <city name="南阳市" index="13">
             <district name="邓州市" index="473000" />
             <district name="方城县" index="473000" />
             <district name="内乡县" index="473000" />
@@ -1246,7 +1261,7 @@
             <district name="镇平县" index="473000" />
             <district name="其他" index="473000" />
         </city>
-        <city name="平顶山市">
+        <city name="平顶山市" index="4">
             <district name="宝丰县" index="467000" />
             <district name="郏县" index="467000" />
             <district name="鲁山县" index="467000" />
@@ -1259,7 +1274,7 @@
             <district name="湛河区" index="467000" />
             <district name="其他" index="467000" />
         </city>
-        <city name="濮阳市">
+        <city name="濮阳市" index="9">
             <district name="范县" index="457000" />
             <district name="华龙区" index="457000" />
             <district name="南乐县" index="457000" />
@@ -1268,7 +1283,7 @@
             <district name="台前县" index="457000" />
             <district name="其他" index="457000" />
         </city>
-        <city name="三门峡市">
+        <city name="三门峡市" index="12">
             <district name="湖滨区" index="472000" />
             <district name="灵宝市" index="472000" />
             <district name="卢氏县" index="472000" />
@@ -1277,7 +1292,7 @@
             <district name="义马市" index="472000" />
             <district name="其他" index="472000" />
         </city>
-        <city name="商丘市">
+        <city name="商丘市" index="14">
             <district name="梁园区" index="476000" />
             <district name="民权县" index="476000" />
             <district name="宁陵县" index="476000" />
@@ -1289,7 +1304,7 @@
             <district name="柘城县" index="476000" />
             <district name="其他" index="476000" />
         </city>
-        <city name="新乡市">
+        <city name="新乡市" index="7">
             <district name="长垣县" index="453000" />
             <district name="封丘县" index="453000" />
             <district name="凤泉区" index="453000" />
@@ -1304,7 +1319,7 @@
             <district name="原阳县" index="453000" />
             <district name="其他" index="453000" />
         </city>
-        <city name="信阳市">
+        <city name="信阳市" index="15">
             <district name="固始县" index="464000" />
             <district name="光山县" index="464000" />
             <district name="淮滨县" index="464000" />
@@ -1317,7 +1332,7 @@
             <district name="新县" index="464000" />
             <district name="其他" index="464000" />
         </city>
-        <city name="许昌市">
+        <city name="许昌市" index="10">
             <district name="长葛市" index="461000" />
             <district name="魏都区" index="461000" />
             <district name="襄城县" index="461000" />
@@ -1326,7 +1341,7 @@
             <district name="禹州市" index="461000" />
             <district name="其他" index="461000" />
         </city>
-        <city name="郑州市">
+        <city name="郑州市" index="1">
             <district name="登封市" index="450000" />
             <district name="二七区" index="450000" />
             <district name="巩义市" index="450000" />
@@ -1341,7 +1356,7 @@
             <district name="中原区" index="450000" />
             <district name="其他" index="450000" />
         </city>
-        <city name="周口市">
+        <city name="周口市" index="16">
             <district name="川汇区" index="466000" />
             <district name="郸城县" index="466000" />
             <district name="扶沟县" index="466000" />
@@ -1354,7 +1369,7 @@
             <district name="项城市" index="466000" />
             <district name="其他" index="466000" />
         </city>
-        <city name="驻马店市">
+        <city name="驻马店市" index="17">
             <district name="泌阳县" index="463000" />
             <district name="平舆县" index="463000" />
             <district name="确山县" index="463000" />
@@ -1368,8 +1383,9 @@
             <district name="其他" index="463000" />
         </city>
     </province>
+
     <province name="黑龙江省" index="9">
-        <city name="大庆市">
+        <city name="大庆市" index="6">
             <district name="大同区" index="163000" />
             <district name="杜尔伯特蒙古族自治县" index="163000" />
             <district name="红岗区" index="163000" />
@@ -1381,7 +1397,7 @@
             <district name="肇州县" index="163000" />
             <district name="其他" index="163000" />
         </city>
-        <city name="大兴安岭地区">
+        <city name="大兴安岭地区" index="13">
             <district name="呼玛县" index="165000" />
             <district name="呼中区" index="165000" />
             <district name="加格达奇区" index="165000" />
@@ -1391,7 +1407,7 @@
             <district name="新林区" index="165000" />
             <district name="其他" index="165000" />
         </city>
-        <city name="哈尔滨市">
+        <city name="哈尔滨市" index="1">
             <district name="阿城区" index="150000" />
             <district name="巴彦县" index="150000" />
             <district name="宾县" index="150000" />
@@ -1412,7 +1428,7 @@
             <district name="依兰县" index="150000" />
             <district name="其他" index="150000" />
         </city>
-        <city name="鹤岗市">
+        <city name="鹤岗市" index="4">
             <district name="东山区" index="154100" />
             <district name="工农区" index="154100" />
             <district name="萝北县" index="154100" />
@@ -1423,7 +1439,7 @@
             <district name="兴山区" index="154100" />
             <district name="其他" index="154100" />
         </city>
-        <city name="黑河市">
+        <city name="黑河市" index="11">
             <district name="爱辉区" index="164300" />
             <district name="北安市" index="164300" />
             <district name="嫩江县" index="164300" />
@@ -1432,7 +1448,7 @@
             <district name="逊克县" index="164300" />
             <district name="其他" index="164300" />
         </city>
-        <city name="鸡西市">
+        <city name="鸡西市" index="3">
             <district name="城子河区" index="158100" />
             <district name="滴道区" index="158100" />
             <district name="恒山区" index="158100" />
@@ -1444,7 +1460,7 @@
             <district name="密山市" index="158100" />
             <district name="其他" index="158100" />
         </city>
-        <city name="佳木斯市">
+        <city name="佳木斯市" index="8">
             <district name="东风区" index="154000" />
             <district name="抚远县" index="154000" />
             <district name="富锦市" index="154000" />
@@ -1457,7 +1473,7 @@
             <district name="向阳区" index="154000" />
             <district name="其他" index="154000" />
         </city>
-        <city name="牡丹江市">
+        <city name="牡丹江市" index="10">
             <district name="爱民区" index="157000" />
             <district name="东安区" index="157000" />
             <district name="东宁县" index="157000" />
@@ -1470,14 +1486,14 @@
             <district name="阳明区" index="157000" />
             <district name="其他" index="157000" />
         </city>
-        <city name="七台河市">
+        <city name="七台河市" index="9">
             <district name="勃利县" index="154600" />
             <district name="茄子河区" index="154600" />
             <district name="桃山区" index="154600" />
             <district name="新兴区" index="154600" />
             <district name="其他" index="154600" />
         </city>
-        <city name="齐齐哈尔市">
+        <city name="齐齐哈尔市" index="2">
             <district name="昂昂溪区" index="161000" />
             <district name="拜泉县" index="161000" />
             <district name="富拉尔基区" index="161000" />
@@ -1496,7 +1512,7 @@
             <district name="依安县" index="161000" />
             <district name="其他" index="161000" />
         </city>
-        <city name="双鸭山市">
+        <city name="双鸭山市" index="5">
             <district name="宝清县" index="155100" />
             <district name="宝山区" index="155100" />
             <district name="集贤县" index="155100" />
@@ -1507,7 +1523,7 @@
             <district name="友谊县" index="155100" />
             <district name="其他" index="155100" />
         </city>
-        <city name="绥化市">
+        <city name="绥化市" index="12">
             <district name="安达市" index="152000" />
             <district name="北林区" index="152000" />
             <district name="海伦市" index="152000" />
@@ -1520,7 +1536,7 @@
             <district name="肇东市" index="152000" />
             <district name="其他" index="152000" />
         </city>
-        <city name="伊春市">
+        <city name="伊春市" index="7">
             <district name="翠峦区" index="152300" />
             <district name="带岭区" index="152300" />
             <district name="红星区" index="152300" />
@@ -1541,14 +1557,14 @@
             <district name="其他" index="152300" />
         </city>
     </province>
+
     <province name="湖北省" index="18">
-        <city name="鄂州市">
-            <district name="鄂城区" index="436000" />
-            <district name="华容区" index="436000" />
-            <district name="梁子湖区" index="436000" />
-            <district name="其他" index="436000" />
+        <city name="鄂州市" index="6">
+            <district name="鄂城区" index="3" />
+            <district name="华容区" index="2" />
+            <district name="梁子湖区" index="1" />
         </city>
-        <city name="恩施土家族苗族自治州">
+        <city name="恩施土家族苗族自治州" index="13">
             <district name="巴东县" index="445000" />
             <district name="恩施市" index="445000" />
             <district name="鹤峰县" index="445000" />
@@ -1559,7 +1575,7 @@
             <district name="宣恩县" index="445000" />
             <district name="其他" index="445000" />
         </city>
-        <city name="黄冈市">
+        <city name="黄冈市" index="10">
             <district name="红安县" index="438000" />
             <district name="黄梅县" index="438000" />
             <district name="黄州区" index="438000" />
@@ -1572,7 +1588,7 @@
             <district name="英山县" index="438000" />
             <district name="其他" index="438000" />
         </city>
-        <city name="黄石市">
+        <city name="黄石市" index="2">
             <district name="大冶市" index="435000" />
             <district name="黄石港区" index="435000" />
             <district name="铁山区" index="435000" />
@@ -1582,7 +1598,7 @@
             <district name="阳新县" index="435000" />
             <district name="其他" index="435000" />
         </city>
-        <city name="荆门市">
+        <city name="荆门市" index="7">
             <district name="东宝区" index="448000" />
             <district name="掇刀区" index="448000" />
             <district name="京山县" index="448000" />
@@ -1590,7 +1606,7 @@
             <district name="钟祥市" index="448000" />
             <district name="其他" index="448000" />
         </city>
-        <city name="荆州市">
+        <city name="荆州市" index="9">
             <district name="公安县" index="434000" />
             <district name="洪湖市" index="434000" />
             <district name="监利县" index="434000" />
@@ -1601,7 +1617,9 @@
             <district name="松滋市" index="434000" />
             <district name="其他" index="434000" />
         </city>
-        <city name="十堰市">
+        <city name="潜江市" index="15" />
+        <city name="神农架林区" index="17" />
+        <city name="十堰市" index="3">
             <district name="丹江口市" index="442000" />
             <district name="房县" index="442000" />
             <district name="茅箭区" index="442000" />
@@ -1612,12 +1630,13 @@
             <district name="竹溪县" index="442000" />
             <district name="其他" index="442000" />
         </city>
-        <city name="随州市">
-            <district name="广水市" index="441300" />
-            <district name="曾都区" index="441300" />
-            <district name="其他" index="441300" />
+        <city name="随州市" index="12">
+            <district name="广水市" index="3" />
+            <district name="随县" index="2" />
+            <district name="曾都区" index="1" />
         </city>
-        <city name="武汉市">
+        <city name="天门市" index="16" />
+        <city name="武汉市" index="1">
             <district name="蔡甸区" index="430000" />
             <district name="东西湖区" index="430000" />
             <district name="汉南区" index="430000" />
@@ -1633,7 +1652,8 @@
             <district name="新洲区" index="430000" />
             <district name="其他" index="430000" />
         </city>
-        <city name="咸宁市">
+        <city name="仙桃市" index="14" />
+        <city name="咸宁市" index="11">
             <district name="赤壁市" index="437000" />
             <district name="崇阳县" index="437000" />
             <district name="嘉鱼县" index="437000" />
@@ -1642,19 +1662,18 @@
             <district name="咸安区" index="437000" />
             <district name="其他" index="437000" />
         </city>
-        <city name="襄樊市">
-            <district name="保康县" index="441000" />
-            <district name="樊城区" index="441000" />
-            <district name="谷城县" index="441000" />
-            <district name="老河口市" index="441000" />
-            <district name="南漳县" index="441000" />
-            <district name="襄城区" index="441000" />
-            <district name="襄阳区" index="441000" />
-            <district name="宜城市" index="441000" />
-            <district name="枣阳市" index="441000" />
-            <district name="其他" index="441000" />
+        <city name="襄阳市" index="5">
+            <district name="保康县" index="6" />
+            <district name="樊城区" index="2" />
+            <district name="谷城县" index="5" />
+            <district name="老河口市" index="7" />
+            <district name="南漳县" index="4" />
+            <district name="襄城区" index="1" />
+            <district name="襄州区" index="3" />
+            <district name="宜城市" index="9" />
+            <district name="枣阳市" index="8" />
         </city>
-        <city name="孝感市">
+        <city name="孝感市" index="8">
             <district name="安陆市" index="432100" />
             <district name="大悟县" index="432100" />
             <district name="汉川市" index="432100" />
@@ -1664,7 +1683,7 @@
             <district name="云梦县" index="432100" />
             <district name="其他" index="432100" />
         </city>
-        <city name="宜昌市">
+        <city name="宜昌市"  index="4">
             <district name="长阳土家族自治县" index="443000" />
             <district name="当阳市" index="443000" />
             <district name="点军区" index="443000" />
@@ -1681,8 +1700,9 @@
             <district name="其他" index="443000" />
         </city>
     </province>
+
     <province name="湖南省" index="19">
-        <city name="长沙市">
+        <city name="长沙市" index="1">
             <district name="长沙县" index="410000" />
             <district name="芙蓉区" index="410000" />
             <district name="开福区" index="410000" />
@@ -1694,7 +1714,7 @@
             <district name="岳麓区" index="410000" />
             <district name="其他" index="410000" />
         </city>
-        <city name="常德市">
+        <city name="常德市" index="7">
             <district name="安乡县" index="415000" />
             <district name="鼎城区" index="415000" />
             <district name="汉寿县" index="415000" />
@@ -1706,7 +1726,7 @@
             <district name="武陵区" index="415000" />
             <district name="其他" index="415000" />
         </city>
-        <city name="郴州市">
+        <city name="郴州市" index="10">
             <district name="安仁县" index="423000" />
             <district name="北湖区" index="423000" />
             <district name="桂东县" index="423000" />
@@ -1720,7 +1740,7 @@
             <district name="资兴市" index="423000" />
             <district name="其他" index="423000" />
         </city>
-        <city name="衡阳市">
+        <city name="衡阳市" index="4">
             <district name="常宁市" index="421000" />
             <district name="衡东县" index="421000" />
             <district name="衡南县" index="421000" />
@@ -1735,7 +1755,7 @@
             <district name="珠晖区" index="421000" />
             <district name="其他" index="421000" />
         </city>
-        <city name="怀化市">
+        <city name="怀化市" index="12">
             <district name="辰溪县" index="418000" />
             <district name="鹤城区" index="418000" />
             <district name="洪江市" index="418000" />
@@ -1750,7 +1770,7 @@
             <district name="中方县" index="418000" />
             <district name="其他" index="418000" />
         </city>
-        <city name="娄底市">
+        <city name="娄底市" index="13">
             <district name="冷水江市" index="417000" />
             <district name="涟源市" index="417000" />
             <district name="娄星区" index="417000" />
@@ -1758,7 +1778,7 @@
             <district name="新化县" index="417000" />
             <district name="其他" index="417000" />
         </city>
-        <city name="邵阳市">
+        <city name="邵阳市" index="5">
             <district name="北塔区" index="422000" />
             <district name="城步苗族自治县" index="422000" />
             <district name="大祥区" index="422000" />
@@ -1773,7 +1793,7 @@
             <district name="新邵县" index="422000" />
             <district name="其他" index="422000" />
         </city>
-        <city name="湘潭市">
+        <city name="湘潭市" index="3">
             <district name="韶山市" index="411100" />
             <district name="湘潭县" index="411100" />
             <district name="湘乡市" index="411100" />
@@ -1781,7 +1801,7 @@
             <district name="岳塘区" index="411100" />
             <district name="其他" index="411100" />
         </city>
-        <city name="湘西土家族苗族自治州">
+        <city name="湘西土家族苗族自治州" index="14">
             <district name="保靖县" index="416000" />
             <district name="凤凰县" index="416000" />
             <district name="古丈县" index="416000" />
@@ -1792,7 +1812,7 @@
             <district name="永顺县" index="416000" />
             <district name="其他" index="416000" />
         </city>
-        <city name="益阳市">
+        <city name="益阳市" index="9">
             <district name="安化县" index="413000" />
             <district name="赫山区" index="413000" />
             <district name="南县" index="413000" />
@@ -1801,7 +1821,7 @@
             <district name="资阳区" index="413000" />
             <district name="其他" index="413000" />
         </city>
-        <city name="永州市">
+        <city name="永州市" index="11">
             <district name="道县" index="425000" />
             <district name="东安县" index="425000" />
             <district name="江华瑶族自治县" index="425000" />
@@ -1815,7 +1835,7 @@
             <district name="新田县" index="425000" />
             <district name="其他" index="425000" />
         </city>
-        <city name="岳阳市">
+        <city name="岳阳市" index="6">
             <district name="华容县" index="414000" />
             <district name="君山区" index="414000" />
             <district name="临湘市" index="414000" />
@@ -1827,14 +1847,14 @@
             <district name="云溪区" index="414000" />
             <district name="其他" index="414000" />
         </city>
-        <city name="张家界市">
+        <city name="张家界市" index="8">
             <district name="慈利县" index="427000" />
             <district name="桑植县" index="427000" />
             <district name="武陵源区" index="427000" />
             <district name="永定区" index="427000" />
             <district name="其他" index="427000" />
         </city>
-        <city name="株洲市">
+        <city name="株洲市" index="2">
             <district name="茶陵县" index="412000" />
             <district name="荷塘区" index="412000" />
             <district name="醴陵市" index="412000" />
@@ -1847,8 +1867,9 @@
             <district name="其他" index="412000" />
         </city>
     </province>
+
     <province name="吉林省" index="8">
-        <city name="白城市">
+        <city name="白城市" index="8">
             <district name="大安市" index="137000" />
             <district name="洮北区" index="137000" />
             <district name="洮南市" index="137000" />
@@ -1856,7 +1877,7 @@
             <district name="镇赉县" index="137000" />
             <district name="其他" index="137000" />
         </city>
-        <city name="白山市">
+        <city name="白山市" index="6">
             <district name="八道江区" index="134300" />
             <district name="长白朝鲜族自治县" index="134300" />
             <district name="抚松县" index="134300" />
@@ -1865,7 +1886,7 @@
             <district name="临江市" index="134300" />
             <district name="其他" index="134300" />
         </city>
-        <city name="长春市">
+        <city name="长春市" index="1">
             <district name="朝阳区" index="130000" />
             <district name="德惠市" index="130000" />
             <district name="二道区" index="130000" />
@@ -1878,7 +1899,7 @@
             <district name="榆树市" index="130000" />
             <district name="其他" index="130000" />
         </city>
-        <city name="吉林市">
+        <city name="吉林市" index="2">
             <district name="昌邑区" index="132000" />
             <district name="船营区" index="132000" />
             <district name="丰满区" index="132000" />
@@ -1890,14 +1911,13 @@
             <district name="永吉县" index="132000" />
             <district name="其他" index="132000" />
         </city>
-        <city name="辽源市">
-            <district name="东丰县" index="136200" />
-            <district name="东辽县" index="136200" />
-            <district name="龙山区" index="136200" />
-            <district name="西安区" index="136200" />
-            <district name="其他" index="136200" />
+        <city name="辽源市" index="4">
+            <district name="东丰县" index="3" />
+            <district name="东辽县" index="4" />
+            <district name="龙山区" index="1" />
+            <district name="西安区" index="2" />
         </city>
-        <city name="四平市">
+        <city name="四平市" index="3">
             <district name="公主岭市" index="136000" />
             <district name="梨树县" index="136000" />
             <district name="双辽市" index="136000" />
@@ -1906,7 +1926,7 @@
             <district name="伊通满族自治县" index="136000" />
             <district name="其他" index="136000" />
         </city>
-        <city name="松原市">
+        <city name="松原市" index="7">
             <district name="长岭县" index="131100" />
             <district name="扶余县" index="131100" />
             <district name="宁江区" index="131100" />
@@ -1914,7 +1934,7 @@
             <district name="乾安县" index="131100" />
             <district name="其他" index="131100" />
         </city>
-        <city name="通化市">
+        <city name="通化市" index="5">
             <district name="东昌区" index="134000" />
             <district name="二道江区" index="134000" />
             <district name="辉南县" index="134000" />
@@ -1924,7 +1944,7 @@
             <district name="通化县" index="134000" />
             <district name="其他" index="134000" />
         </city>
-        <city name="延边朝鲜族自治州">
+        <city name="延边朝鲜族自治州" index="9">
             <district name="安图县" index="133000" />
             <district name="敦化市" index="133000" />
             <district name="和龙市" index="133000" />
@@ -1936,8 +1956,9 @@
             <district name="其他" index="133000" />
         </city>
     </province>
+
     <province name="江苏省" index="11">
-        <city name="常州市">
+        <city name="常州市" index="4">
             <district name="金坛市" index="213000" />
             <district name="溧阳市" index="213000" />
             <district name="戚墅堰区" index="213000" />
@@ -1947,7 +1968,7 @@
             <district name="钟楼区" index="213000" />
             <district name="其他" index="213000" />
         </city>
-        <city name="淮安市">
+        <city name="淮安市" index="8">
             <district name="楚州区" index="223200" />
             <district name="洪泽县" index="223200" />
             <district name="淮阴区" index="223200" />
@@ -1958,7 +1979,7 @@
             <district name="盱眙县" index="223200" />
             <district name="其他" index="223200" />
         </city>
-        <city name="连云港市">
+        <city name="连云港市" index="7">
             <district name="东海县" index="222000" />
             <district name="赣榆县" index="222000" />
             <district name="灌南县" index="222000" />
@@ -1968,7 +1989,7 @@
             <district name="新浦区" index="222000" />
             <district name="其他" index="222000" />
         </city>
-        <city name="南京市">
+        <city name="南京市" index="1">
             <district name="白下区" index="210000" />
             <district name="高淳县" index="210000" />
             <district name="鼓楼区" index="210000" />
@@ -1984,7 +2005,7 @@
             <district name="雨花台区" index="210000" />
             <district name="其他" index="210000" />
         </city>
-        <city name="南通市">
+        <city name="南通市" index="6">
             <district name="崇川区" index="226000" />
             <district name="港闸区" index="226000" />
             <district name="海安县" index="226000" />
@@ -1995,7 +2016,7 @@
             <district name="通州市" index="226000" />
             <district name="其他" index="226000" />
         </city>
-        <city name="苏州市">
+        <city name="苏州市" index="5">
             <district name="沧浪区" index="215000" />
             <district name="常熟市" index="215000" />
             <district name="虎丘区" index="215000" />
@@ -2009,7 +2030,7 @@
             <district name="张家港市" index="215000" />
             <district name="其他" index="215000" />
         </city>
-        <city name="宿迁市">
+        <city name="宿迁市" index="13">
             <district name="沭阳县" index="223800" />
             <district name="泗洪县" index="223800" />
             <district name="泗阳县" index="223800" />
@@ -2017,7 +2038,7 @@
             <district name="宿豫区" index="223800" />
             <district name="其他" index="223800" />
         </city>
-        <city name="泰州市">
+        <city name="泰州市" index="12">
             <district name="高港区" index="225300" />
             <district name="海陵区" index="225300" />
             <district name="姜堰市" index="225300" />
@@ -2026,7 +2047,7 @@
             <district name="兴化市" index="225300" />
             <district name="其他" index="225300" />
         </city>
-        <city name="无锡市">
+        <city name="无锡市" index="2">
             <district name="北塘区" index="214000" />
             <district name="滨湖区" index="214000" />
             <district name="崇安区" index="214000" />
@@ -2037,7 +2058,7 @@
             <district name="宜兴市" index="214000" />
             <district name="其他" index="214000" />
         </city>
-        <city name="徐州市">
+        <city name="徐州市" index="3">
             <district name="丰县" index="221000" />
             <district name="鼓楼区" index="221000" />
             <district name="贾汪区" index="221000" />
@@ -2051,7 +2072,7 @@
             <district name="云龙区" index="221000" />
             <district name="其他" index="221000" />
         </city>
-        <city name="盐城市">
+        <city name="盐城市" index="9">
             <district name="滨海县" index="224000" />
             <district name="大丰市" index="224000" />
             <district name="东台市" index="224000" />
@@ -2063,7 +2084,7 @@
             <district name="盐都区" index="224000" />
             <district name="其他" index="224000" />
         </city>
-        <city name="扬州市">
+        <city name="扬州市" index="10">
             <district name="宝应县" index="225000" />
             <district name="高邮市" index="225000" />
             <district name="广陵区" index="225000" />
@@ -2073,7 +2094,7 @@
             <district name="仪征市" index="225000" />
             <district name="其他" index="225000" />
         </city>
-        <city name="镇江市">
+        <city name="镇江市" index="11">
             <district name="丹徒区" index="212000" />
             <district name="丹阳市" index="212000" />
             <district name="京口区" index="212000" />
@@ -2083,8 +2104,9 @@
             <district name="其他" index="212000" />
         </city>
     </province>
+
     <province name="江西省" index="15">
-        <city name="抚州市">
+        <city name="抚州市" index="10">
             <district name="崇仁县" index="332900" />
             <district name="东乡县" index="332900" />
             <district name="广昌县" index="332900" />
@@ -2098,7 +2120,7 @@
             <district name="资溪县" index="332900" />
             <district name="其他" index="332900" />
         </city>
-        <city name="赣州市">
+        <city name="赣州市" index="7">
             <district name="安远县" index="341000" />
             <district name="崇义县" index="341000" />
             <district name="大余县" index="341000" />
@@ -2119,7 +2141,7 @@
             <district name="章贡区" index="341000" />
             <district name="其他" index="341000" />
         </city>
-        <city name="吉安市">
+        <city name="吉安市" index="8">
             <district name="安福县" index="343000" />
             <district name="吉安县" index="343000" />
             <district name="吉水县" index="343000" />
@@ -2135,14 +2157,14 @@
             <district name="永新县" index="343000" />
             <district name="其他" index="343000" />
         </city>
-        <city name="景德镇市">
+        <city name="景德镇市" index="2">
             <district name="昌江区" index="333000" />
             <district name="浮梁县" index="333000" />
             <district name="乐平市" index="333000" />
             <district name="珠山区" index="333000" />
             <district name="其他" index="333000" />
         </city>
-        <city name="九江市">
+        <city name="九江市" index="4">
             <district name="德安县" index="332000" />
             <district name="都昌县" index="332000" />
             <district name="共青城" index="332000" />
@@ -2158,7 +2180,7 @@
             <district name="永修县" index="332000" />
             <district name="其他" index="332000" />
         </city>
-        <city name="南昌市">
+        <city name="南昌市" index="1">
             <district name="安义县" index="330000" />
             <district name="东湖区" index="330000" />
             <district name="进贤县" index="330000" />
@@ -2170,7 +2192,7 @@
             <district name="新建县" index="330000" />
             <district name="其他" index="330000" />
         </city>
-        <city name="萍乡市">
+        <city name="萍乡市" index="3">
             <district name="安源区" index="337000" />
             <district name="莲花县" index="337000" />
             <district name="芦溪县" index="337000" />
@@ -2178,7 +2200,7 @@
             <district name="湘东区" index="337000" />
             <district name="其他" index="337000" />
         </city>
-        <city name="上饶市">
+        <city name="上饶市" index="11">
             <district name="德兴市" index="334000" />
             <district name="广丰县" index="334000" />
             <district name="横峰县" index="334000" />
@@ -2193,12 +2215,11 @@
             <district name="玉山县" index="334000" />
             <district name="其他" index="334000" />
         </city>
-        <city name="新余市">
-            <district name="分宜县" index="338000" />
-            <district name="渝水区" index="338000" />
-            <district name="其他" index="338000" />
+        <city name="新余市" index="5">
+            <district name="分宜县" index="2" />
+            <district name="渝水区" index="1" />
         </city>
-        <city name="宜春市">
+        <city name="宜春市" index="9">
             <district name="丰城市" index="336000" />
             <district name="奉新县" index="336000" />
             <district name="高安市" index="336000" />
@@ -2211,15 +2232,16 @@
             <district name="樟树市" index="336000" />
             <district name="其他" index="336000" />
         </city>
-        <city name="鹰潭市">
+        <city name="鹰潭市" index="6">
             <district name="贵溪市" index="335000" />
             <district name="余江县" index="335000" />
             <district name="月湖区" index="335000" />
             <district name="其他" index="335000" />
         </city>
     </province>
+
     <province name="辽宁省" index="7">
-        <city name="鞍山市">
+        <city name="鞍山市" index="3">
             <district name="海城市" index="114000" />
             <district name="立山区" index="114000" />
             <district name="千山区" index="114000" />
@@ -2229,7 +2251,7 @@
             <district name="岫岩满族自治县" index="114000" />
             <district name="其他" index="114000" />
         </city>
-        <city name="本溪市">
+        <city name="本溪市" index="5">
             <district name="本溪满族自治县" index="117000" />
             <district name="桓仁满族自治县" index="117000" />
             <district name="明山区" index="117000" />
@@ -2238,7 +2260,7 @@
             <district name="溪湖区" index="117000" />
             <district name="其他" index="117000" />
         </city>
-        <city name="朝阳市">
+        <city name="朝阳市" index="13">
             <district name="北票市" index="122000" />
             <district name="朝阳县" index="122000" />
             <district name="建平县" index="122000" />
@@ -2248,7 +2270,7 @@
             <district name="双塔区" index="122000" />
             <district name="其他" index="122000" />
         </city>
-        <city name="大连市">
+        <city name="大连市" index="2">
             <district name="长海县" index="116000" />
             <district name="甘井子区" index="116000" />
             <district name="金州区" index="116000" />
@@ -2261,7 +2283,7 @@
             <district name="庄河市" index="116000" />
             <district name="其他" index="116000" />
         </city>
-        <city name="丹东市">
+        <city name="丹东市" index="6">
             <district name="东港市" index="118000" />
             <district name="凤城市" index="118000" />
             <district name="宽甸满族自治县" index="118000" />
@@ -2270,7 +2292,7 @@
             <district name="振兴区" index="118000" />
             <district name="其他" index="118000" />
         </city>
-        <city name="抚顺市">
+        <city name="抚顺市" index="4">
             <district name="东洲区" index="113000" />
             <district name="抚顺县" index="113000" />
             <district name="清原满族自治县" index="113000" />
@@ -2280,7 +2302,7 @@
             <district name="新抚区" index="113000" />
             <district name="其他" index="113000" />
         </city>
-        <city name="阜新市">
+        <city name="阜新市" index="9">
             <district name="阜新蒙古族自治县" index="123000" />
             <district name="海州区" index="123000" />
             <district name="清河门区" index="123000" />
@@ -2290,7 +2312,7 @@
             <district name="彰武县" index="123000" />
             <district name="其他" index="123000" />
         </city>
-        <city name="葫芦岛市">
+        <city name="葫芦岛市" index="14">
             <district name="建昌县" index="125000" />
             <district name="连山区" index="125000" />
             <district name="龙港区" index="125000" />
@@ -2299,7 +2321,7 @@
             <district name="兴城市" index="125000" />
             <district name="其他" index="125000" />
         </city>
-        <city name="锦州市">
+        <city name="锦州市" index="7">
             <district name="北镇市" index="121000" />
             <district name="古塔区" index="121000" />
             <district name="黑山县" index="121000" />
@@ -2309,7 +2331,7 @@
             <district name="义县" index="121000" />
             <district name="其他" index="121000" />
         </city>
-        <city name="辽阳市">
+        <city name="辽阳市" index="10">
             <district name="白塔区" index="111000" />
             <district name="灯塔市" index="111000" />
             <district name="弓长岭区" index="111000" />
@@ -2319,14 +2341,14 @@
             <district name="文圣区" index="111000" />
             <district name="其他" index="111000" />
         </city>
-        <city name="盘锦市">
+        <city name="盘锦市" index="11">
             <district name="大洼县" index="124000" />
             <district name="盘山县" index="124000" />
             <district name="双台子区" index="124000" />
             <district name="兴隆台区" index="124000" />
             <district name="其他" index="124000" />
         </city>
-        <city name="沈阳市">
+        <city name="沈阳市" index="1">
             <district name="大东区" index="110000" />
             <district name="东陵区" index="110000" />
             <district name="法库县" index="110000" />
@@ -2342,7 +2364,7 @@
             <district name="于洪区" index="110000" />
             <district name="其他" index="110000" />
         </city>
-        <city name="铁岭市">
+        <city name="铁岭市" index="12">
             <district name="昌图县" index="112000" />
             <district name="调兵山市" index="112000" />
             <district name="开原市" index="112000" />
@@ -2352,7 +2374,7 @@
             <district name="银州区" index="112000" />
             <district name="其他" index="112000" />
         </city>
-        <city name="营口市">
+        <city name="营口市" index="8">
             <district name="鲅鱼圈区" index="115000" />
             <district name="大石桥市" index="115000" />
             <district name="盖州市" index="115000" />
@@ -2362,24 +2384,23 @@
             <district name="其他" index="115000" />
         </city>
     </province>
+
     <province name="内蒙古自治区" index="6">
-        <city name="阿拉善盟">
-            <district name="阿拉善右旗" index="750300" />
-            <district name="阿拉善左旗" index="750300" />
-            <district name="额济纳旗" index="750300" />
-            <district name="其他" index="750300" />
+        <city name="阿拉善盟" index="12">
+            <district name="阿拉善右旗" index="2" />
+            <district name="阿拉善左旗" index="1" />
+            <district name="额济纳旗" index="3" />
         </city>
-        <city name="巴彦淖尔市">
-            <district name="磴口县" index="014400" />
-            <district name="杭锦后旗" index="014400" />
-            <district name="临河区" index="014400" />
-            <district name="乌拉特后旗" index="014400" />
-            <district name="乌拉特前旗" index="014400" />
-            <district name="乌拉特中旗" index="014400" />
-            <district name="五原县" index="014400" />
-            <district name="其他" index="14400" />
+        <city name="巴彦淖尔市" index="8">
+            <district name="磴口县" index="3" />
+            <district name="杭锦后旗" index="7" />
+            <district name="临河区" index="1" />
+            <district name="乌拉特后旗" index="6" />
+            <district name="乌拉特前旗" index="4" />
+            <district name="乌拉特中旗" index="5" />
+            <district name="五原县" index="2" />
         </city>
-        <city name="包头市">
+        <city name="包头市" index="2">
             <district name="白云鄂博矿区" index="014000" />
             <district name="达尔罕茂明安联合旗" index="014000" />
             <district name="东河区" index="014000" />
@@ -2391,7 +2412,7 @@
             <district name="土默特右旗" index="014000" />
             <district name="其他" index="14000" />
         </city>
-        <city name="赤峰市">
+        <city name="赤峰市" index="4">
             <district name="阿鲁科尔沁旗" index="024000" />
             <district name="敖汉旗" index="024000" />
             <district name="巴林右旗" index="024000" />
@@ -2406,7 +2427,7 @@
             <district name="元宝山区" index="024000" />
             <district name="其他" index="24000" />
         </city>
-        <city name="鄂尔多斯市">
+        <city name="鄂尔多斯市" index="6">
             <district name="达拉特旗" index="010300" />
             <district name="东胜区" index="010300" />
             <district name="鄂托克旗" index="010300" />
@@ -2417,7 +2438,7 @@
             <district name="准格尔旗" index="010300" />
             <district name="其他" index="10300" />
         </city>
-        <city name="呼和浩特市">
+        <city name="呼和浩特市" index="1">
             <district name="和林格尔县" index="010000" />
             <district name="回民区" index="010000" />
             <district name="清水河县" index="010000" />
@@ -2429,7 +2450,7 @@
             <district name="玉泉区" index="010000" />
             <district name="其他" index="10000" />
         </city>
-        <city name="呼伦贝尔市">
+        <city name="呼伦贝尔市" index="7">
             <district name="阿荣旗" index="021000" />
             <district name="陈巴尔虎旗" index="021000" />
             <district name="额尔古纳市" index="021000" />
@@ -2445,7 +2466,7 @@
             <district name="扎兰屯市" index="021000" />
             <district name="其他" index="21000" />
         </city>
-        <city name="通辽市">
+        <city name="通辽市" index="5">
             <district name="霍林郭勒市" index="028000" />
             <district name="开鲁县" index="028000" />
             <district name="科尔沁区" index="028000" />
@@ -2456,13 +2477,12 @@
             <district name="扎鲁特旗" index="028000" />
             <district name="其他" index="28000" />
         </city>
-        <city name="乌海市">
-            <district name="海勃湾区" index="016000" />
-            <district name="海南区" index="016000" />
-            <district name="乌达区" index="016000" />
-            <district name="其他" index="16000" />
+        <city name="乌海市" index="3">
+            <district name="海勃湾区" index="1" />
+            <district name="海南区" index="2" />
+            <district name="乌达区" index="3" />
         </city>
-        <city name="乌兰察布市">
+        <city name="乌兰察布市" index="9">
             <district name="察哈尔右翼后旗" index="012000" />
             <district name="察哈尔右翼前旗" index="012000" />
             <district name="察哈尔右翼中旗" index="012000" />
@@ -2476,7 +2496,7 @@
             <district name="卓资县" index="012000" />
             <district name="其他" index="12000" />
         </city>
-        <city name="锡林郭勒盟">
+        <city name="锡林郭勒盟" index="11">
             <district name="阿巴嘎旗" index="011100" />
             <district name="东乌珠穆沁旗" index="011100" />
             <district name="多伦县" index="011100" />
@@ -2491,18 +2511,18 @@
             <district name="正镶白旗" index="011100" />
             <district name="其他" index="11100" />
         </city>
-        <city name="兴安盟">
-            <district name="阿尔山市" index="137400" />
-            <district name="科尔沁右翼前旗" index="137400" />
-            <district name="科尔沁右翼中旗" index="137400" />
-            <district name="突泉县" index="137400" />
-            <district name="乌兰浩特市" index="137400" />
-            <district name="扎赉特旗" index="137400" />
-            <district name="其他" index="137400" />
+        <city name="兴安盟" index="10">
+            <district name="阿尔山市" index="2" />
+            <district name="科尔沁右翼前旗" index="3" />
+            <district name="科尔沁右翼中旗" index="4" />
+            <district name="突泉县" index="6" />
+            <district name="乌兰浩特市" index="1" />
+            <district name="扎赉特旗" index="5" />
         </city>
     </province>
+
     <province name="宁夏回族自治区" index="31">
-        <city name="固原市">
+        <city name="固原市" index="4">
             <district name="泾源县" index="756000" />
             <district name="隆德县" index="756000" />
             <district name="彭阳县" index="756000" />
@@ -2510,20 +2530,19 @@
             <district name="原州区" index="756000" />
             <district name="其他" index="756000" />
         </city>
-        <city name="石嘴山市">
-            <district name="大武口区" index="753000" />
-            <district name="惠农区" index="753000" />
-            <district name="平罗县" index="753000" />
-            <district name="其他" index="753000" />
+        <city name="石嘴山市" index="2">
+            <district name="大武口区" index="1" />
+            <district name="惠农区" index="2" />
+            <district name="平罗县" index="3" />
         </city>
-        <city name="吴忠市">
+        <city name="吴忠市" index="3">
             <district name="利通区" index="751100" />
             <district name="青铜峡市" index="751100" />
             <district name="同心县" index="751100" />
             <district name="盐池县" index="751100" />
             <district name="其他" index="751100" />
         </city>
-        <city name="银川市">
+        <city name="银川市" index="1">
             <district name="贺兰县" index="750000" />
             <district name="金凤区" index="750000" />
             <district name="灵武市" index="750000" />
@@ -2532,15 +2551,16 @@
             <district name="永宁县" index="750000" />
             <district name="其他" index="750000" />
         </city>
-        <city name="中卫市">
+        <city name="中卫市" index="5">
             <district name="海原县" index="751700" />
             <district name="沙坡头区" index="751700" />
             <district name="中宁县" index="751700" />
             <district name="其他" index="751700" />
         </city>
     </province>
+
     <province name="青海省" index="30">
-        <city name="果洛藏族自治州">
+        <city name="果洛藏族自治州" index="6">
             <district name="班玛县" index="814000" />
             <district name="达日县" index="814000" />
             <district name="甘德县" index="814000" />
@@ -2549,14 +2569,14 @@
             <district name="玛沁县" index="814000" />
             <district name="其他" index="814000" />
         </city>
-        <city name="海北藏族自治州">
+        <city name="海北藏族自治州" index="3">
             <district name="刚察县" index="812200" />
             <district name="海晏县" index="812200" />
             <district name="门源回族自治县" index="812200" />
             <district name="祁连县" index="812200" />
             <district name="其他" index="812200" />
         </city>
-        <city name="海东地区">
+        <city name="海东地区" index="2">
             <district name="互助土族自治县" index="810600" />
             <district name="化隆回族自治县" index="810600" />
             <district name="乐都县" index="810600" />
@@ -2565,7 +2585,7 @@
             <district name="循化撒拉族自治县" index="810600" />
             <district name="其他" index="810600" />
         </city>
-        <city name="海南藏族自治州">
+        <city name="海南藏族自治州" index="5">
             <district name="共和县" index="813000" />
             <district name="贵德县" index="813000" />
             <district name="贵南县" index="813000" />
@@ -2573,7 +2593,7 @@
             <district name="兴海县" index="813000" />
             <district name="其他" index="813000" />
         </city>
-        <city name="海西蒙古族藏族自治州">
+        <city name="海西蒙古族藏族自治州" index="8">
             <district name="大柴旦" index="817000" />
             <district name="德令哈市" index="817000" />
             <district name="都兰县" index="817000" />
@@ -2584,14 +2604,14 @@
             <district name="乌兰县" index="817000" />
             <district name="其他" index="817000" />
         </city>
-        <city name="黄南藏族自治州">
+        <city name="黄南藏族自治州" index="4">
             <district name="河南蒙古族自治县" index="811300" />
             <district name="尖扎县" index="811300" />
             <district name="同仁县" index="811300" />
             <district name="泽库县" index="811300" />
             <district name="其他" index="811300" />
         </city>
-        <city name="西宁市">
+        <city name="西宁市" index="1">
             <district name="城北区" index="810000" />
             <district name="城东区" index="810000" />
             <district name="城西区" index="810000" />
@@ -2601,7 +2621,7 @@
             <district name="湟中县" index="810000" />
             <district name="其他" index="810000" />
         </city>
-        <city name="玉树藏族自治州">
+        <city name="玉树藏族自治州" index="7">
             <district name="称多县" index="815000" />
             <district name="囊谦县" index="815000" />
             <district name="曲麻莱县" index="815000" />
@@ -2611,202 +2631,186 @@
             <district name="其他" index="815000" />
         </city>
     </province>
+
     <province name="山东省" index="16">
-        <city name="滨州市">
-            <district name="滨城区" index="256600" />
-            <district name="博兴县" index="256600" />
-            <district name="惠民县" index="256600" />
-            <district name="无棣县" index="256600" />
-            <district name="阳信县" index="256600" />
-            <district name="沾化县" index="256600" />
-            <district name="邹平县" index="256600" />
-            <district name="其他" index="256600" />
+        <city name="滨州市" index="16">
+            <district name="滨城区" index="1" />
+            <district name="博兴县" index="6" />
+            <district name="惠民县" index="2" />
+            <district name="无棣县" index="4" />
+            <district name="阳信县" index="3" />
+            <district name="沾化县" index="5" />
+            <district name="邹平县" index="7" />
         </city>
-        <city name="德州市">
-            <district name="德城区" index="253000" />
-            <district name="乐陵市" index="253000" />
-            <district name="临邑县" index="253000" />
-            <district name="陵县" index="253000" />
-            <district name="宁津县" index="253000" />
-            <district name="平原县" index="253000" />
-            <district name="齐河县" index="253000" />
-            <district name="庆云县" index="253000" />
-            <district name="武城县" index="253000" />
-            <district name="夏津县" index="253000" />
-            <district name="禹城市" index="253000" />
-            <district name="其他" index="253000" />
+        <city name="德州市" index="14">
+            <district name="德城区" index="1" />
+            <district name="乐陵市" index="10" />
+            <district name="临邑县" index="5" />
+            <district name="陵县" index="2" />
+            <district name="宁津县" index="3" />
+            <district name="平原县" index="7" />
+            <district name="齐河县" index="6" />
+            <district name="庆云县" index="4" />
+            <district name="武城县" index="9" />
+            <district name="夏津县" index="8" />
+            <district name="禹城市" index="11" />
         </city>
-        <city name="东营市">
-            <district name="东营区" index="257000" />
-            <district name="广饶县" index="257000" />
-            <district name="河口区" index="257000" />
-            <district name="垦利县" index="257000" />
-            <district name="利津县" index="257000" />
-            <district name="其他" index="257000" />
+        <city name="东营市" index="5">
+            <district name="东营区" index="1" />
+            <district name="广饶县" index="5" />
+            <district name="河口区" index="2" />
+            <district name="垦利县" index="3" />
+            <district name="利津县" index="4" />
         </city>
-        <city name="菏泽市">
-            <district name="曹县" index="274000" />
-            <district name="成武县" index="274000" />
-            <district name="单县" index="274000" />
-            <district name="定陶县" index="274000" />
-            <district name="东明县" index="274000" />
-            <district name="巨野县" index="274000" />
-            <district name="鄄城县" index="274000" />
-            <district name="牡丹区" index="274000" />
-            <district name="郓城县" index="274000" />
-            <district name="其他" index="274000" />
+        <city name="菏泽市" index="17">
+            <district name="曹县" index="2" />
+            <district name="成武县" index="4" />
+            <district name="单县" index="3" />
+            <district name="定陶县" index="8" />
+            <district name="东明县" index="9" />
+            <district name="巨野县" index="5" />
+            <district name="鄄城县" index="7" />
+            <district name="牡丹区" index="1" />
+            <district name="郓城县" index="6" />
         </city>
-        <city name="济南市">
-            <district name="长清区" index="250000" />
-            <district name="槐荫区" index="250000" />
-            <district name="济阳县" index="250000" />
-            <district name="历城区" index="250000" />
-            <district name="历下区" index="250000" />
-            <district name="平阴县" index="250000" />
-            <district name="商河县" index="250000" />
-            <district name="市中区" index="250000" />
-            <district name="天桥区" index="250000" />
-            <district name="章丘市" index="250000" />
-            <district name="其他" index="250000" />
+        <city name="济南市" index="1">
+            <district name="长清区" index="6" />
+            <district name="槐荫区" index="3" />
+            <district name="济阳县" index="8" />
+            <district name="历城区" index="5" />
+            <district name="历下区" index="1" />
+            <district name="平阴县" index="7" />
+            <district name="商河县" index="9" />
+            <district name="市中区" index="2" />
+            <district name="天桥区" index="4" />
+            <district name="章丘市" index="10" />
         </city>
-        <city name="济宁市">
-            <district name="嘉祥县" index="272100" />
-            <district name="金乡县" index="272100" />
-            <district name="梁山县" index="272100" />
-            <district name="曲阜市" index="272100" />
-            <district name="任城区" index="272100" />
-            <district name="市中区" index="272100" />
-            <district name="泗水县" index="272100" />
-            <district name="微山县" index="272100" />
-            <district name="汶上县" index="272100" />
-            <district name="兖州市" index="272100" />
-            <district name="鱼台县" index="272100" />
-            <district name="邹城市" index="272100" />
-            <district name="其他" index="272100" />
+        <city name="济宁市" index="8">
+            <district name="嘉祥县" index="6" />
+            <district name="金乡县" index="5" />
+            <district name="梁山县" index="9" />
+            <district name="曲阜市" index="10" />
+            <district name="任城区" index="2" />
+            <district name="市中区" index="1" />
+            <district name="泗水县" index="8" />
+            <district name="微山县" index="3" />
+            <district name="汶上县" index="7" />
+            <district name="兖州市" index="11" />
+            <district name="鱼台县" index="4" />
+            <district name="邹城市" index="12" />
         </city>
-        <city name="莱芜市">
-            <district name="钢城区" index="271100" />
-            <district name="莱城区" index="271100" />
-            <district name="其他" index="271100" />
+        <city name="莱芜市" index="12">
+            <district name="钢城区" index="2" />
+            <district name="莱城区" index="1" />
         </city>
-        <city name="聊城市">
-            <district name="茌平县" index="252000" />
-            <district name="东阿县" index="252000" />
-            <district name="东昌府区" index="252000" />
-            <district name="高唐县" index="252000" />
-            <district name="冠县" index="252000" />
-            <district name="临清市" index="252000" />
-            <district name="莘县" index="252000" />
-            <district name="阳谷县" index="252000" />
-            <district name="其他" index="252000" />
+        <city name="聊城市" index="15">
+            <district name="茌平县" index="4" />
+            <district name="东阿县" index="5" />
+            <district name="东昌府区" index="1" />
+            <district name="高唐县" index="7" />
+            <district name="冠县" index="6" />
+            <district name="临清市" index="8" />
+            <district name="莘县" index="3" />
+            <district name="阳谷县" index="2" />
         </city>
-        <city name="临沂市">
-            <district name="苍山县" index="276000" />
-            <district name="费县" index="276000" />
-            <district name="河东区" index="276000" />
-            <district name="莒南县" index="276000" />
-            <district name="兰山区" index="276000" />
-            <district name="临沭县" index="276000" />
-            <district name="罗庄区" index="276000" />
-            <district name="蒙阴县" index="276000" />
-            <district name="平邑县" index="276000" />
-            <district name="郯城县" index="276000" />
-            <district name="沂南县" index="276000" />
-            <district name="沂水县" index="276000" />
-            <district name="其他" index="276000" />
+        <city name="临沂市" index="13">
+            <district name="苍山县" index="7" />
+            <district name="费县" index="8" />
+            <district name="河东区" index="3" />
+            <district name="莒南县" index="10" />
+            <district name="兰山区" index="1" />
+            <district name="临沭县" index="12" />
+            <district name="罗庄区" index="2" />
+            <district name="蒙阴县" index="11" />
+            <district name="平邑县" index="9" />
+            <district name="郯城县" index="5" />
+            <district name="沂南县" index="4" />
+            <district name="沂水县" index="6" />
         </city>
-        <city name="青岛市">
-            <district name="城阳区" index="266000" />
-            <district name="黄岛区" index="266000" />
-            <district name="即墨市" index="266000" />
-            <district name="胶南市" index="266000" />
-            <district name="胶州市" index="266000" />
-            <district name="莱西市" index="266000" />
-            <district name="崂山区" index="266000" />
-            <district name="李沧区" index="266000" />
-            <district name="平度市" index="266000" />
-            <district name="市北区" index="266000" />
-            <district name="市南区" index="266000" />
-            <district name="四方区" index="266000" />
-            <district name="其他" index="266000" />
+        <city name="青岛市" index="2">
+            <district name="城阳区" index="7" />
+            <district name="黄岛区" index="4" />
+            <district name="即墨市" index="9" />
+            <district name="胶南市" index="11" />
+            <district name="胶州市" index="8" />
+            <district name="莱西市" index="12" />
+            <district name="崂山区" index="5" />
+            <district name="李沧区" index="6" />
+            <district name="平度市" index="10" />
+            <district name="市北区" index="2" />
+            <district name="市南区" index="1" />
+            <district name="四方区" index="3" />
         </city>
-        <city name="日照市">
-            <district name="东港区" index="276800" />
-            <district name="莒县" index="276800" />
-            <district name="岚山区" index="276800" />
-            <district name="五莲县" index="276800" />
-            <district name="其他" index="276800" />
+        <city name="日照市" index="11">
+            <district name="东港区" index="1" />
+            <district name="莒县" index="4" />
+            <district name="岚山区" index="2" />
+            <district name="五莲县" index="3" />
         </city>
-        <city name="泰安市">
-            <district name="岱岳区" index="271000" />
-            <district name="东平县" index="271000" />
-            <district name="肥城市" index="271000" />
-            <district name="宁阳县" index="271000" />
-            <district name="泰山区" index="271000" />
-            <district name="新泰市" index="271000" />
-            <district name="其他" index="271000" />
+        <city name="泰安市" index="9">
+            <district name="岱岳区" index="2" />
+            <district name="东平县" index="4" />
+            <district name="肥城市" index="6" />
+            <district name="宁阳县" index="3" />
+            <district name="泰山区" index="1" />
+            <district name="新泰市" index="5" />
         </city>
-        <city name="威海市">
-            <district name="环翠区" index="265700" />
-            <district name="荣成市" index="265700" />
-            <district name="乳山市" index="265700" />
-            <district name="文登市" index="265700" />
-            <district name="其他" index="265700" />
+        <city name="威海市" index="10">
+            <district name="环翠区" index="1" />
+            <district name="荣成市" index="3" />
+            <district name="乳山市" index="4" />
+            <district name="文登市" index="2" />
         </city>
-        <city name="潍坊市">
-            <district name="安丘市" index="261000" />
-            <district name="昌乐县" index="261000" />
-            <district name="昌邑市" index="261000" />
-            <district name="坊子区" index="261000" />
-            <district name="高密市" index="261000" />
-            <district name="寒亭区" index="261000" />
-            <district name="奎文区" index="261000" />
-            <district name="临朐县" index="261000" />
-            <district name="青州市" index="261000" />
-            <district name="寿光市" index="261000" />
-            <district name="潍城区" index="261000" />
-            <district name="诸城市" index="261000" />
-            <district name="其他" index="261000" />
+        <city name="潍坊市" index="7">
+            <district name="安丘市" index="10" />
+            <district name="昌乐县" index="12" />
+            <district name="昌邑市" index="6" />
+            <district name="坊子区" index="3" />
+            <district name="高密市" index="11" />
+            <district name="寒亭区" index="2" />
+            <district name="奎文区" index="4" />
+            <district name="临朐县" index="5" />
+            <district name="青州市" index="7" />
+            <district name="寿光市" index="9" />
+            <district name="潍城区" index="1" />
+            <district name="诸城市" index="8" />
         </city>
-        <city name="烟台市">
-            <district name="长岛县" index="264000" />
-            <district name="福山区" index="264000" />
-            <district name="海阳市" index="264000" />
-            <district name="开发区" index="264000" />
-            <district name="莱山区" index="264000" />
-            <district name="莱阳市" index="264000" />
-            <district name="莱州市" index="264000" />
-            <district name="龙口市" index="264000" />
-            <district name="牟平区" index="264000" />
-            <district name="蓬莱市" index="264000" />
-            <district name="栖霞市" index="264000" />
-            <district name="招远市" index="264000" />
-            <district name="芝罘区" index="264000" />
-            <district name="其他" index="264000" />
+        <city name="烟台市" index="6">
+            <district name="长岛县" index="5" />
+            <district name="福山区" index="2" />
+            <district name="海阳市" index="12" />
+            <district name="莱山区" index="4" />
+            <district name="莱阳市" index="7" />
+            <district name="莱州市" index="8" />
+            <district name="龙口市" index="6" />
+            <district name="牟平区" index="3" />
+            <district name="蓬莱市" index="9" />
+            <district name="栖霞市" index="11" />
+            <district name="招远市" index="10" />
+            <district name="芝罘区" index="1" />
         </city>
-        <city name="枣庄市">
-            <district name="山亭区" index="277100" />
-            <district name="市中区" index="277100" />
-            <district name="台儿庄区" index="277100" />
-            <district name="滕州市" index="277100" />
-            <district name="薛城区" index="277100" />
-            <district name="峄城区" index="277100" />
-            <district name="其他" index="277100" />
+        <city name="枣庄市" index="4">
+            <district name="山亭区" index="5" />
+            <district name="市中区" index="1" />
+            <district name="台儿庄区" index="4" />
+            <district name="滕州市" index="6" />
+            <district name="薛城区" index="2" />
+            <district name="峄城区" index="3" />
         </city>
-        <city name="淄博市">
-            <district name="博山区" index="255000" />
-            <district name="高青县" index="255000" />
-            <district name="桓台县" index="255000" />
-            <district name="临淄区" index="255000" />
-            <district name="沂源县" index="255000" />
-            <district name="张店区" index="255000" />
-            <district name="周村区" index="255000" />
-            <district name="淄川区" index="255000" />
-            <district name="其他" index="255000" />
+        <city name="淄博市" index="3">
+            <district name="博山区" index="3" />
+            <district name="高青县" index="7" />
+            <district name="桓台县" index="6" />
+            <district name="临淄区" index="4" />
+            <district name="沂源县" index="8" />
+            <district name="张店区" index="2" />
+            <district name="周村区" index="5" />
+            <district name="淄川区" index="1" />
         </city>
     </province>
+
     <province name="山西省" index="5">
-        <city name="长治市">
+        <city name="长治市" index="4">
             <district name="长治县" index="046000" />
             <district name="长子县" index="046000" />
             <district name="城区" index="046000" />
@@ -2822,7 +2826,7 @@
             <district name="襄垣县" index="046000" />
             <district name="其他" index="46000" />
         </city>
-        <city name="大同市">
+        <city name="大同市" index="2">
             <district name="城区" index="037000" />
             <district name="大同县" index="037000" />
             <district name="广灵县" index="037000" />
@@ -2836,7 +2840,7 @@
             <district name="左云县" index="037000" />
             <district name="其他" index="37000" />
         </city>
-        <city name="晋城市">
+        <city name="晋城市" index="5">
             <district name="城区" index="048000" />
             <district name="高平市" index="048000" />
             <district name="陵川县" index="048000" />
@@ -2845,7 +2849,7 @@
             <district name="泽州县" index="048000" />
             <district name="其他" index="48000" />
         </city>
-        <city name="晋中市">
+        <city name="晋中市" index="7">
             <district name="和顺县" index="030600" />
             <district name="介休市" index="030600" />
             <district name="灵石县" index="030600" />
@@ -2859,7 +2863,7 @@
             <district name="左权县" index="030600" />
             <district name="其他" index="30600" />
         </city>
-        <city name="临汾市">
+        <city name="临汾市" index="10">
             <district name="安泽县" index="041000" />
             <district name="大宁县" index="041000" />
             <district name="汾西县" index="041000" />
@@ -2879,7 +2883,7 @@
             <district name="永和县" index="041000" />
             <district name="其他" index="41000" />
         </city>
-        <city name="吕梁市">
+        <city name="吕梁市" index="11">
             <district name="方山县" index="030500" />
             <district name="汾阳市" index="030500" />
             <district name="交城县" index="030500" />
@@ -2895,7 +2899,7 @@
             <district name="中阳县" index="030500" />
             <district name="其他" index="30500" />
         </city>
-        <city name="朔州市">
+        <city name="朔州市" index="6">
             <district name="怀仁县" index="036000" />
             <district name="平鲁区" index="036000" />
             <district name="山阴县" index="036000" />
@@ -2904,7 +2908,7 @@
             <district name="右玉县" index="036000" />
             <district name="其他" index="36000" />
         </city>
-        <city name="太原市">
+        <city name="太原市" index="1">
             <district name="古交市" index="030000" />
             <district name="尖草坪区" index="030000" />
             <district name="晋源区" index="030000" />
@@ -2917,7 +2921,7 @@
             <district name="迎泽区" index="030000" />
             <district name="其他" index="30000" />
         </city>
-        <city name="忻州市">
+        <city name="忻州市" index="9">
             <district name="保德县" index="034000" />
             <district name="代县" index="034000" />
             <district name="定襄县" index="034000" />
@@ -2934,7 +2938,7 @@
             <district name="原平市" index="034000" />
             <district name="其他" index="34000" />
         </city>
-        <city name="阳泉市">
+        <city name="阳泉市" index="3">
             <district name="城区" index="045000" />
             <district name="郊区" index="045000" />
             <district name="矿区" index="045000" />
@@ -2942,7 +2946,7 @@
             <district name="盂县" index="045000" />
             <district name="其他" index="45000" />
         </city>
-        <city name="运城市">
+        <city name="运城市" index="8">
             <district name="河津市" index="044000" />
             <district name="稷山县" index="044000" />
             <district name="绛县" index="044000" />
@@ -2959,8 +2963,9 @@
             <district name="其他" index="44000" />
         </city>
     </province>
+
     <province name="陕西省" index="28">
-        <city name="安康市">
+        <city name="安康市" index="9">
             <district name="白河县" index="725000" />
             <district name="汉滨区" index="725000" />
             <district name="汉阴县" index="725000" />
@@ -2973,7 +2978,7 @@
             <district name="紫阳县" index="725000" />
             <district name="其他" index="725000" />
         </city>
-        <city name="宝鸡市">
+        <city name="宝鸡市" index="3">
             <district name="陈仓区" index="721000" />
             <district name="凤县" index="721000" />
             <district name="凤翔县" index="721000" />
@@ -2988,7 +2993,7 @@
             <district name="渭滨区" index="721000" />
             <district name="其他" index="721000" />
         </city>
-        <city name="汉中市">
+        <city name="汉中市" index="7">
             <district name="城固县" index="723000" />
             <district name="佛坪县" index="723000" />
             <district name="汉台区" index="723000" />
@@ -3002,7 +3007,7 @@
             <district name="镇巴县" index="723000" />
             <district name="其他" index="723000" />
         </city>
-        <city name="商洛市">
+        <city name="商洛市" index="10">
             <district name="丹凤县" index="726000" />
             <district name="洛南县" index="726000" />
             <district name="山阳县" index="726000" />
@@ -3012,14 +3017,14 @@
             <district name="柞水县" index="726000" />
             <district name="其他" index="726000" />
         </city>
-        <city name="铜川市">
+        <city name="铜川市" index="2">
             <district name="王益区" index="727000" />
             <district name="耀州区" index="727000" />
             <district name="宜君县" index="727000" />
             <district name="印台区" index="727000" />
             <district name="其他" index="727000" />
         </city>
-        <city name="渭南市">
+        <city name="渭南市" index="5">
             <district name="白水县" index="714000" />
             <district name="澄城县" index="714000" />
             <district name="大荔县" index="714000" />
@@ -3033,7 +3038,7 @@
             <district name="潼关县" index="714000" />
             <district name="其他" index="714000" />
         </city>
-        <city name="西安市">
+        <city name="西安市" index="1">
             <district name="灞桥区" index="710000" />
             <district name="碑林区" index="710000" />
             <district name="长安区" index="710000" />
@@ -3049,7 +3054,7 @@
             <district name="周至县" index="710000" />
             <district name="其他" index="710000" />
         </city>
-        <city name="咸阳市">
+        <city name="咸阳市" index="4">
             <district name="彬县" index="712000" />
             <district name="长武县" index="712000" />
             <district name="淳化县" index="712000" />
@@ -3066,7 +3071,7 @@
             <district name="永寿县" index="712000" />
             <district name="其他" index="712000" />
         </city>
-        <city name="延安市">
+        <city name="延安市" index="6">
             <district name="安塞县" index="716000" />
             <district name="宝塔区" index="716000" />
             <district name="富县" index="716000" />
@@ -3081,7 +3086,7 @@
             <district name="子长县" index="716000" />
             <district name="其他" index="716000" />
         </city>
-        <city name="榆林市">
+        <city name="榆林市" index="8">
             <district name="定边县" index="719000" />
             <district name="府谷县" index="719000" />
             <district name="横山县" index="719000" />
@@ -3097,32 +3102,32 @@
             <district name="其他" index="719000" />
         </city>
     </province>
+
     <province name="上海市" index="10">
-        <city name="上海市">
-            <district name="宝山区" index="200000" />
-            <district name="长宁区" index="200000" />
-            <district name="崇明县" index="200000" />
-            <district name="奉贤区" index="200000" />
-            <district name="虹口区" index="200000" />
-            <district name="黄浦区" index="200000" />
-            <district name="嘉定区" index="200000" />
-            <district name="金山区" index="200000" />
-            <district name="静安区" index="200000" />
-            <district name="卢湾区" index="200000" />
-            <district name="闵行区" index="200000" />
-            <district name="南汇区" index="200000" />
-            <district name="浦东新区" index="200000" />
-            <district name="普陀区" index="200000" />
-            <district name="青浦区" index="200000" />
-            <district name="松江区" index="200000" />
-            <district name="徐汇区" index="200000" />
-            <district name="杨浦区" index="200000" />
-            <district name="闸北区" index="200000" />
-            <district name="其他" index="200000" />
+        <city name="上海市" index="1">
+            <district name="宝山区" index="11" />
+            <district name="长宁区" index="4" />
+            <district name="崇明县" index="18" />
+            <district name="奉贤区" index="16" />
+            <district name="虹口区" index="8" />
+            <district name="黄浦区" index="1" />
+            <district name="嘉定区" index="12" />
+            <district name="金山区" index="14" />
+            <district name="静安区" index="5" />
+            <district name="卢湾区" index="2" />
+            <district name="闵行区" index="10" />
+            <district name="浦东新区" index="13" />
+            <district name="普陀区" index="6" />
+            <district name="青浦区" index="17" />
+            <district name="松江区" index="15" />
+            <district name="徐汇区" index="3" />
+            <district name="杨浦区" index="9" />
+            <district name="闸北区" index="7" />
         </city>
     </province>
+
     <province name="四川省" index="24">
-        <city name="阿坝藏族羌族自治州">
+        <city name="阿坝藏族羌族自治州" index="19">
             <district name="阿坝县" index="624000" />
             <district name="黑水县" index="624000" />
             <district name="红原县" index="624000" />
@@ -3138,14 +3143,14 @@
             <district name="小金县" index="624000" />
             <district name="其他" index="624000" />
         </city>
-        <city name="巴中市">
+        <city name="巴中市" index="17">
             <district name="巴州区" index="636600" />
             <district name="南江县" index="636600" />
             <district name="平昌县" index="636600" />
             <district name="通江县" index="636600" />
             <district name="其他" index="636600" />
         </city>
-        <city name="成都市">
+        <city name="成都市" index="1">
             <district name="成华区" index="610000" />
             <district name="崇州市" index="610000" />
             <district name="大邑县" index="610000" />
@@ -3167,7 +3172,7 @@
             <district name="新津县" index="610000" />
             <district name="其他" index="610000" />
         </city>
-        <city name="达州市">
+        <city name="达州市" index="15">
             <district name="达县" index="635000" />
             <district name="大竹县" index="635000" />
             <district name="开江县" index="635000" />
@@ -3177,7 +3182,7 @@
             <district name="宣汉县" index="635000" />
             <district name="其他" index="635000" />
         </city>
-        <city name="德阳市">
+        <city name="德阳市" index="5">
             <district name="广汉市" index="618000" />
             <district name="旌阳区" index="618000" />
             <district name="罗江县" index="618000" />
@@ -3186,7 +3191,7 @@
             <district name="中江县" index="618000" />
             <district name="其他" index="618000" />
         </city>
-        <city name="甘孜藏族自治州">
+        <city name="甘孜藏族自治州" index="20">
             <district name="巴塘县" index="626000" />
             <district name="白玉县" index="626000" />
             <district name="丹巴县" index="626000" />
@@ -3207,7 +3212,7 @@
             <district name="雅江县" index="626000" />
             <district name="其他" index="626000" />
         </city>
-        <city name="广安市">
+        <city name="广安市" index="14">
             <district name="广安区" index="638500" />
             <district name="华蓥市" index="638500" />
             <district name="邻水县" index="638500" />
@@ -3215,7 +3220,7 @@
             <district name="岳池县" index="638500" />
             <district name="其他" index="638500" />
         </city>
-        <city name="广元市">
+        <city name="广元市" index="7">
             <district name="苍溪县" index="628000" />
             <district name="朝天区" index="628000" />
             <district name="剑阁县" index="628000" />
@@ -3225,7 +3230,7 @@
             <district name="元坝区" index="628000" />
             <district name="其他" index="628000" />
         </city>
-        <city name="乐山市">
+        <city name="乐山市" index="10">
             <district name="峨边彝族自治县" index="614000" />
             <district name="峨眉山市" index="614000" />
             <district name="夹江县" index="614000" />
@@ -3239,7 +3244,7 @@
             <district name="五通桥区" index="614000" />
             <district name="其他" index="614000" />
         </city>
-        <city name="凉山彝族自治州">
+        <city name="凉山彝族自治州" index="21">
             <district name="布拖县" index="615000" />
             <district name="德昌县" index="615000" />
             <district name="甘洛县" index="615000" />
@@ -3259,7 +3264,7 @@
             <district name="昭觉县" index="615000" />
             <district name="其他" index="615000" />
         </city>
-        <city name="泸州市">
+        <city name="泸州市" index="4">
             <district name="古蔺县" index="646000" />
             <district name="合江县" index="646000" />
             <district name="江阳区" index="646000" />
@@ -3269,7 +3274,7 @@
             <district name="叙永县" index="646000" />
             <district name="其他" index="646000" />
         </city>
-        <city name="眉山市">
+        <city name="眉山市" index="12">
             <district name="丹棱县" index="620000" />
             <district name="东坡区" index="620000" />
             <district name="洪雅县" index="620000" />
@@ -3278,7 +3283,7 @@
             <district name="仁寿县" index="620000" />
             <district name="其他" index="620000" />
         </city>
-        <city name="绵阳市">
+        <city name="绵阳市" index="6">
             <district name="安县" index="621000" />
             <district name="北川羌族自治县" index="621000" />
             <district name="涪城区" index="621000" />
@@ -3290,7 +3295,7 @@
             <district name="梓潼县" index="621000" />
             <district name="其他" index="621000" />
         </city>
-        <city name="内江市">
+        <city name="内江市" index="9">
             <district name="东兴区" index="641000" />
             <district name="隆昌县" index="641000" />
             <district name="市中区" index="641000" />
@@ -3298,7 +3303,7 @@
             <district name="资中县" index="641000" />
             <district name="其他" index="641000" />
         </city>
-        <city name="南充市">
+        <city name="南充市" index="11">
             <district name="高坪区" index="637000" />
             <district name="嘉陵区" index="637000" />
             <district name="阆中市" index="637000" />
@@ -3310,7 +3315,7 @@
             <district name="营山县" index="637000" />
             <district name="其他" index="637000" />
         </city>
-        <city name="攀枝花市">
+        <city name="攀枝花市" index="3">
             <district name="东区" index="617000" />
             <district name="米易县" index="617000" />
             <district name="仁和区" index="617000" />
@@ -3318,7 +3323,7 @@
             <district name="盐边县" index="617000" />
             <district name="其他" index="617000" />
         </city>
-        <city name="遂宁市">
+        <city name="遂宁市" index="8">
             <district name="安居区" index="629000" />
             <district name="船山区" index="629000" />
             <district name="大英县" index="629000" />
@@ -3326,7 +3331,7 @@
             <district name="射洪县" index="629000" />
             <district name="其他" index="629000" />
         </city>
-        <city name="雅安市">
+        <city name="雅安市" index="16">
             <district name="宝兴县" index="625000" />
             <district name="汉源县" index="625000" />
             <district name="芦山县" index="625000" />
@@ -3337,7 +3342,7 @@
             <district name="雨城区" index="625000" />
             <district name="其他" index="625000" />
         </city>
-        <city name="宜宾市">
+        <city name="宜宾市" index="13">
             <district name="长宁县" index="644000" />
             <district name="翠屏区" index="644000" />
             <district name="高县" index="644000" />
@@ -3350,14 +3355,14 @@
             <district name="宜宾县" index="644000" />
             <district name="其他" index="644000" />
         </city>
-        <city name="资阳市">
+        <city name="资阳市" index="18">
             <district name="安岳县" index="641300" />
             <district name="简阳市" index="641300" />
             <district name="乐至县" index="641300" />
             <district name="雁江区" index="641300" />
             <district name="其他" index="641300" />
         </city>
-        <city name="自贡市">
+        <city name="自贡市" index="2">
             <district name="大安区" index="643000" />
             <district name="富顺县" index="643000" />
             <district name="贡井区" index="643000" />
@@ -3367,6 +3372,33 @@
             <district name="其他" index="643000" />
         </city>
     </province>
+
+    <province name="台湾省" index="33">
+        <city name="台北市" index="1" />
+        <city name="高雄市" index="2" />
+        <city name="基隆市" index="3" />
+        <city name="台中市" index="4" />
+        <city name="台南市" index="5" />
+        <city name="新竹市" index="6" />
+        <city name="嘉义市" index="7" />
+        <city name="台北县" index="8" />
+        <city name="宜兰县" index="9" />
+        <city name="桃园县" index="10" />
+        <city name="新竹县" index="11" />
+        <city name="苗栗县" index="12" />
+        <city name="台中县" index="13" />
+        <city name="彰化县" index="14" />
+        <city name="南投县" index="15" />
+        <city name="云林县" index="16" />
+        <city name="嘉义县" index="17" />
+        <city name="台南县" index="18" />
+        <city name="高雄县" index="19" />
+        <city name="屏东县" index="20" />
+        <city name="台东县" index="21" />
+        <city name="花莲县" index="22" />
+        <city name="澎湖县" index="23" />
+    </province>
+
     <province name="天津市" index="3">
         <city name="天津市" index="1">
             <district name="宝坻区" index="15" />
@@ -3387,8 +3419,9 @@
             <district name="西青区" index="9" />
         </city>
     </province>
+
     <province name="西藏自治区" index="27">
-        <city name="阿里地区">
+        <city name="阿里地区" index="6">
             <district name="措勤县" index="859000" />
             <district name="噶尔县" index="859000" />
             <district name="改则县" index="859000" />
@@ -3398,7 +3431,7 @@
             <district name="札达县" index="859000" />
             <district name="其他" index="859000" />
         </city>
-        <city name="昌都地区">
+        <city name="昌都地区" index="2">
             <district name="八宿县" index="854000" />
             <district name="边坝县" index="854000" />
             <district name="察雅县" index="854000" />
@@ -3412,7 +3445,7 @@
             <district name="左贡县" index="854000" />
             <district name="其他" index="854000" />
         </city>
-        <city name="拉萨市">
+        <city name="拉萨市" index="1">
             <district name="达孜县" index="850000" />
             <district name="当雄县" index="850000" />
             <district name="堆龙德庆县" index="850000" />
@@ -3422,7 +3455,7 @@
             <district name="曲水县" index="850000" />
             <district name="其他" index="850000" />
         </city>
-        <city name="林芝地区">
+        <city name="林芝地区" index="7">
             <district name="波密县" index="860100" />
             <district name="察隅县" index="860100" />
             <district name="工布江达县" index="860100" />
@@ -3432,7 +3465,7 @@
             <district name="墨脱县" index="860100" />
             <district name="其他" index="860100" />
         </city>
-        <city name="那曲地区">
+        <city name="那曲地区" index="5">
             <district name="安多县" index="852000" />
             <district name="巴青县" index="852000" />
             <district name="班戈县" index="852000" />
@@ -3445,7 +3478,7 @@
             <district name="索县" index="852000" />
             <district name="其他" index="852000" />
         </city>
-        <city name="日喀则地区">
+        <city name="日喀则地区" index="4">
             <district name="昂仁县" index="857000" />
             <district name="白朗县" index="857000" />
             <district name="定结县" index="857000" />
@@ -3466,7 +3499,7 @@
             <district name="仲巴县" index="857000" />
             <district name="其他" index="857000" />
         </city>
-        <city name="山南地区">
+        <city name="山南地区" index="3">
             <district name="措美县" index="856000" />
             <district name="错那县" index="856000" />
             <district name="贡嘎县" index="856000" />
@@ -3482,8 +3515,32 @@
             <district name="其他" index="856000" />
         </city>
     </province>
+
+    <province name="香港" index="34">
+        <city name="香港特别行政区" index="1">
+            <district name="北区" index="12" />
+            <district name="大埔区" index="16" />
+            <district name="东区" index="2" />
+            <district name="观塘区" index="4" />
+            <district name="黄大仙区" index="7" />
+            <district name="九龙城区" index="3" />
+            <district name="葵青区" index="11" />
+            <district name="离岛区" index="10" />
+            <district name="南区" index="5" />
+            <district name="荃湾区" index="17" />
+            <district name="沙田区" index="14" />
+            <district name="深水涉区" index="6" />
+            <district name="屯门区" index="15" />
+            <district name="湾仔区" index="8" />
+            <district name="西贡区" index="13" />
+            <district name="油尖旺区" index="9" />
+            <district name="元朗区" index="18" />
+            <district name="中西区" index="1" />
+        </city>
+    </province>
+
     <province name="新疆维吾尔自治区" index="32">
-        <city name="阿克苏地区">
+        <city name="阿克苏地区" index="8">
             <district name="阿克苏市" index="843000" />
             <district name="阿瓦提县" index="843000" />
             <district name="拜城县" index="843000" />
@@ -3495,7 +3552,8 @@
             <district name="新和县" index="843000" />
             <district name="其他" index="843000" />
         </city>
-        <city name="阿勒泰地区">
+        <city name="阿拉尔" index="16" />
+        <city name="阿勒泰地区" index="14">
             <district name="阿勒泰市" index="836500" />
             <district name="北屯镇" index="836500" />
             <district name="布尔津县" index="836500" />
@@ -3506,7 +3564,7 @@
             <district name="青河县" index="836500" />
             <district name="其他" index="836500" />
         </city>
-        <city name="巴音郭楞蒙古自治州">
+        <city name="巴音郭楞蒙古自治州" index="7">
             <district name="博湖县" index="841000" />
             <district name="和静县" index="841000" />
             <district name="和硕县" index="841000" />
@@ -3518,13 +3576,14 @@
             <district name="焉耆回族自治县" index="841000" />
             <district name="其他" index="841000" />
         </city>
-        <city name="博尔塔拉蒙古自治州">
+        <city name="北屯" index="19" />
+        <city name="博尔塔拉蒙古自治州" index="6">
             <district name="博乐市" index="833400" />
             <district name="精河县" index="833400" />
             <district name="温泉县" index="833400" />
             <district name="其他" index="833400" />
         </city>
-        <city name="昌吉回族自治州">
+        <city name="昌吉回族自治州" index="5">
             <district name="昌吉市" index="831100" />
             <district name="阜康市" index="831100" />
             <district name="呼图壁县" index="831100" />
@@ -3535,13 +3594,13 @@
             <district name="五家渠市" index="831100" />
             <district name="其他" index="831100" />
         </city>
-        <city name="哈密地区">
+        <city name="哈密地区" index="4">
             <district name="巴里坤哈萨克自治县" index="839000" />
             <district name="哈密市" index="839000" />
             <district name="伊吾县" index="839000" />
             <district name="其他" index="839000" />
         </city>
-        <city name="和田地区">
+        <city name="和田地区" index="11">
             <district name="策勒县" index="848000" />
             <district name="和田市" index="848000" />
             <district name="和田县" index="848000" />
@@ -3552,7 +3611,7 @@
             <district name="于田县" index="848000" />
             <district name="其他" index="848000" />
         </city>
-        <city name="喀什地区">
+        <city name="喀什地区" index="10">
             <district name="巴楚县" index="844000" />
             <district name="伽师县" index="844000" />
             <district name="喀什市" index="844000" />
@@ -3567,21 +3626,22 @@
             <district name="泽普县" index="844000" />
             <district name="其他" index="844000" />
         </city>
-        <city name="克拉玛依市">
+        <city name="克拉玛依市" index="2">
             <district name="白碱滩区" index="834000" />
             <district name="独山子区" index="834000" />
             <district name="克拉玛依区" index="834000" />
             <district name="乌尔禾区" index="834000" />
             <district name="其他" index="834000" />
         </city>
-        <city name="克孜勒苏柯尔克孜自治州">
+        <city name="克孜勒苏柯尔克孜自治州" index="9">
             <district name="阿合奇县" index="845350" />
             <district name="阿克陶县" index="845350" />
             <district name="阿图什市" index="845350" />
             <district name="乌恰县" index="845350" />
             <district name="其他" index="845350" />
         </city>
-        <city name="塔城地区">
+        <city name="石河子" index="15" />
+        <city name="塔城地区" index="13">
             <district name="额敏县" index="834700" />
             <district name="和布克赛尔蒙古自治县" index="834700" />
             <district name="沙湾县" index="834700" />
@@ -3591,13 +3651,15 @@
             <district name="裕民县" index="834700" />
             <district name="其他" index="834700" />
         </city>
-        <city name="吐鲁番地区">
+        <city name="吐鲁番地区" index="3">
             <district name="鄯善县" index="838000" />
             <district name="吐鲁番市" index="838000" />
             <district name="托克逊县" index="838000" />
             <district name="其他" index="838000" />
         </city>
-        <city name="乌鲁木齐市">
+        <city name="图木舒克" index="17" />
+        <city name="五家渠" index="18" />
+        <city name="乌鲁木齐市" index="1">
             <district name="达坂城区" index="830000" />
             <district name="米东区" index="830000" />
             <district name="沙依巴克区" index="830000" />
@@ -3608,7 +3670,7 @@
             <district name="新市区" index="830000" />
             <district name="其他" index="830000" />
         </city>
-        <city name="伊犁哈萨克自治州">
+        <city name="伊犁哈萨克自治州" index="12">
             <district name="察布查尔锡伯自治县" index="833200" />
             <district name="巩留县" index="833200" />
             <district name="霍城县" index="833200" />
@@ -3622,8 +3684,9 @@
             <district name="其他" index="833200" />
         </city>
     </province>
+
     <province name="云南省" index="26">
-        <city name="保山市">
+        <city name="保山市" index="4">
             <district name="昌宁县" index="678000" />
             <district name="龙陵县" index="678000" />
             <district name="隆阳区" index="678000" />
@@ -3631,7 +3694,7 @@
             <district name="腾冲县" index="678000" />
             <district name="其他" index="678000" />
         </city>
-        <city name="楚雄彝族自治州">
+        <city name="楚雄彝族自治州" index="9">
             <district name="楚雄市" index="675000" />
             <district name="大姚县" index="675000" />
             <district name="禄丰县" index="675000" />
@@ -3644,7 +3707,7 @@
             <district name="元谋县" index="675000" />
             <district name="其他" index="675000" />
         </city>
-        <city name="大理白族自治州">
+        <city name="大理白族自治州" index="13">
             <district name="宾川县" index="671000" />
             <district name="大理市" index="671000" />
             <district name="洱源县" index="671000" />
@@ -3659,7 +3722,7 @@
             <district name="云龙县" index="671000" />
             <district name="其他" index="671000" />
         </city>
-        <city name="德宏傣族景颇族自治州">
+        <city name="德宏傣族景颇族自治州" index="14">
             <district name="梁河县" index="678400" />
             <district name="陇川县" index="678400" />
             <district name="潞西市" index="678400" />
@@ -3667,13 +3730,12 @@
             <district name="盈江县" index="678400" />
             <district name="其他" index="678400" />
         </city>
-        <city name="迪庆藏族自治州">
-            <district name="德钦县" index="674400" />
-            <district name="维西傈僳族自治县" index="674400" />
-            <district name="香格里拉县" index="674400" />
-            <district name="其他" index="674400" />
+        <city name="迪庆藏族自治州" index="16">
+            <district name="德钦县" index="2" />
+            <district name="维西傈僳族自治县" index="3" />
+            <district name="香格里拉县" index="1" />
         </city>
-        <city name="红河哈尼族彝族自治州">
+        <city name="红河哈尼族彝族自治州" index="10">
             <district name="个旧市" index="661400" />
             <district name="河口瑶族自治县" index="661400" />
             <district name="红河县" index="661400" />
@@ -3689,7 +3751,7 @@
             <district name="元阳县" index="661400" />
             <district name="其他" index="661400" />
         </city>
-        <city name="昆明市">
+        <city name="昆明市" index="1">
             <district name="安宁市" index="650000" />
             <district name="呈贡县" index="650000" />
             <district name="东川区" index="650000" />
@@ -3706,7 +3768,7 @@
             <district name="宜良县" index="650000" />
             <district name="其他" index="650000" />
         </city>
-        <city name="丽江市">
+        <city name="丽江市" index="6">
             <district name="古城区" index="674100" />
             <district name="华坪县" index="674100" />
             <district name="宁蒗彝族自治县" index="674100" />
@@ -3714,7 +3776,7 @@
             <district name="玉龙纳西族自治县" index="674100" />
             <district name="其他" index="674100" />
         </city>
-        <city name="临沧市">
+        <city name="临沧市" index="8">
             <district name="沧源佤族自治县" index="677000" />
             <district name="凤庆县" index="677000" />
             <district name="耿马傣族佤族自治县" index="677000" />
@@ -3725,14 +3787,14 @@
             <district name="镇康县" index="677000" />
             <district name="其他" index="677000" />
         </city>
-        <city name="怒江傈僳族自治州">
+        <city name="怒江傈僳族自治州" index="15">
             <district name="福贡县" index="673100" />
             <district name="贡山独龙族怒族自治县" index="673100" />
             <district name="兰坪白族普米族自治县" index="673100" />
             <district name="泸水县" index="673100" />
             <district name="其他" index="673100" />
         </city>
-        <city name="普洱市">
+        <city name="普洱市" index="7">
             <district name="江城哈尼族彝族自治县" index="665000" />
             <district name="景东彝族自治县" index="665000" />
             <district name="景谷傣族彝族自治县" index="665000" />
@@ -3745,7 +3807,7 @@
             <district name="镇沅彝族哈尼族拉祜族自治县" index="665000" />
             <district name="其他" index="665000" />
         </city>
-        <city name="曲靖市">
+        <city name="曲靖市" index="2">
             <district name="富源县" index="655000" />
             <district name="会泽县" index="655000" />
             <district name="陆良县" index="655000" />
@@ -3757,7 +3819,7 @@
             <district name="沾益县" index="655000" />
             <district name="其他" index="655000" />
         </city>
-        <city name="文山壮族苗族自治州">
+        <city name="文山壮族苗族自治州" index="11">
             <district name="富宁县" index="663000" />
             <district name="广南县" index="663000" />
             <district name="麻栗坡县" index="663000" />
@@ -3768,13 +3830,12 @@
             <district name="砚山县" index="663000" />
             <district name="其他" index="663000" />
         </city>
-        <city name="西双版纳傣族自治州">
-            <district name="景洪市" index="666100" />
-            <district name="勐海县" index="666100" />
-            <district name="勐腊县" index="666100" />
-            <district name="其他" index="666100" />
+        <city name="西双版纳傣族自治州" index="12">
+            <district name="景洪市" index="1" />
+            <district name="勐海县" index="2" />
+            <district name="勐腊县" index="3" />
         </city>
-        <city name="玉溪市">
+        <city name="玉溪市" index="3">
             <district name="澄江县" index="653100" />
             <district name="峨山彝族自治县" index="653100" />
             <district name="红塔区" index="653100" />
@@ -3786,7 +3847,7 @@
             <district name="元江哈尼族彝族傣族自治县" index="653100" />
             <district name="其他" index="653100" />
         </city>
-        <city name="昭通市">
+        <city name="昭通市" index="5">
             <district name="大关县" index="657000" />
             <district name="鲁甸县" index="657000" />
             <district name="巧家县" index="657000" />
@@ -3801,8 +3862,9 @@
             <district name="其他" index="657000" />
         </city>
     </province>
+
     <province name="浙江省" index="12">
-        <city name="杭州市">
+        <city name="杭州市" index="1">
             <district name="滨江区" index="310000" />
             <district name="淳安县" index="310000" />
             <district name="富阳市" index="310000" />
@@ -3818,7 +3880,7 @@
             <district name="余杭区" index="310000" />
             <district name="其他" index="310000" />
         </city>
-        <city name="湖州市">
+        <city name="湖州市" index="5">
             <district name="安吉县" index="313000" />
             <district name="长兴县" index="313000" />
             <district name="德清县" index="313000" />
@@ -3826,7 +3888,7 @@
             <district name="吴兴区" index="313000" />
             <district name="其他" index="313000" />
         </city>
-        <city name="嘉兴市">
+        <city name="嘉兴市" index="4">
             <district name="海宁市" index="314000" />
             <district name="海盐县" index="314000" />
             <district name="嘉善县" index="314000" />
@@ -3836,7 +3898,7 @@
             <district name="秀洲区" index="314000" />
             <district name="其他" index="314000" />
         </city>
-        <city name="金华市">
+        <city name="金华市" index="7">
             <district name="东阳市" index="321000" />
             <district name="金东区" index="321000" />
             <district name="兰溪市" index="321000" />
@@ -3848,7 +3910,7 @@
             <district name="永康市" index="321000" />
             <district name="其他" index="321000" />
         </city>
-        <city name="丽水市">
+        <city name="丽水市" index="11">
             <district name="缙云县" index="323000" />
             <district name="景宁畲族自治县" index="323000" />
             <district name="莲都区" index="323000" />
@@ -3860,7 +3922,7 @@
             <district name="云和县" index="323000" />
             <district name="其他" index="323000" />
         </city>
-        <city name="宁波市">
+        <city name="宁波市" index="2">
             <district name="北仑区" index="315000" />
             <district name="慈溪市" index="315000" />
             <district name="奉化市" index="315000" />
@@ -3874,7 +3936,7 @@
             <district name="镇海区" index="315000" />
             <district name="其他" index="315000" />
         </city>
-        <city name="衢州市">
+        <city name="衢州市" index="8">
             <district name="常山县" index="324000" />
             <district name="江山市" index="324000" />
             <district name="开化县" index="324000" />
@@ -3883,7 +3945,7 @@
             <district name="衢江区" index="324000" />
             <district name="其他" index="324000" />
         </city>
-        <city name="绍兴市">
+        <city name="绍兴市" index="6">
             <district name="上虞市" index="312000" />
             <district name="绍兴县" index="312000" />
             <district name="嵊州市" index="312000" />
@@ -3892,7 +3954,7 @@
             <district name="诸暨市" index="312000" />
             <district name="其他" index="312000" />
         </city>
-        <city name="台州市">
+        <city name="台州市" index="10">
             <district name="黄岩区" index="318000" />
             <district name="椒江区" index="318000" />
             <district name="临海市" index="318000" />
@@ -3904,7 +3966,7 @@
             <district name="玉环县" index="318000" />
             <district name="其他" index="318000" />
         </city>
-        <city name="温州市">
+        <city name="温州市" index="3">
             <district name="苍南县" index="325000" />
             <district name="洞头县" index="325000" />
             <district name="乐清市" index="325000" />
@@ -3918,12 +3980,11 @@
             <district name="永嘉县" index="325000" />
             <district name="其他" index="325000" />
         </city>
-        <city name="舟山市">
-            <district name="岱山县" index="316000" />
-            <district name="定海区" index="316000" />
-            <district name="普陀区" index="316000" />
-            <district name="嵊泗县" index="316000" />
-            <district name="其他" index="316000" />
+        <city name="舟山市" index="9">
+            <district name="岱山县" index="3" />
+            <district name="定海区" index="1" />
+            <district name="普陀区" index="2" />
+            <district name="嵊泗县" index="4" />
         </city>
     </province>
 </root>
