@@ -40,6 +40,12 @@ TBC..
 
 * android-wheel: https://github.com/maarek/android-wheel
 
+## Disclaimer
+
+All of the address data is collected form the Internet. The data can not be guaranteed or assured to be accurate for all.
+
+I can not be held responsible for any error or negligence derived therefrom.
+
 ## License
 
 TBC..
