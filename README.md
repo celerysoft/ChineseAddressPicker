@@ -10,9 +10,11 @@ ChineseAddressPicker is an Android widget to pick a Chinese detailed address.
 
 * Smooth animation.
 
+* Sort by pronunciation or official location id.
+
 ## Technical Information
 
-* Required minimum API level: 7
+* Required minimum API level: 5
 
 * Supports all the screens sizes and density.
 
@@ -24,7 +26,11 @@ So welcome to set up a pull request to update the address data, thx.
 
 ## Sample
 
-TBC..
+You can download the app test from here: http://pan.baidu.com/s/1i3wBZO5 password: **dnd3**
+
+Click `下载` to start download.
+
+Sample version: v1.0, 405113f
 
 ## Screenshots
 
