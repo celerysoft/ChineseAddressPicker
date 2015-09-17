@@ -15,11 +15,14 @@ import android.widget.RelativeLayout;
 
 import com.eruntech.addresspicker.R;
 import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
+import com.eruntech.addresspicker.interfaces.Sortable;
 import com.eruntech.addresspicker.services.LoadAddressDataService;
 import com.eruntech.addresspicker.valueobjects.City;
 import com.eruntech.addresspicker.valueobjects.District;
 import com.eruntech.addresspicker.valueobjects.Province;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,11 +47,13 @@ public class ChineseAddressPicker extends LinearLayout
 
     /** Log标签 **/
     private final String LOG_TAG = this.getClass().getSimpleName();
-
+    /** 选择地址的时候没有选中具体地址时的字符串 **/
+    private final String NO_ADDRESS_PICKED = "-----";
     /** 地址选择器默认可见项目数 **/
     private final int DEFAULT_VISIBLE_ITEM_COUNT = 5;
-    /** 选择地址的时候没有选中具体地址时的字符串 **/
-    private final String PICK_NONE_ADDRESS = "-----";
+    /** 地址选择器最小可见项目数 **/
+    private final int MIN_VISIBLE_ITEM_COUNT = 3;
+
 
     //从 R.styleable.ChineseAddressPicker 读取
     /** 地址选择器实际可见项目数 **/
@@ -59,6 +64,8 @@ public class ChineseAddressPicker extends LinearLayout
     private boolean mAnimationVisible = true;
     /** 是否显示动作条，即确认按钮 **/
     private boolean mActionBarVisible = true;
+    /** 是否按读音排序，否则按区域代号排序 **/
+    private boolean mSortByPronunciation = false;
 
     /** 所有省 **/
     private String[] mProvinceDatas;
@@ -66,8 +73,6 @@ public class ChineseAddressPicker extends LinearLayout
     private Map<String, String[]> mCitisDatasMap = new HashMap<>();
     /** key - 市 values - 区 **/
     private Map<String, String[]> mDistrictDatasMap = new HashMap<>();
-    /** key - 区 values - 邮编**/
-    //private Map<String, String> mZipcodeDatasMap = new IdentityHashMap<>();
 
     /** 当前选中的省的名称 **/
     private String mCurrentProviceName;
@@ -82,7 +87,7 @@ public class ChineseAddressPicker extends LinearLayout
     /** 当前选中的区的名称 **/
     private String mCurrentDistrictName;
     public String getDistrictName() {
-        if (mCurrentDistrictName.equals(PICK_NONE_ADDRESS)) {
+        if (mCurrentDistrictName.equals(NO_ADDRESS_PICKED)) {
             return null;
         } else {
             return mCurrentDistrictName;
@@ -117,13 +122,15 @@ public class ChineseAddressPicker extends LinearLayout
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ChineseAddressPicker, 0, 0);
         try {
             mVisibleItemCount = a.getInteger(R.styleable.ChineseAddressPicker_visibleItemCount, DEFAULT_VISIBLE_ITEM_COUNT);
-            mVisibleItemCount = mVisibleItemCount >= 3 ? mVisibleItemCount : 3;
+            mVisibleItemCount = mVisibleItemCount >= MIN_VISIBLE_ITEM_COUNT ? mVisibleItemCount : MIN_VISIBLE_ITEM_COUNT;
 
             mDefaultVisible = a.getBoolean(R.styleable.ChineseAddressPicker_defaultVisible, true);
 
             mAnimationVisible = a.getBoolean(R.styleable.ChineseAddressPicker_animationVisible, true);
 
             mActionBarVisible = a.getBoolean(R.styleable.ChineseAddressPicker_actionBarVisible, true);
+
+            mSortByPronunciation = a.getBoolean(R.styleable.ChineseAddressPicker_sortByPronunciation, false);
         } finally {
             a.recycle();
         }
@@ -241,17 +248,27 @@ public class ChineseAddressPicker extends LinearLayout
     /**
      * <P>修改时间：2015-09-11
      * <P>作者：Qin Yuanyi
-     * <P>功能描述：创建哈希表储存解析好的数据，加快读取速度
+     * <P>功能描述：对数据进行排序，并创建哈希表储存解析好的数据，加快读取速度
      */
     private void initParsedDatas(List<Province> provinceList) {
         if (provinceList!= null && !provinceList.isEmpty()) {
-            // init default picked address data
-            mCurrentProviceName = provinceList.get(0).getName();
-            List<City> cityList = provinceList.get(0).getCityList();
-            if (cityList!= null && !cityList.isEmpty()) {
-                mCurrentCityName = cityList.get(0).getName();
-                List<District> districtList = cityList.get(0).getDistrictList();
-                mCurrentDistrictName = districtList.get(0).getName();
+
+            // sort the address datas by index
+            if (!mSortByPronunciation) {
+                int provinceCount = provinceList.size();
+                int cityCount;
+
+                Collections.sort(provinceList, new AddressComparator());
+                for(int i = 0; i < provinceCount; ++i) {
+                    List<City> cityList = provinceList.get(i).getCityList();
+                    Collections.sort(cityList, new AddressComparator());
+                    cityCount = cityList.size();
+                    for (int j = 0; j < cityCount; ++j) {
+                        List<District> districtList = cityList.get(j).getDistrictList();
+                        Collections.sort(districtList, new AddressComparator());
+                    }
+                }
+                //TODO add sorting method
             }
 
             // store address datas to map
@@ -259,7 +276,7 @@ public class ChineseAddressPicker extends LinearLayout
             for (int i=0; i< provinceList.size(); i++) {
                 // 遍历所有省的数据
                 mProvinceDatas[i] = provinceList.get(i).getName();
-                cityList = provinceList.get(i).getCityList();
+                List<City> cityList = provinceList.get(i).getCityList();
                 String[] cityNames = new String[cityList.size()];
                 for (int j = 0; j < cityList.size(); j++) {
                     // 遍历省下面的所有市的数据
@@ -267,7 +284,7 @@ public class ChineseAddressPicker extends LinearLayout
                     List<District> districtList = cityList.get(j).getDistrictList();
                     // 需要在 distrinctNameArray[0] 插入字符串 “-----”，所以size+1
                     String[] distrinctNameArray = new String[districtList.size()+1];
-                    distrinctNameArray[0] = PICK_NONE_ADDRESS;
+                    distrinctNameArray[0] = NO_ADDRESS_PICKED;
                     for (int k = 0; k < districtList.size(); k++) {
                         // 遍历市下面所有区/县的数据
                         District districtModel = new District(districtList.get(k).getName(), districtList.get(k).getIndex());
@@ -278,6 +295,15 @@ public class ChineseAddressPicker extends LinearLayout
                 }
                 // 省-市的数据，保存到mCitisDatasMap
                 mCitisDatasMap.put(provinceList.get(i).getName(), cityNames);
+            }
+
+            // init default picked address data
+            mCurrentProviceName = provinceList.get(0).getName();
+            List<City> cityList = provinceList.get(0).getCityList();
+            if (cityList!= null && !cityList.isEmpty()) {
+                mCurrentCityName = cityList.get(0).getName();
+                List<District> districtList = cityList.get(0).getDistrictList();
+                mCurrentDistrictName = districtList.get(0).getName();
             }
         }
     }
@@ -484,6 +510,18 @@ public class ChineseAddressPicker extends LinearLayout
 
         @Override
         public void onAnimationRepeat(Animation animation) {}
+    }
+
+    /**
+     * <P>时间：2015-09-17
+     * <P>作者：Qin Yuanyi
+     * <P>功能：对省、市、区按序号进行排序的比较器
+     */
+    private class AddressComparator implements Comparator<Sortable> {
+        @Override
+        public int compare(Sortable lhs, Sortable rhs) {
+            return lhs.getIndex() - rhs.getIndex();
+        }
     }
 
     /**

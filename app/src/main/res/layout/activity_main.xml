@@ -24,6 +24,7 @@
         app:defaultVisible="false"
         app:actionBarVisible="true"
         app:animationVisible="true"
+        app:sortByPronunciation="false"
         />
 
 </LinearLayout>

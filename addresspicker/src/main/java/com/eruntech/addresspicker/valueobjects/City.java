@@ -1,5 +1,7 @@
 package com.eruntech.addresspicker.valueobjects;
 
+import com.eruntech.addresspicker.interfaces.Sortable;
+
 import java.util.List;
 
 /**
@@ -7,7 +9,7 @@ import java.util.List;
  * @author 作者：Qin Yuanyi
  * 功能：城市信息模型，包含城市名称，城市序号，城市区域列表
  */
-public class City {
+public class City implements Sortable {
     private String name;
     private int index;
     private List<District> districtList;

@@ -1,5 +1,7 @@
 package com.eruntech.addresspicker.valueobjects;
 
+import com.eruntech.addresspicker.interfaces.Sortable;
+
 import java.util.List;
 
 /**
@@ -7,7 +9,7 @@ import java.util.List;
  * @author 作者：Qin Yuanyi
  * 功能：省份信息模型，包含省份名称，省份序号，省份城市列表
  */
-public class Province {
+public class Province implements Sortable {
     private String name;
     private int index;
     private List<City> cityList;

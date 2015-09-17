@@ -1,11 +1,13 @@
 package com.eruntech.addresspicker.valueobjects;
 
+import com.eruntech.addresspicker.interfaces.Sortable;
+
 /**
  * 时间：2015-09-08
  * @author 作者：Qin Yuanyi
  * 功能：区域信息模型，包含区域名称和序号
  */
-public class District {
+public class District implements Sortable {
     private String name;
     private int index;
 

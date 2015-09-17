@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ChineseAddressPicker">
-        <!-- 每列可见的项目数 -->
+        <!-- 每列可见的项目数，最小3，默认5 -->
         <attr name="visibleItemCount" format="integer" />
-        <!-- 初始是否可见，通过调用控件的show()方法来使控件可见，调用hide()方法隐藏控件 -->
+        <!-- 初始是否可见，通过调用控件的show()方法来使控件可见，调用hide()方法隐藏控件，默认可见 -->
         <attr name="defaultVisible" format="boolean" />
-        <!-- 是否显示过渡动画 -->
+        <!-- 是否显示过渡动画，默认显示 -->
         <attr name="animationVisible" format="boolean" />
-        <!-- 是否显示动作条，即确认按钮 -->
+        <!-- 是否显示动作条，即确认按钮，默认显示 -->
         <attr name="actionBarVisible" format="boolean" />
+        <!-- 是否按读音排序，否则按区域代号排序，默认按区域代号排序 -->
+        <attr name="sortByPronunciation" format="boolean" />
     </declare-styleable>
 </resources>
