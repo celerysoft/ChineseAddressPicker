@@ -23,13 +23,6 @@ public class City {
         this.districtList = districtList;
     }
 
-    @Deprecated
-    public City(String name, List<District> districtList) {
-        super();
-        this.name = name;
-        this.districtList = districtList;
-    }
-
     public String getName() {
         return name;
     }

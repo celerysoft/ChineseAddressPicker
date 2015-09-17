@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Xml;
 
-import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
 import com.eruntech.addresspicker.valueobjects.City;
 import com.eruntech.addresspicker.valueobjects.District;
 import com.eruntech.addresspicker.valueobjects.Province;
@@ -21,49 +20,46 @@ import java.util.List;
 
 /**
  * Parse the local Chinese address data in assets.
- * @author Qin Yuanyi
- * 时间：2015-09-09
- * 功能：解析储存在assets的中国地址库数据
+ * <P>作者：Qin Yuanyi
+ * <P>时间：2015-09-09
+ * <P>功能：解析储存在assets的中国地址库数据
  */
 public class LoadAddressDataService {
 
+    /** Log tag **/
     private final String LOG_TAG = this.getClass().getSimpleName();
 
+    /** 解析index节点时的结果转换为int型失败时，index的默认值 **/
     private final int INDEX_PARSE_WRONG = -1;
 
+    /** ChineseAddressPicker控件的引用 **/
     private ChineseAddressPicker mChineseAddressPicker;
-    private OnAddressDataServiceListener mOnAddressDataServiceListener;
 
     /** namespace **/
     private final String ns = null;
 
-    /**
-     * 储存所有的解析对象
-     */
-    //private List<Province> mProvinceList = new ArrayList<Province>();
+    /** 储存所有的解析对象 **/
     private List<Province> mProvinceList;
-    public List<Province> getProvinceList() {
-        return mProvinceList;
-    }
 
     public LoadAddressDataService(ChineseAddressPicker chineseAddressPicker) {
         mChineseAddressPicker = chineseAddressPicker;
-        if (chineseAddressPicker instanceof OnAddressDataServiceListener) {
-            mOnAddressDataServiceListener = (OnAddressDataServiceListener) chineseAddressPicker;
-        } else {
-                Log.w(LOG_TAG, "LoadAddressDataService构造函数传进的参数必须实现OnTubeViewServiceListener接口");
-        }
     }
 
     /**
-     * 修改时间：2015-09-11
-     * 作者：Qin Yuanyi
-     * 功能描述：发送异步请求开始解析储存在本地的中国地址数据库
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     public void startToParseData() {
-        new GetAddressDataAsyncTask().execute("address_data_new.xml");
+        new GetAddressDataAsyncTask().execute("address_data.xml");
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：解析位置assets下指定位置的本地xml文件
+     * @param xmlPath xml文件的位置
+     */
     private void parseXmlData(String xmlPath) throws XmlPullParserException, IOException {
 
         AssetManager asset = mChineseAddressPicker.getContext().getAssets();
@@ -84,10 +80,17 @@ public class LoadAddressDataService {
 
     }
 
+    /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：读取province标签，遍历root标签下的province标签，构建省份数据
+     * @param parser 解析xml的parser，确保parser的位置位于province标签的startTag
+     * @return 包含所有省份信息的List
+     */
     private List<Province> readRoot(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "root");
 
-        List<Province> provinceList = new ArrayList<Province>();
+        List<Province> provinceList = new ArrayList<>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
 
@@ -107,25 +110,25 @@ public class LoadAddressDataService {
     }
 
     /**
-     * 读取root标签，遍历root标签下的province标签，构建省份数据
-     * @param parser 解析xml的parser，确保parser的位置位于root标签的startTag
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：读取province标签，遍历root标签下的province标签，构建省份数据
+     * @param parser 解析xml的parser，确保parser的位置位于province标签的startTag
      * @return 包含所有省份信息的List
-     * @throws XmlPullParserException
-     * @throws IOException
      */
     private Province readProvince(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "province");
 
-        Province province = null;
+        Province province;
         String provinceName = parser.getAttributeValue(ns, "name");
-        int index = 0;
+        int index;
         try {
             index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
         } catch (NumberFormatException e) {
             index = INDEX_PARSE_WRONG;
             Log.e(LOG_TAG, provinceName + "的序号转换成int型时出错，请检查数据是否正确");
         }
-        List<City> cityList = new ArrayList<City>();
+        List<City> cityList = new ArrayList<>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
 
@@ -147,24 +150,25 @@ public class LoadAddressDataService {
     }
 
     /**
-     * 读取provice标签，遍历provice标签下的city标签，构建城市数据
-     * @param parser 解析xml的parser，确保parser的位置位于provice标签的startTag
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：读取city标签，遍历provice标签下的city标签，构建城市数据
+     * @param parser 解析xml的parser，确保parser的位置位于city标签的startTag
      * @return 包含所有管孔信息的List
-     * @throws Exception
      */
     private City readCity(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "city");
 
-        City city = null;
+        City city;
         String cityName = parser.getAttributeValue(ns, "name");
-        int index = 0;
+        int index;
         try {
             index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
         } catch (NumberFormatException e) {
             index = INDEX_PARSE_WRONG;
             Log.e(LOG_TAG, cityName + "的序号转换成int型时出错，请检查数据是否正确");
         }
-        List<District> districtList = new ArrayList<District>();
+        List<District> districtList = new ArrayList<>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -184,11 +188,11 @@ public class LoadAddressDataService {
     }
 
     /**
-     * 读取city标签，遍历city标签下的district标签，构建区域数据
-     * @param parser 解析xml的parser，确保parser的位置位于record标签的startTag
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：读取district标签，遍历city标签下的district标签，构建区域数据
+     * @param parser 解析xml的parser，确保parser的位置位于district标签的startTag
      * @return 区域数据对象
-     * @throws XmlPullParserException
-     * @throws IOException
      */
     private District readDistrict(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "district");
@@ -199,7 +203,7 @@ public class LoadAddressDataService {
 
         if (parser.getName().equalsIgnoreCase("district")) {
             // 为了让区域名称String指向的内存地址不同，建立IdentityHashMap时防止因内存地址相同导致的bug
-            districtName = new String(parser.getAttributeValue(ns, "name"));
+            districtName = parser.getAttributeValue(ns, "name");
             try {
                 index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
             } catch (NumberFormatException e) {
@@ -217,7 +221,11 @@ public class LoadAddressDataService {
         return district;
     }
 
-    /** 用于解析地址xml文件的异步线程类 **/
+    /**
+     * <P>作者：Qin Yuanyi
+     * <P>时间：2015-09-09
+     * <P>功能：用于解析地址xml文件的异步线程类
+     */
     private class GetAddressDataAsyncTask extends AsyncTask<String, Object, Object> {
         /**
          * 解析地址xml文件
@@ -228,25 +236,25 @@ public class LoadAddressDataService {
                 parseXmlData(params[0]);
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
+                Log.e(LOG_TAG, "解析xml文件时发生错误，错误原因：" + e.getMessage());
             } catch (IOException e) {
                 e.printStackTrace();
+                Log.e(LOG_TAG, "读取xml文件时发生错误，错误原因：" + e.getMessage());
             }
             return null;
         }
 
-
         /**
-         * 通知mOnAddressDataServiceListener已经获取地址数据
+         * 通知mChineseAddressPicker已经获取地址数据
          */
         @Override
         protected void onPostExecute(Object result) {
             if (mProvinceList != null) {
                 if (mProvinceList.size() > 0) {
-                    mOnAddressDataServiceListener.onAddressDataGot(mProvinceList);
+                    mChineseAddressPicker.onAddressDataGot(mProvinceList);
                 }
             }
 
         }
-
     }
 }

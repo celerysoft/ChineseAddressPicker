@@ -159,8 +159,6 @@ public class ChineseAddressPicker extends LinearLayout
     private void requestAddressData() {
         LoadAddressDataService service = new LoadAddressDataService(this);
         service.startToParseData();
-        //LoadOldAddressDataService oldService = new LoadOldAddressDataService(this);
-        //oldService.startToParseData();
         // 异步方法，解析完地址数据后自动调用 onAddressDataGot() 方法
     }
 

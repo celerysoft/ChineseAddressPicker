@@ -23,13 +23,6 @@ public class Province {
         this.cityList = cityList;
     }
 
-    @Deprecated
-    public Province(String name, List<City> cityList) {
-        super();
-        this.name = name;
-        this.cityList = cityList;
-    }
-
     public String getName() {
         return name;
     }

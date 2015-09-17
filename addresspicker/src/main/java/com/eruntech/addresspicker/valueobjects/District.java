@@ -3,12 +3,10 @@ package com.eruntech.addresspicker.valueobjects;
 /**
  * 时间：2015-09-08
  * @author 作者：Qin Yuanyi
- * 功能：区域信息模型，包含区域名称和邮编
+ * 功能：区域信息模型，包含区域名称和序号
  */
 public class District {
     private String name;
-    @Deprecated
-    private String zipcode;
     private int index;
 
     public District() {
@@ -19,12 +17,6 @@ public class District {
         super();
         this.name = name;
         this.index = index;
-    }
-
-    @Deprecated
-    public District(String name, String zipcode) {
-        this.name = name;
-        this.zipcode = zipcode;
     }
 
     public String getName() {

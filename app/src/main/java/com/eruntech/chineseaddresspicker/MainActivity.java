@@ -8,9 +8,6 @@ import android.widget.Button;
 import com.eruntech.addresspicker.widgets.ChineseAddressPicker;
 
 
-/**
- *
- */
 public class MainActivity extends Activity implements ChineseAddressPicker.OnAddressPickerListener {
 
     ChineseAddressPicker mPicker;
@@ -30,7 +27,7 @@ public class MainActivity extends Activity implements ChineseAddressPicker.OnAdd
         mPicker = (ChineseAddressPicker) findViewById(R.id.main_picker);
 
         mButton = (Button) findViewById(R.id.main_btn);
-        mButton.setText("请选择地址");
+        mButton.setText(getString(R.string.btn_main_text));
     }
 
     private void setupListener() {
@@ -48,7 +45,7 @@ public class MainActivity extends Activity implements ChineseAddressPicker.OnAdd
 
     @Override
     public void onAddressPicked() {
-        String address = new String();
+        String address = null;
         if (mPicker.getProviceName() != null) {
             address = mPicker.getProviceName();
             if (mPicker.getCityName() != null) {
