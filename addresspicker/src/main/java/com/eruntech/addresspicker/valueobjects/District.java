@@ -7,14 +7,22 @@ package com.eruntech.addresspicker.valueobjects;
  */
 public class District {
     private String name;
+    @Deprecated
     private String zipcode;
+    private int index;
 
     public District() {
         super();
     }
 
-    public District(String name, String zipcode) {
+    public District(String name, int index) {
         super();
+        this.name = name;
+        this.index = index;
+    }
+
+    @Deprecated
+    public District(String name, String zipcode) {
         this.name = name;
         this.zipcode = zipcode;
     }
@@ -27,16 +35,16 @@ public class District {
         this.name = name;
     }
 
-    public String getZipcode() {
-        return zipcode;
+    public int getIndex() {
+        return index;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setIndex(int index) {
+        this.index = index;
     }
 
     @Override
     public String toString() {
-        return "District [name=" + name + ", zipcode=" + zipcode + "]";
+        return "District [name=" + name + ", index=" + index + "]";
     }
 }

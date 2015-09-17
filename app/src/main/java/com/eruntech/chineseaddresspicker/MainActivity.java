@@ -48,9 +48,16 @@ public class MainActivity extends Activity implements ChineseAddressPicker.OnAdd
 
     @Override
     public void onAddressPicked() {
-        String address = mPicker.getProviceName() + " - "
-                + mPicker.getCityName() + " - "
-                + mPicker.getDistrictName();
+        String address = new String();
+        if (mPicker.getProviceName() != null) {
+            address = mPicker.getProviceName();
+            if (mPicker.getCityName() != null) {
+                address += " - " + mPicker.getCityName();
+                if (mPicker.getDistrictName() != null) {
+                    address += " - " + mPicker.getDistrictName();
+                }
+            }
+        }
         mButton.setText(address);
     }
 }

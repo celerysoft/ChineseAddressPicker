@@ -16,13 +16,11 @@ import android.widget.RelativeLayout;
 import com.eruntech.addresspicker.R;
 import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
 import com.eruntech.addresspicker.services.LoadAddressDataService;
-import com.eruntech.addresspicker.services.LoadOldAddressDataService;
 import com.eruntech.addresspicker.valueobjects.City;
 import com.eruntech.addresspicker.valueobjects.District;
 import com.eruntech.addresspicker.valueobjects.Province;
 
 import java.util.HashMap;
-import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -49,6 +47,8 @@ public class ChineseAddressPicker extends LinearLayout
 
     /** 地址选择器默认可见项目数 **/
     private final int DEFAULT_VISIBLE_ITEM_COUNT = 5;
+    /** 选择地址的时候没有选中具体地址时的字符串 **/
+    private final String PICK_NONE_ADDRESS = "-----";
 
     //从 R.styleable.ChineseAddressPicker 读取
     /** 地址选择器实际可见项目数 **/
@@ -67,7 +67,7 @@ public class ChineseAddressPicker extends LinearLayout
     /** key - 市 values - 区 **/
     private Map<String, String[]> mDistrictDatasMap = new HashMap<>();
     /** key - 区 values - 邮编**/
-    private Map<String, String> mZipcodeDatasMap = new IdentityHashMap<>();
+    //private Map<String, String> mZipcodeDatasMap = new IdentityHashMap<>();
 
     /** 当前选中的省的名称 **/
     private String mCurrentProviceName;
@@ -82,10 +82,12 @@ public class ChineseAddressPicker extends LinearLayout
     /** 当前选中的区的名称 **/
     private String mCurrentDistrictName;
     public String getDistrictName() {
-        return mCurrentDistrictName;
+        if (mCurrentDistrictName.equals(PICK_NONE_ADDRESS)) {
+            return null;
+        } else {
+            return mCurrentDistrictName;
+        }
     }
-    /** 当前选中的区的邮政编码 **/
-    private String mCurrentZipCode;
 
     //控件声明，setUpViews()方法
     /** 省份WheelView的引用 **/
@@ -155,10 +157,10 @@ public class ChineseAddressPicker extends LinearLayout
      * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     private void requestAddressData() {
-        //LoadAddressDataService service = new LoadAddressDataService(this);
-        //service.startToParseData();
-        LoadOldAddressDataService oldService = new LoadOldAddressDataService(this);
-        oldService.startToParseData();
+        LoadAddressDataService service = new LoadAddressDataService(this);
+        service.startToParseData();
+        //LoadOldAddressDataService oldService = new LoadOldAddressDataService(this);
+        //oldService.startToParseData();
         // 异步方法，解析完地址数据后自动调用 onAddressDataGot() 方法
     }
 
@@ -252,7 +254,6 @@ public class ChineseAddressPicker extends LinearLayout
                 mCurrentCityName = cityList.get(0).getName();
                 List<District> districtList = cityList.get(0).getDistrictList();
                 mCurrentDistrictName = districtList.get(0).getName();
-                mCurrentZipCode = districtList.get(0).getZipcode();
             }
 
             // store address datas to map
@@ -266,15 +267,13 @@ public class ChineseAddressPicker extends LinearLayout
                     // 遍历省下面的所有市的数据
                     cityNames[j] = cityList.get(j).getName();
                     List<District> districtList = cityList.get(j).getDistrictList();
-                    String[] distrinctNameArray = new String[districtList.size()];
-                    // District[] distrinctArray = new District[districtList.size()];
+                    // 需要在 distrinctNameArray[0] 插入字符串 “-----”，所以size+1
+                    String[] distrinctNameArray = new String[districtList.size()+1];
+                    distrinctNameArray[0] = PICK_NONE_ADDRESS;
                     for (int k = 0; k < districtList.size(); k++) {
                         // 遍历市下面所有区/县的数据
-                        District districtModel = new District(districtList.get(k).getName(), districtList.get(k).getZipcode());
-                        // 区/县对于的邮编，保存到mZipcodeDatasMap
-                        mZipcodeDatasMap.put(districtList.get(k).getName(), districtList.get(k).getZipcode());
-                        // distrinctArray[k] = districtModel;
-                        distrinctNameArray[k] = districtModel.getName();
+                        District districtModel = new District(districtList.get(k).getName(), districtList.get(k).getIndex());
+                        distrinctNameArray[k+1] = districtModel.getName();
                     }
                     // 市-区/县的数据，保存到mDistrictDatasMap
                     mDistrictDatasMap.put(cityNames[j], distrinctNameArray);
@@ -312,7 +311,7 @@ public class ChineseAddressPicker extends LinearLayout
     private void onDistrictChanged() {
         int currentDistrictIndex = mViewDistrict.getCurrentItem();
         mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[currentDistrictIndex];
-        mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
+        //mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
     }
 
     /**
@@ -351,7 +350,7 @@ public class ChineseAddressPicker extends LinearLayout
         mViewDistrict.setCurrentItem(0);
 
         mCurrentDistrictName = mDistrictDatasMap.get(mCurrentCityName)[0];
-        mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
+        //mCurrentZipCode = mZipcodeDatasMap.get(mCurrentDistrictName);
     }
 
     /**
@@ -363,7 +362,7 @@ public class ChineseAddressPicker extends LinearLayout
     public void onClick(View v) {
         if (v.getId() == R.id.btn_confirm) {
             Log.v(LOG_TAG, "当前选中：" + mCurrentProviceName + " - " + mCurrentCityName + " - "
-                    + mCurrentDistrictName + "，邮编：" + mCurrentZipCode);
+                    + mCurrentDistrictName);
             hide();
             mOnAddressPickerListener.onAddressPicked();
         }

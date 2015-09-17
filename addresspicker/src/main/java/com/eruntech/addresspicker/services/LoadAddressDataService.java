@@ -1,6 +1,5 @@
 package com.eruntech.addresspicker.services;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -29,6 +28,8 @@ import java.util.List;
 public class LoadAddressDataService {
 
     private final String LOG_TAG = this.getClass().getSimpleName();
+
+    private final int INDEX_PARSE_WRONG = -1;
 
     private ChineseAddressPicker mChineseAddressPicker;
     private OnAddressDataServiceListener mOnAddressDataServiceListener;
@@ -60,7 +61,7 @@ public class LoadAddressDataService {
      * 功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     public void startToParseData() {
-        new GetAddressDataAsyncTask().execute("address_data.xml");
+        new GetAddressDataAsyncTask().execute("address_data_new.xml");
     }
 
     private void parseXmlData(String xmlPath) throws XmlPullParserException, IOException {
@@ -117,6 +118,13 @@ public class LoadAddressDataService {
 
         Province province = null;
         String provinceName = parser.getAttributeValue(ns, "name");
+        int index = 0;
+        try {
+            index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
+        } catch (NumberFormatException e) {
+            index = INDEX_PARSE_WRONG;
+            Log.e(LOG_TAG, provinceName + "的序号转换成int型时出错，请检查数据是否正确");
+        }
         List<City> cityList = new ArrayList<City>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -133,7 +141,7 @@ public class LoadAddressDataService {
             }
         }
 
-        province = new Province(provinceName, cityList);
+        province = new Province(provinceName, index, cityList);
 
         return province;
     }
@@ -148,7 +156,14 @@ public class LoadAddressDataService {
         parser.require(XmlPullParser.START_TAG, ns, "city");
 
         City city = null;
-        String cityName = parser.getAttributeValue(ns, "name");;
+        String cityName = parser.getAttributeValue(ns, "name");
+        int index = 0;
+        try {
+            index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
+        } catch (NumberFormatException e) {
+            index = INDEX_PARSE_WRONG;
+            Log.e(LOG_TAG, cityName + "的序号转换成int型时出错，请检查数据是否正确");
+        }
         List<District> districtList = new ArrayList<District>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -163,7 +178,7 @@ public class LoadAddressDataService {
 
         }
 
-        city = new City(cityName, districtList);
+        city = new City(cityName, index, districtList);
 
         return city;
     }
@@ -179,19 +194,25 @@ public class LoadAddressDataService {
         parser.require(XmlPullParser.START_TAG, ns, "district");
 
         District district;
-        String name = null;
-        String zipCode = null;
+        String districtName = null;
+        int index = 0;
 
         if (parser.getName().equalsIgnoreCase("district")) {
-            // 为了让区域名称String指向的内存地址不同，建立IdentityHashMap时防止“其他”区域的邮编一致的bug
-            name = new String(parser.getAttributeValue(ns, "name"));
-            zipCode = parser.getAttributeValue(ns, "zipcode");
+            // 为了让区域名称String指向的内存地址不同，建立IdentityHashMap时防止因内存地址相同导致的bug
+            districtName = new String(parser.getAttributeValue(ns, "name"));
+            try {
+                index = Integer.parseInt(parser.getAttributeValue(ns, "index"));
+            } catch (NumberFormatException e) {
+                index = INDEX_PARSE_WRONG;
+                Log.e(LOG_TAG, districtName + "的序号转换成int型时出错，请检查数据是否正确");
+            }
+
             parser.nextTag();
         } else {
             Log.w(LOG_TAG, "city下出现非district标签");
         }
 
-        district = new District(name, zipCode);
+        district = new District(districtName, index);
 
         return district;
     }

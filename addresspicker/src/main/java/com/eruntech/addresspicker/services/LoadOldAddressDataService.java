@@ -1,6 +1,5 @@
 package com.eruntech.addresspicker.services;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.util.Log;
