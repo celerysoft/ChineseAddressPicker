@@ -268,7 +268,6 @@ public class ChineseAddressPicker extends LinearLayout
                         Collections.sort(districtList, new AddressComparator());
                     }
                 }
-                //TODO add sorting method
             }
 
             // store address datas to map
@@ -322,6 +321,7 @@ public class ChineseAddressPicker extends LinearLayout
         } else if (wheel == mViewDistrict) {
             onDistrictChanged();
         }
+        mOnAddressPickerListener.onAddressChanged();
     }
 
     private void onProvinceChanged() {
@@ -497,7 +497,7 @@ public class ChineseAddressPicker extends LinearLayout
     }
 
     /**
-     * <P>时间：2015-09-11
+     * <P>时间：2015-09-14
      * <P>作者：Qin Yuanyi
      * <P>功能：实现动画监听接口的抽象类
      */
@@ -534,9 +534,15 @@ public class ChineseAddressPicker extends LinearLayout
         /**
          * <P>修改时间：2015-09-11
          * <P>作者：Qin Yuanyi
-         * <P>功能描述：当地址被选中之后的回调函数
+         * <P>功能描述：当地址被选中，并按下动作条的确定按钮之后的回调函数
          */
         void onAddressPicked();
+        /**
+         * <P>修改时间：2015-09-17
+         * <P>作者：Qin Yuanyi
+         * <P>功能描述：当选择的地址发生改变之后的回调函数
+         */
+        void onAddressChanged();
     }
 
 }
