@@ -1,22 +1,23 @@
 package com.eruntech.addresspicker.interfaces;
 
-import com.eruntech.addresspicker.services.LoadAddressDataService;
-import com.eruntech.addresspicker.valueobjects.Province;
+import com.eruntech.addresspicker.services.LoadXmlAddressDataService;
 
-import java.util.List;
+import java.util.Map;
 
 /**
- * Difine some mothod must be implemented when listen {@link LoadAddressDataService}.
- * <P>时间：2015-09-11
+ * Difine some mothod must be implemented when listen {@link LoadXmlAddressDataService}.
+ * <P>时间：2015-09-18
  * <P>作者：Qin Yuanyi
  * <P>功能：定义监听LoadAddressDataService类必须实现的方法
- * @see LoadAddressDataService
+ * @see LoadXmlAddressDataService
  */
 public interface OnAddressDataServiceListener {
     /**
-     * call this method when the address xml resource is parsed.
+     * call this method when the address data is parsed.
      * <P>当储存在本地的中国地址数据被解析完毕时的回调函数
-     * @param provinceList 解析好的中国地址数据
+     * @param provinceData 包含所有省名字的字符串数组
+     * @param cityDataMap key - 省， value - 市
+     * @param districtDatasMap key - 市， value - 区
      */
-    void onAddressDataGot(List<Province> provinceList);
+    void onAddressDataGot(String[] provinceData, Map<String, String[]> cityDataMap, Map<String, String[]> districtDatasMap);
 }

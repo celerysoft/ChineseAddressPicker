@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Xml;
 
+import com.eruntech.addresspicker.interfaces.Sortable;
 import com.eruntech.addresspicker.valueobjects.City;
 import com.eruntech.addresspicker.valueobjects.District;
 import com.eruntech.addresspicker.valueobjects.Province;
@@ -16,7 +17,11 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Parse the local Chinese address XML data in assets.
@@ -24,10 +29,13 @@ import java.util.List;
  * <P>时间：2015-09-09
  * <P>功能：解析储存在assets的中国地址库XML数据
  */
-public class LoadAddressDataService {
+public class LoadXmlAddressDataService {
 
     /** Log tag **/
     private final String LOG_TAG = this.getClass().getSimpleName();
+
+    /** 选择地址的时候没有选中具体地址时的字符串 **/
+    private final String NO_ADDRESS_PICKED = "-----";
 
     /** 解析index节点时的结果转换为int型失败时，index的默认值 **/
     private final int INDEX_PARSE_WRONG = -1;
@@ -41,16 +49,27 @@ public class LoadAddressDataService {
     /** 储存所有的解析对象 **/
     private List<Province> mProvinceList;
 
-    public LoadAddressDataService(ChineseAddressPicker chineseAddressPicker) {
+    /** 所有省 **/
+    private String[] mProvinceDatas;
+    /** key - 省 value - 市 **/
+    private Map<String, String[]> mCitisDatasMap = new HashMap<>();
+    /** key - 市 values - 区 **/
+    private Map<String, String[]> mDistrictDatasMap = new HashMap<>();
+
+    private boolean mIsDataSortedByPronunciation;
+
+    public LoadXmlAddressDataService(ChineseAddressPicker chineseAddressPicker) {
         mChineseAddressPicker = chineseAddressPicker;
     }
 
     /**
-     * <P>修改时间：2015-09-11
+     * <P>修改时间：2015-09-18
      * <P>作者：Qin Yuanyi
      * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
+     * @param isDataSortByPronunciation 解析好的数据是否按照读音排序
      */
-    public void startToParseData() {
+    public void startToParseData(boolean isDataSortByPronunciation) {
+        mIsDataSortedByPronunciation = isDataSortByPronunciation;
         new GetAddressDataAsyncTask().execute("address_data.xml");
     }
 
@@ -222,6 +241,71 @@ public class LoadAddressDataService {
     }
 
     /**
+     * <P>修改时间：2015-09-11
+     * <P>作者：Qin Yuanyi
+     * <P>功能描述：对数据进行排序，并创建哈希表储存解析好的数据，加快读取速度
+     */
+    private void initParsedDatas(List<Province> provinceList) {
+        if (provinceList!= null && !provinceList.isEmpty()) {
+
+            // sort the address datas by index
+            if (!mIsDataSortedByPronunciation) {
+                int provinceCount = provinceList.size();
+                int cityCount;
+
+                Collections.sort(provinceList, new AddressComparator());
+                for(int i = 0; i < provinceCount; ++i) {
+                    List<City> cityList = provinceList.get(i).getCityList();
+                    Collections.sort(cityList, new AddressComparator());
+                    cityCount = cityList.size();
+                    for (int j = 0; j < cityCount; ++j) {
+                        List<District> districtList = cityList.get(j).getDistrictList();
+                        Collections.sort(districtList, new AddressComparator());
+                    }
+                }
+            }
+
+            // store address datas to map
+            mProvinceDatas = new String[provinceList.size()];
+            for (int i=0; i< provinceList.size(); i++) {
+                // 遍历所有省的数据
+                mProvinceDatas[i] = provinceList.get(i).getName();
+                List<City> cityList = provinceList.get(i).getCityList();
+                String[] cityNames = new String[cityList.size()];
+                for (int j = 0; j < cityList.size(); j++) {
+                    // 遍历省下面的所有市的数据
+                    cityNames[j] = cityList.get(j).getName();
+                    List<District> districtList = cityList.get(j).getDistrictList();
+                    // 需要在 distrinctNameArray[0] 插入字符串 “-----”，所以size+1
+                    String[] distrinctNameArray = new String[districtList.size()+1];
+                    distrinctNameArray[0] = NO_ADDRESS_PICKED;
+                    for (int k = 0; k < districtList.size(); k++) {
+                        // 遍历市下面所有区/县的数据
+                        District districtModel = new District(districtList.get(k).getName(), districtList.get(k).getIndex());
+                        distrinctNameArray[k+1] = districtModel.getName();
+                    }
+                    // 市-区/县的数据，保存到mDistrictDatasMap
+                    mDistrictDatasMap.put(cityNames[j], distrinctNameArray);
+                }
+                // 省-市的数据，保存到mCitisDatasMap
+                mCitisDatasMap.put(provinceList.get(i).getName(), cityNames);
+            }
+        }
+    }
+
+    /**
+     * <P>时间：2015-09-17
+     * <P>作者：Qin Yuanyi
+     * <P>功能：对省、市、区按序号进行排序的比较器
+     */
+    private class AddressComparator implements Comparator<Sortable> {
+        @Override
+        public int compare(Sortable lhs, Sortable rhs) {
+            return lhs.getIndex() - rhs.getIndex();
+        }
+    }
+
+    /**
      * <P>作者：Qin Yuanyi
      * <P>时间：2015-09-09
      * <P>功能：用于解析地址xml文件的异步线程类
@@ -236,13 +320,15 @@ public class LoadAddressDataService {
                 parseXmlData(params[0]);
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
-                Log.e(LOG_TAG, "解析xml文件时发生错误，错误原因：" + e.getMessage());
+                Log.e(LOG_TAG, "解析XML文件时发生错误，错误原因：" + e.getMessage());
             } catch (IOException e) {
                 e.printStackTrace();
-                Log.e(LOG_TAG, "读取xml文件时发生错误，错误原因：" + e.getMessage());
+                Log.e(LOG_TAG, "读取XML文件时发生错误，错误原因：" + e.getMessage());
             }
             return null;
         }
+
+
 
         /**
          * 通知mChineseAddressPicker已经获取地址数据
@@ -251,10 +337,13 @@ public class LoadAddressDataService {
         protected void onPostExecute(Object result) {
             if (mProvinceList != null) {
                 if (mProvinceList.size() > 0) {
-                    mChineseAddressPicker.onAddressDataGot(mProvinceList);
+                    try {
+                        initParsedDatas(mProvinceList);
+                    } finally {
+                        mChineseAddressPicker.onAddressDataGot(mProvinceDatas, mCitisDatasMap, mDistrictDatasMap);
+                    }
                 }
             }
-
         }
     }
 }
