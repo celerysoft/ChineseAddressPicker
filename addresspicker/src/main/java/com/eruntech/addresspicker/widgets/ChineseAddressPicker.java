@@ -163,8 +163,7 @@ public class ChineseAddressPicker extends LinearLayout
      * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     private void requestAddressData() {
-        //JSON数据更新更全面，推荐使用
-        if (mIsJsonDataEnable) {
+        if (!mIsJsonDataEnable) {
             LoadXmlAddressDataService service = new LoadXmlAddressDataService(this);
             service.startToParseData(mIsSortedByPronunciation);
         } else {
