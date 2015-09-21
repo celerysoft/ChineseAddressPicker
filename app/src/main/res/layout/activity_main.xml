@@ -25,6 +25,7 @@
         app:actionBarVisible="true"
         app:animationVisible="true"
         app:sortByPronunciation="false"
+        app:jsonDataEnable="true"
         />
 
 </LinearLayout>

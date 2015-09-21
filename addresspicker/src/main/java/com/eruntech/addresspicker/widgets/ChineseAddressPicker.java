@@ -58,10 +58,12 @@ public class ChineseAddressPicker extends LinearLayout
     private boolean mAnimationVisible = true;
     /** 是否显示动作条，即确认按钮 **/
     private boolean mActionBarVisible = true;
-    /** 是否按读音排序，否则按区域代号排序 **/
+    /** 是否按读音排序，否则按区域代号排序，按读音排序必须XML数据 **/
     private boolean mIsSortedByPronunciation = false;
+    /** 是否使用JSON数据，否则使用XML数据，JSON数据更新更全面，但是无法按照读音排序，默认使用JSON数据 **/
+    private boolean mIsJsonDataEnable = true;
 
-    /** 所有省 **/
+    /** 包含所有省的名称 **/
     private String[] mProvinceDatas;
     /** key - 省 value - 市 **/
     private Map<String, String[]> mCityDataMap = new HashMap<>();
@@ -125,6 +127,9 @@ public class ChineseAddressPicker extends LinearLayout
             mActionBarVisible = a.getBoolean(R.styleable.ChineseAddressPicker_actionBarVisible, true);
 
             mIsSortedByPronunciation = a.getBoolean(R.styleable.ChineseAddressPicker_sortByPronunciation, false);
+
+            mIsJsonDataEnable = a.getBoolean(R.styleable.ChineseAddressPicker_jsonDataEnable, true);
+
         } finally {
             a.recycle();
         }
@@ -159,8 +164,7 @@ public class ChineseAddressPicker extends LinearLayout
      */
     private void requestAddressData() {
         //JSON数据更新更全面，推荐使用
-        final boolean USE_JSON_DATA = false;
-        if (!USE_JSON_DATA) {
+        if (mIsJsonDataEnable) {
             LoadXmlAddressDataService service = new LoadXmlAddressDataService(this);
             service.startToParseData(mIsSortedByPronunciation);
         } else {

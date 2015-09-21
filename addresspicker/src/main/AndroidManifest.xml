@@ -3,7 +3,7 @@
     package="com.eruntech.addresspicker">
 
     <uses-sdk
-        android:minSdkVersion="7"/>
+        android:minSdkVersion="5"/>
 
     <application
         android:allowBackup="true"

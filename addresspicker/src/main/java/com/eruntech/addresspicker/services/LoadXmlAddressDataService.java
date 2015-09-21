@@ -49,7 +49,7 @@ public class LoadXmlAddressDataService {
     /** 储存所有的解析对象 **/
     private List<Province> mProvinceList;
 
-    /** 所有省 **/
+    /** 包含所有省的名称 **/
     private String[] mProvinceDatas;
     /** key - 省 value - 市 **/
     private Map<String, String[]> mCitisDatasMap = new HashMap<>();
