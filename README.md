@@ -46,6 +46,8 @@ Sample version: v1.0, 405113f
 
 * android-wheel: https://github.com/maarek/android-wheel
 
+* chinaddress: https://github.com/cnluzhang/chinaddress
+
 ## Disclaimer
 
 All of the address data is collected form the Internet. The data can not be guaranteed or assured to be accurate for all.

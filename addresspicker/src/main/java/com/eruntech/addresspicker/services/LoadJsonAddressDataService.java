@@ -13,7 +13,6 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -119,30 +118,14 @@ public class LoadJsonAddressDataService {
      * @param encoding 编码
      */
     private String InputStreamToString(InputStream inputStream, String encoding) throws IOException {
-        String string = null;
-
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
-        int length = 0;
+        int length;
         while ((length = inputStream.read(buffer)) != -1) {
             baos.write(buffer, 0, length);
         }
 
-        string = new String(baos.toByteArray(), encoding);
-
-        return string;
-    }
-
-    /**
-     * <P>时间：2015-09-17
-     * <P>作者：Qin Yuanyi
-     * <P>功能：对省、市、区按序号进行排序的比较器
-     */
-    private class AddressComparator implements Comparator<String> {
-        @Override
-        public int compare(String lhs, String rhs) {
-            return 0;
-        }
+        return new String(baos.toByteArray(), encoding);
     }
 
     /**
