@@ -1,38 +1,38 @@
-# ChineseAddressPicker
-## What is it?
-ChineseAddressPicker is an Android widget to pick a Chinese detailed address.
+# ChineseAddressPicker（中国地址选择器）
 
-## Features
+[English](./README-en.md)
 
-* Provice, cities and districts are interrelated.
+## 这是啥？
 
-* Scroll to pick.
+ChineseAddressPicker（中国地址选择器）是一个安卓控件，通过这个控件你可以轻松选择一个中国的地址。
 
-* Smooth animation.
+## 特性
 
-* Sort by pronunciation or official location id.
+* 省市区三级级联
 
-## Technical Information
+* 滚动控件选择地址
 
-* Required minimum API level: 5
+* 平滑的动画效果
 
-* Supports all the screens sizes and density.
+* 可以按照读音对地址进行排序，亦可按照官方行政区域ID对地址进行排序
 
-## Need Help
+## 技术说明
 
-The Chinese address data is downloaded in the Internet, i dont know if is newest.
+* 最低API支持: 5
 
-So welcome to set up a pull request to update the address data, thx.
+* 支持所有的屏幕尺寸及分辨率
 
-## Sample
+## 请求帮助
 
-You can download the app test from here: http://pan.baidu.com/s/1i3wBZO5 password: **dnd3**
+地址数据来源于互联网，我不知道这是否是最新的，所以很欢迎你帮我修改地址数据文件，谢谢。
 
-Click `下载` to start download.
+## 示例
 
-Sample version: v1.0, 405113f
+你可以在这下载测试程序：http://pan.baidu.com/s/1i3wBZO5 密码：**dnd3**
 
-## Screenshots
+示例程序版本: v1.0, 405113f
+
+## 截图
 
 ![Screenshot 1](https://raw.githubusercontent.com/celerysoft/README/master/ChineseAddressPicker/sc01.png "Screenshot 1")
 
@@ -42,18 +42,16 @@ Sample version: v1.0, 405113f
 
 ![Screenshot 4](https://raw.githubusercontent.com/celerysoft/README/master/ChineseAddressPicker/sc04.png "Screenshot 4")
 
-## Acknowledgement
+## 特别感谢
 
 * android-wheel: https://github.com/maarek/android-wheel
 
 * chinaddress: https://github.com/cnluzhang/chinaddress
 
-## Disclaimer
+## 免责申明
 
-All of the address data is collected form the Internet. The data can not be guaranteed or assured to be accurate for all.
-
-I can not be held responsible for any error or negligence derived therefrom.
+所以地址数据来源于互联网，数据并不能被保证完全正确，所以你拿去用的时候出了啥事，千万不要来找我。
 
 ## License
 
-TBC..
+待添加...
