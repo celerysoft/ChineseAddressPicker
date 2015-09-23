@@ -15,9 +15,13 @@ import android.widget.RelativeLayout;
 
 import com.eruntech.addresspicker.R;
 import com.eruntech.addresspicker.interfaces.OnAddressDataServiceListener;
+import com.eruntech.addresspicker.services.LoadTencentJsonAddressDataService;
 import com.eruntech.addresspicker.services.LoadXmlAddressDataService;
 import com.eruntech.addresspicker.services.LoadJsonAddressDataService;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -163,6 +167,9 @@ public class ChineseAddressPicker extends LinearLayout
      * <P>功能描述：发送异步请求开始解析储存在本地的中国地址数据库
      */
     private void requestAddressData() {
+        LoadTencentJsonAddressDataService s = new LoadTencentJsonAddressDataService(this);
+        s.startToParseData();
+
         if (!mIsJsonDataEnable) {
             LoadXmlAddressDataService service = new LoadXmlAddressDataService(this);
             service.startToParseData(mIsSortedByPronunciation);

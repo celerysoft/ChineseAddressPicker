@@ -4,13 +4,13 @@ import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.eruntech.addresspicker.utils.StringUtils;
 import com.eruntech.addresspicker.widgets.ChineseAddressPicker;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -62,7 +62,7 @@ public class LoadJsonAddressDataService {
         InputStream jsonStream = asset.open("address_data.json");
 
         try {
-            String json = InputStreamToString(jsonStream, "UTF-8");
+            String json = StringUtils.InputStreamToString(jsonStream, "UTF-8");
 
             JSONObject jsonObject = new JSONObject(json);
             jsonObject.remove("整理者");
@@ -108,24 +108,6 @@ public class LoadJsonAddressDataService {
             jsonStream.close();
         }
 
-    }
-
-    /**
-     * <P>修改时间：2015-09-18
-     * <P>作者：Qin Yuanyi
-     * <P>功能描述：将InputStream转化为String
-     * @param inputStream 需要转化为String型的InputStream
-     * @param encoding 编码
-     */
-    private String InputStreamToString(InputStream inputStream, String encoding) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = inputStream.read(buffer)) != -1) {
-            baos.write(buffer, 0, length);
-        }
-
-        return new String(baos.toByteArray(), encoding);
     }
 
     /**

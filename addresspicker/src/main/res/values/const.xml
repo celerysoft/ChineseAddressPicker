@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tencent_map_key">VG2BZ-MKCKI-4RDGU-524FD-TZOQK-6FFJK</string>
+    <string name="tencent_api_url">http://apis.map.qq.com/ws/district/v1/getchildren</string>
+</resources>
