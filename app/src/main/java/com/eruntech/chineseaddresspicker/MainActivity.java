@@ -8,7 +8,7 @@ import android.widget.Button;
 import com.eruntech.addresspicker.widgets.ChineseAddressPicker;
 
 
-public class MainActivity extends Activity implements ChineseAddressPicker.OnAddressPickerListener {
+public class MainActivity extends Activity {
 
     ChineseAddressPicker mPicker;
     Button mButton;
@@ -25,6 +25,37 @@ public class MainActivity extends Activity implements ChineseAddressPicker.OnAdd
 
     private void setupViews() {
         mPicker = (ChineseAddressPicker) findViewById(R.id.main_picker);
+        mPicker.setOnAddressPickerListener(new ChineseAddressPicker.OnAddressPickerListener() {
+            @Override
+            public void onAddressPicked() {
+                String address = null;
+                if (mPicker.getProviceName() != null) {
+                    address = mPicker.getProviceName();
+                    if (mPicker.getCityName() != null) {
+                        address += " - " + mPicker.getCityName();
+                        if (mPicker.getDistrictName() != null) {
+                            address += " - " + mPicker.getDistrictName();
+                        }
+                    }
+                }
+                mButton.setText(address);
+            }
+
+            @Override
+            public void onAddressChanged() {
+                String address = null;
+                if (mPicker.getProviceName() != null) {
+                    address = mPicker.getProviceName();
+                    if (mPicker.getCityName() != null) {
+                        address += " - " + mPicker.getCityName();
+                        if (mPicker.getDistrictName() != null) {
+                            address += " - " + mPicker.getDistrictName();
+                        }
+                    }
+                }
+                mButton.setText(address);
+            }
+        });
 
         mButton = (Button) findViewById(R.id.main_btn);
         mButton.setText(getString(R.string.btn_main_text));
@@ -41,35 +72,5 @@ public class MainActivity extends Activity implements ChineseAddressPicker.OnAdd
         };
 
         mButton.setOnClickListener(onClickListener);
-    }
-
-    @Override
-    public void onAddressPicked() {
-        String address = null;
-        if (mPicker.getProviceName() != null) {
-            address = mPicker.getProviceName();
-            if (mPicker.getCityName() != null) {
-                address += " - " + mPicker.getCityName();
-                if (mPicker.getDistrictName() != null) {
-                    address += " - " + mPicker.getDistrictName();
-                }
-            }
-        }
-        mButton.setText(address);
-    }
-
-    @Override
-    public void onAddressChanged() {
-        String address = null;
-        if (mPicker.getProviceName() != null) {
-            address = mPicker.getProviceName();
-            if (mPicker.getCityName() != null) {
-                address += " - " + mPicker.getCityName();
-                if (mPicker.getDistrictName() != null) {
-                    address += " - " + mPicker.getDistrictName();
-                }
-            }
-        }
-        mButton.setText(address);
     }
 }

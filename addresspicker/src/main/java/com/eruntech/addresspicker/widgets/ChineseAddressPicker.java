@@ -36,8 +36,6 @@ public class ChineseAddressPicker extends LinearLayout
 
     /** 上下文 **/
     private Context mContext;
-    /** 通过构造函数传进的OnAddressPickerListener实例 **/
-    private OnAddressPickerListener mOnAddressPickerListener;
 
     /** Log标签 **/
     private final String LOG_TAG = this.getClass().getSimpleName();
@@ -89,6 +87,11 @@ public class ChineseAddressPicker extends LinearLayout
             return mCurrentDistrictName;
         }
     }
+    /** 监听器 **/
+    private OnAddressPickerListener mOnAddressPickerListener;
+    public void setOnAddressPickerListener(OnAddressPickerListener listener) {
+        mOnAddressPickerListener = listener;
+    }
 
     //控件声明，setUpViews()方法
     /** 省份WheelView的引用 **/
@@ -113,8 +116,6 @@ public class ChineseAddressPicker extends LinearLayout
     public ChineseAddressPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        initPicker(context);
-
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ChineseAddressPicker, 0, 0);
         try {
             mVisibleItemCount = a.getInteger(R.styleable.ChineseAddressPicker_visibleItemCount, DEFAULT_VISIBLE_ITEM_COUNT);
@@ -133,6 +134,8 @@ public class ChineseAddressPicker extends LinearLayout
         } finally {
             a.recycle();
         }
+
+        initPicker(context);
     }
 
     @Override
@@ -150,11 +153,6 @@ public class ChineseAddressPicker extends LinearLayout
      */
     private void initPicker(Context context) {
         mContext = context;
-        if (context instanceof OnAddressPickerListener && mActionBarVisible) {
-            mOnAddressPickerListener = (OnAddressPickerListener) context;
-        } else {
-            Log.w(LOG_TAG, "当显示ActionBar时，构造传入的Context类最好实现OnAddressPickerListener接口，不然无法响应选择地址事件");
-        }
     }
 
     /**
@@ -268,7 +266,10 @@ public class ChineseAddressPicker extends LinearLayout
         } else if (wheel == mViewDistrict) {
             onDistrictChanged();
         }
-        mOnAddressPickerListener.onAddressChanged();
+        if (mOnAddressPickerListener != null) {
+            mOnAddressPickerListener.onAddressChanged();
+        }
+
     }
 
     private void onProvinceChanged() {
@@ -333,7 +334,10 @@ public class ChineseAddressPicker extends LinearLayout
             Log.v(LOG_TAG, "当前选中：" + mCurrentProviceName + " - " + mCurrentCityName + " - "
                     + mCurrentDistrictName);
             hide();
-            mOnAddressPickerListener.onAddressPicked();
+            if (mOnAddressPickerListener != null) {
+                mOnAddressPickerListener.onAddressPicked();
+            }
+
         }
     }
 
