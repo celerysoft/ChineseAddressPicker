@@ -360,9 +360,10 @@ public class ChineseAddressPicker extends LinearLayout
      * <P>功能描述：显示控件(无动画)
      */
     private void showWidget() {
-        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
-        layoutParams.height = LayoutParams.WRAP_CONTENT;
-        this.setLayoutParams(layoutParams);
+        this.setVisibility(View.VISIBLE);
+        //LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
+        //layoutParams.height = LayoutParams.WRAP_CONTENT;
+        //this.setLayoutParams(layoutParams);
     }
 
     /**
@@ -412,9 +413,10 @@ public class ChineseAddressPicker extends LinearLayout
      * <P>功能描述：隐藏控件(无动画)
      */
     private void hideWidget() {
-        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
-        layoutParams.height = 0;
-        this.setLayoutParams(layoutParams);
+        this.setVisibility(View.GONE);
+        //LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.getLayoutParams();
+        //layoutParams.height = 0;
+        //this.setLayoutParams(layoutParams);
     }
 
     /**
